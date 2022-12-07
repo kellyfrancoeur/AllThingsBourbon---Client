@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
-// import { isStaff } from "../../utils/isStaff"
 import { getBourbons, deleteBourbon } from "../../managers/BourbonManager.js"
 
 

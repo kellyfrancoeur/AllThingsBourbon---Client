@@ -2,6 +2,7 @@ import { Outlet, Route, Routes } from "react-router-dom"
 import { BourbonList } from "../bourbons/BourbonList"
 import { CocktailList } from "../cocktails/CocktailList"
 import { DistilleryList } from "../distilleries/DistilleryList"
+import { MembersPage } from "../members/MembersPage"
 
 
 
@@ -19,6 +20,7 @@ export const MemberViews = () => {
                 <Route path="distilleries" element={<DistilleryList />} />
                 <Route path = "bourbons" element = {<BourbonList/>}/>
                 <Route path = "cocktails" element = {<CocktailList/>}/>
+                <Route path = "mybourbons" element = {<MembersPage/>}/>                
             </Route>
         </Routes>
     )

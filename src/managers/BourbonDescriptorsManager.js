@@ -19,7 +19,7 @@ export const getBourbonDescriptorById = (id) => {
         .then(response => response.json())
 }
 
-export const createBourbonDescriptor = (descriptor) => {
+export const createBourbonDescriptor = (descript) => {
     return fetch("http://localhost:8000/descriptors", {
         method: "POST",
         headers: {
@@ -27,7 +27,7 @@ export const createBourbonDescriptor = (descriptor) => {
             "Content-Type": "application/json",
             "Authorization": `Token ${JSON.parse(localStorage.getItem("bourbon_user")).token}`
         },
-        body: JSON.stringify(descriptor)
+        body: JSON.stringify(descript)
     })
 }
 

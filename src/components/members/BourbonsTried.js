@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom";
-import { getBourbonsTried } from "../../managers/BourbonsTriedManager";
+import { getBourbonsTried, deleteBourbonTried } from "../../managers/BourbonsTriedManager";
+
 
 export const BourbonsTried = () => {
     const [triedBourbons, setTriedBourbons] = useState([])
@@ -14,7 +15,9 @@ export const BourbonsTried = () => {
     return (<>
         <article className="myBourbons">
             <div>
-                <button>Add A Bourbon</button>
+                <button className="add_bourbon" onClick={() => {
+                    navigate({ pathname: `/bourbonstried/add` })
+                }}>Add A Bourbon</button>
             </div>
             {
                 triedBourbons.map(triedBourbon => {
@@ -22,10 +25,25 @@ export const BourbonsTried = () => {
                         <div>{triedBourbon?.bourbon?.name}</div>
                         <div>{triedBourbon.comments}</div>
                         <div>{triedBourbon.rating}</div>
-                        <div>{triedBourbon?.descriptors?.label}</div>
+                        {
+                            triedBourbon.descriptors.map(descriptor =>{
+                                return <div key={`descriptor--${descriptor.id}`}>{descriptor.label}</div>
+                            })
+                        }
                         <div>
-                            <button>Edit</button>
+                            <button className="edit_bourbon" onClick={() => {
+                                navigate({ pathname: `/bourbonstried/${triedBourbon.id}/edit` })
+                            }}>Edit</button>
                         </div>
+                        <div>
+                            <button className="delete_bourbon" onClick={() => {
+                                const bourbonTriedDelete = {
+                                    id: triedBourbon.id
+                                }
+                                deleteBourbonTried(bourbonTriedDelete)
+                                    .then(() => { window.location.reload() })
+                            }}
+                            >Delete</button></div>
                     </section>
 
                 })
@@ -36,11 +54,3 @@ export const BourbonsTried = () => {
 
     )
 }
-
-// className="add_bourbon" onClick={() => {
-//     navigate({ pathname: `/bourbons/${bourbon.id}/add` })
-// }}
-
-// className="edit_bourbon" onClick={() => {
-//     navigate({ pathname: `/bourbons/${bourbon.id}/edit` })
-// }}

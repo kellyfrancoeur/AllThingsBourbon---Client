@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
+import { Link } from "react-router-dom"
 import { getBourbons, deleteBourbon } from "../../managers/BourbonManager.js"
 
 
@@ -41,16 +42,17 @@ export const BourbonList = (props) => {
             {
                 bourbons.map(bourbon => {
                     return <section key={`bourbon--${bourbon.id}`} className="bourbon">
-                        <div className="bourbon_name">{bourbon.name}</div>
-                        <div className="bourbon_proof">{bourbon.proof}</div>
-                        <div className="bourbon_aroma">{bourbon.aroma}</div>
-                        <div className="bourbon_taste">{bourbon.taste}</div>
-                        <div className="bourbon_finish">{bourbon.finish}</div>
-                        <div className="bourbon_description">{bourbon.description}</div>
-                        <div className="bourbon_madeIn">{bourbon.made_in}</div>
-                        <div className="bourbon_linkToBuy">{bourbon.link_to_buy}</div>
-                        <div className="bourbon_bourbonImg">{bourbon.bourbon_img}</div>
-                        <div className="bourbon_type">{bourbon?.type_of_bourbon?.type}</div>
+                        <div className="bourbon_name"><u><b>{bourbon.name}</b></u></div>
+                        <div className="bourbon_type"><b>Type of Bourbon:</b>{bourbon?.type_of_bourbon?.type}</div>
+                        <div className="bourbon_proof"><b>Proof:</b>{bourbon.proof}</div>
+                        <div className="bourbon_aroma"><b>Aroma:</b>{bourbon.aroma}</div>
+                        <div className="bourbon_taste"><b>Taste:</b>{bourbon.taste}</div>
+                        <div className="bourbon_finish"><b>Finish:</b>{bourbon.finish}</div>
+                        <div className="bourbon_description"><b>Description:</b>{bourbon.description}</div>
+                        <div className="bourbon_madeIn"><b>Made In:</b>{bourbon.made_in}</div>
+                        <a.href to ={bourbon.link_to_buy}>Buy Bourbon</a.href>
+                        <div className="bourbon_bourbonImg">
+                            <img src={bourbon.bourbon_img} height="205" width="175"/></div>
                          
                         <div>
                             {

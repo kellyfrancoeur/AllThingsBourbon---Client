@@ -53,3 +53,13 @@ export const deleteBourbonTried = (bourbonTried) => {
         }
     })
 }
+
+export const describedBourbon = (bourbonId) =>{
+    return fetch(`http://localhost:8000/bourbonstried/${bourbonId}/descriptors`, {
+        method: "POST",
+        headers: {
+            "Authorization": `Token ${JSON.parse(localStorage.getItem("bourbon_user")).token}` 
+        }
+    })
+    .then(response => response.json())
+}

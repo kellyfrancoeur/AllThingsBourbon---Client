@@ -12,12 +12,9 @@ export const BourbonsTried = () => {
     )
 
     return (<>
-        <h2>My Bourbons</h2>
         <article className="myBourbons">
             <div>
-                <button className="add_bourbon" onClick={() => {
-                    navigate({ pathname: `/bourbons/${bourbon.id}/add` })
-                }}>Add A Bourbon</button>
+                <button>Add A Bourbon</button>
             </div>
             {
                 triedBourbons.map(triedBourbon => {
@@ -27,9 +24,7 @@ export const BourbonsTried = () => {
                         <div>{triedBourbon.rating}</div>
                         <div>{triedBourbon?.descriptors?.label}</div>
                         <div>
-                            <button className="edit_bourbon" onClick={() => {
-                                navigate({ pathname: `/bourbons/${bourbon.id}/edit` })
-                            }}>Edit</button>
+                            <button>Edit</button>
                         </div>
                     </section>
 
@@ -41,3 +36,11 @@ export const BourbonsTried = () => {
 
     )
 }
+
+// className="add_bourbon" onClick={() => {
+//     navigate({ pathname: `/bourbons/${bourbon.id}/add` })
+// }}
+
+// className="edit_bourbon" onClick={() => {
+//     navigate({ pathname: `/bourbons/${bourbon.id}/edit` })
+// }}

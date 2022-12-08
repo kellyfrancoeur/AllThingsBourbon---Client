@@ -39,17 +39,17 @@ export const updateBourbonTried = (bourbonTried) => {
             "Content-Type": "application/json",
             "Authorization": `Token ${JSON.parse(localStorage.getItem("bourbon_user")).token}`
         },
-        body: JSON.stringify(bourbon)
+        body: JSON.stringify(bourbonTried)
     })
 }
 
-// export const deleteBourbon = (bourbon) => {
-//     return fetch(`http://localhost:8000/bourbonstried/${bourbon.id}`, {
-//         method: "DELETE",
-//         headers: {
-//             "Content-Type": "application/json",
-//             "Accept": "application/json",
-//             "Authorization": `Token ${JSON.parse(localStorage.getItem("bourbon_user")).token}`
-//         }
-//     })
-// }
+export const deleteBourbonTried = (bourbonTried) => {
+    return fetch(`http://localhost:8000/bourbonstried/${bourbonTried.id}`, {
+        method: "DELETE",
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+            "Authorization": `Token ${JSON.parse(localStorage.getItem("bourbon_user")).token}`
+        }
+    })
+}

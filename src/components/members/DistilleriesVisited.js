@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom";
-import { getDistilleriesVisited } from "../../managers/DistilleriesVisitedManager";
+import { getDistilleriesVisited, deleteDistilleryVisited } from "../../managers/DistilleriesVisitedManager";
 
 export const DistilleriesVisited = () => {
     const [visitedDistilleries, setVisitedDistilleries] = useState([])
@@ -12,11 +12,10 @@ export const DistilleriesVisited = () => {
     )
 
     return (<>
-        <h2>My Distilleries</h2>
         <article className="myDistilleries">
             <div>
                 <button className="add_distillery" onClick={() => {
-                    navigate({ pathname: `/distilleries/${distillery.id}/add` })
+                    navigate({ pathname: `/distilleriesvisited/add` })
                 }}>Add A Distillery</button>
             </div>
             {
@@ -27,8 +26,18 @@ export const DistilleriesVisited = () => {
                         <div>{visitedDistillery.rating}</div>
                         <div>
                             <button className="edit_distillery" onClick={() => {
-                                navigate({ pathname: `/distilleries/${distillery.id}/edit` })
+                                navigate({ pathname: `/distilleriesvisited/${visitedDistillery.id}/edit` })
                             }}>Edit</button>
+                        </div>
+                        <div>
+                            <button className="delete_distillery" onClick={() => {
+                                const distilleryVisitedDelete = {
+                                    id: visitedDistillery.id
+                                }
+                                deleteDistilleryVisited(distilleryVisitedDelete)
+                                    .then(() => { window.location.reload() })
+                            }}
+                            >Delete</button>
                         </div>
                     </section>
 
@@ -40,3 +49,5 @@ export const DistilleriesVisited = () => {
 
     )
 }
+
+

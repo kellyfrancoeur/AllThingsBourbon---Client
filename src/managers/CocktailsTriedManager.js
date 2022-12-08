@@ -39,6 +39,17 @@ export const updateCocktailTried = (cocktailTried) => {
             "Content-Type": "application/json",
             "Authorization": `Token ${JSON.parse(localStorage.getItem("bourbon_user")).token}`
         },
-        body: JSON.stringify(bourbon)
+        body: JSON.stringify(cocktailTried)
+    })
+}
+
+export const deleteCocktailTried = (cocktailTried) => {
+    return fetch(`http://localhost:8000/cocktailstried/${cocktailTried.id}`, {
+        method: "DELETE",
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json",
+            "Authorization": `Token ${JSON.parse(localStorage.getItem("bourbon_user")).token}`
+        }
     })
 }

@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom";
-import { getCocktailsTried } from "../../managers/CocktailsTriedManager";
+import { getCocktailsTried, deleteCocktailTried } from "../../managers/CocktailsTriedManager";
 
 export const CocktailsTried = () => {
     const [triedCocktails, setTriedCocktails] = useState([])
@@ -12,11 +12,10 @@ export const CocktailsTried = () => {
     )
 
     return (<>
-        <h2>My Cocktails</h2>
         <article className="myCocktails">
             <div>
                 <button className="add_cocktail" onClick={() => {
-                    navigate({ pathname: `/cocktails/${cocktail.id}/add` })
+                    navigate({ pathname: `/cocktailstried/add` })
                 }}>Add A Cocktail</button>
             </div>
             {
@@ -27,8 +26,18 @@ export const CocktailsTried = () => {
                         <div>{triedCocktail.rating}</div>
                         <div>
                             <button className="edit_cocktail" onClick={() => {
-                                navigate({ pathname: `/cocktails/${cocktail.id}/edit` })
+                                navigate({ pathname: `/cocktailstried/${triedCocktail.id}/edit` })
                             }}>Edit</button>
+                        </div>
+                        <div>
+                            <button className="delete_cocktail" onClick={() => {
+                                const cocktailTriedDelete = {
+                                    id: triedCocktail.id
+                                }
+                                deleteCocktailTried(cocktailTriedDelete)
+                                    .then(() => { window.location.reload() })
+                            }}
+                            >Delete</button>
                         </div>
                     </section>
 
@@ -40,3 +49,6 @@ export const CocktailsTried = () => {
 
     )
 }
+
+
+

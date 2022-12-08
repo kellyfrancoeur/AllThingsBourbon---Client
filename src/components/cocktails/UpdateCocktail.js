@@ -15,7 +15,7 @@ export const UpdateCocktail = () => {
         how_to_make: "",
         cocktail_img:"",
         type_of_cocktail: 0
-    })
+    }) 
 
     useEffect(() => {
         getCocktailById(cocktailId).then(setUpdatedCocktail)

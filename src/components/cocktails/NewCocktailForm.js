@@ -12,7 +12,7 @@ export const NewCocktailForm = () => {
         how_to_make: "",
         cocktail_img:"",
         type_of_cocktail: 0
-    })
+    }) 
 
     useEffect(() => {
         getCocktailTypes().then(setCocktailTypes)
@@ -100,7 +100,7 @@ export const NewCocktailForm = () => {
                         }
                     </select>
                 </div>
-            </fieldset>
+            </fieldset> 
             <button type="submit"
                 onClick={evt => {
                     evt.preventDefault()

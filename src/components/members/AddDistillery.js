@@ -75,6 +75,7 @@ export const AddDistillery = () => {
             <button type="submit"
                 onClick={evt => {
                     evt.preventDefault()
+                    window.alert("Distillery has been added!")
 
                     const newTriedDistillery = {
                         distillery: parseInt(triedNewDistillery.distillery),

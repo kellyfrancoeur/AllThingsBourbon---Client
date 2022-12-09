@@ -21,7 +21,7 @@ export const EditBourbon = () => {
     useEffect(() => {
         getBourbonTriedById(bourbonTriedId).then(setUpdatedTriedBourbon)
     },
-        [])
+        [bourbonTriedId])
 
     useEffect(() => {
         getBourbons().then(setBourbons)
@@ -117,6 +117,7 @@ export const EditBourbon = () => {
             <button type="submit"
                 onClick={evt => {
                     evt.preventDefault()
+                    window.alert("Bourbon has been updated!")
 
                     const newTriedBourbon = {
                         id: updateTriedBourbon.id,

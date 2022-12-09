@@ -8,6 +8,7 @@ import { UpdateDistillery } from "../distilleries/UpdateDistillery"
 import { UpdateCocktail } from "../cocktails/UpdateCocktail"
 import { CocktailList } from "../cocktails/CocktailList"
 import { NewCocktailForm } from "../cocktails/NewCocktailForm"
+import { MemberList } from "../members/ManageBourbonMembers"
 
 
 
@@ -16,7 +17,7 @@ export const StaffViews = () => {
         <Routes>
             <Route path="/" element={
                 <>
-                    <h1>All Things Bourbon</h1>
+                    {/* <h1>All Things Bourbon</h1> */}
 
                     <Outlet />
                 </>
@@ -31,6 +32,7 @@ export const StaffViews = () => {
                 <Route path = "cocktails" element = {<CocktailList/>}/>
 				<Route path="cocktails/add" element={ <NewCocktailForm /> } />
                 <Route path = "cocktails/:cocktailId/update" element = {<UpdateCocktail/>}/>
+                <Route path = "bourbonusers" element = {<MemberList/>}/>
                 
             </Route>
         </Routes>

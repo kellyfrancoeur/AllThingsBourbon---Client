@@ -43,11 +43,11 @@ export const DistilleryList = (props) => {
             {
                 distilleries.map(distillery => {
                     return <section key={`distillery--${distillery.id}`} className="distillery">
-                        <div className="distillery_name">{distillery.name}</div>
-                        <div className="distillery_location">{distillery.location}</div>
+                        <a target="_blank" href={distillery.link_to_site}><b><u>{distillery.name}</u></b></a>
+                        <div className="distillery_location"><i>{distillery.location}</i></div>
                         <div className="distillery_description">{distillery.description}</div>
-                        <div className="distillery_linkToSite">{distillery.link_to_site}</div>
-                        <div className="distillery_distilleryImg">{distillery.distillery_img}</div>
+                        <div className="distillery_distilleryImg">
+                            <img src={distillery.distillery_img} height="205" width="175"/></div>
 
                         <div>
                             {
@@ -62,6 +62,7 @@ export const DistilleryList = (props) => {
                             {
                                 bourbonUserObject.staff
                                     ? <button className="delete_distillery" onClick={() => {
+                                        window.alert("Distillery has been deleted!")
                                         const distilleryDelete = {
                                         id: distillery.id
                                     }

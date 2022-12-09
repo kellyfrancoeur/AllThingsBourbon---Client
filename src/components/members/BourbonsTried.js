@@ -37,6 +37,7 @@ export const BourbonsTried = () => {
                         </div>
                         <div>
                             <button className="delete_bourbon" onClick={() => {
+                                window.alert("Bourbon has been deleted!")
                                 const bourbonTriedDelete = {
                                     id: triedBourbon.id
                                 }

@@ -50,7 +50,7 @@ export const BourbonList = (props) => {
                         <div className="bourbon_finish"><b>Finish:</b>{bourbon.finish}</div>
                         <div className="bourbon_description"><b>Description:</b>{bourbon.description}</div>
                         <div className="bourbon_madeIn"><b>Made In:</b>{bourbon.made_in}</div>
-                        <a.href to ={bourbon.link_to_buy}>Buy Bourbon</a.href>
+                        <a target="_blank" href={bourbon.link_to_buy}>Buy Bourbon</a>
                         <div className="bourbon_bourbonImg">
                             <img src={bourbon.bourbon_img} height="205" width="175"/></div>
                          
@@ -67,6 +67,7 @@ export const BourbonList = (props) => {
                             {
                                 bourbonUserObject.staff
                                     ? <button className="delete_bourbon" onClick={() => {
+                                        window.alert("Bourbon has been deleted!")
                                         const bourbonDelete = {
                                             id: bourbon.id
                                         }

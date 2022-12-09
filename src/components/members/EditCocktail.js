@@ -17,7 +17,7 @@ export const EditCocktail = () => {
     useEffect(() => {
         getCocktailTriedById(cocktailTriedId).then(setUpdatedTriedCocktail)
     },
-        [])
+        [cocktailTriedId])
 
     useEffect(() => {
         getCocktails().then(setCocktails)
@@ -79,6 +79,7 @@ export const EditCocktail = () => {
             <button type="submit"
                 onClick={evt => {
                     evt.preventDefault()
+                    window.alert("Cocktail has been updated!")
 
                     const newTriedCocktail = {
                         id: updateTriedCocktail.id,

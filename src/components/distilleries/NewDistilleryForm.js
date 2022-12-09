@@ -93,6 +93,7 @@ export const NewDistilleryForm = () => {
             <button type="submit"
                 onClick={evt => {
                     evt.preventDefault()
+                    window.alert("Distillery has been added!")
 
                     const distillery = {
                         name: newDistillery.name,

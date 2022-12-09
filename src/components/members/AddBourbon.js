@@ -114,6 +114,7 @@ export const AddBourbon = () => {
             <button type="submit"
                 onClick={evt => {
                     evt.preventDefault()
+                    window.alert("Bourbon has been added!")
 
                     const newTriedBourbon = {
                         bourbon: parseInt(triedNewBourbon.bourbon),

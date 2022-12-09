@@ -18,7 +18,8 @@ export const UpdateDistillery = () => {
     useEffect(() => {
         getDistilleryById(distilleryId).then(setUpdatedDistillery)
     },
-        [])
+        [distilleryId])
+        
     const changeDistilleryState = (evt) => {
         const copy = { ...updatedDistillery }
         const propertyToModify = evt.target.id
@@ -92,6 +93,7 @@ export const UpdateDistillery = () => {
             <button type="submit"
                 onClick={evt => {
                     evt.preventDefault()
+                    window.alert("Distillery has been updated!")
 
                     const distillery = {
                         id: updatedDistillery.id,

@@ -25,12 +25,12 @@ export const UpdateBourbon = () => {
     useEffect(() => {
         getBourbonById(bourbonId).then(setUpdatedBourbon)
     },
-        [])
+        [bourbonId])
 
-        useEffect(() => {
-            getBourbonTypes().then(setBourbonTypes)
-        }, []
-        )
+    useEffect(() => {
+        getBourbonTypes().then(setBourbonTypes)
+     }, []
+    )
 
     const changeBourbonState = (evt) => {
         const copy = { ...updatedBourbon }
@@ -170,6 +170,7 @@ export const UpdateBourbon = () => {
             <button type="submit"
                 onClick={evt => {
                     evt.preventDefault()
+                    window.alert("Bourbon has been updated!")
 
                     const bourbon = {
                         id: updatedBourbon.id,
@@ -189,6 +190,6 @@ export const UpdateBourbon = () => {
                         .then(() => navigate("/bourbons"))
                 }}
                 className="btn btn-primary">Update Bourbon</button>
-        </form>
+        </form> 
     )
 }

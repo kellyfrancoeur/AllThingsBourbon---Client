@@ -104,6 +104,7 @@ export const NewCocktailForm = () => {
             <button type="submit"
                 onClick={evt => {
                     evt.preventDefault()
+                    window.alert("Cocktail has been added!")
 
                     const cocktail = {
                         name: newCocktail.name,

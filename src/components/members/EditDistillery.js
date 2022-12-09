@@ -17,7 +17,7 @@ export const EditDistillery = () => {
     useEffect(() => {
         getDistilleryVisitedById(distilleryVisitedId).then(setUpdatedTriedDistillery)
     },
-        [])
+        [distilleryVisitedId])
 
     useEffect(() => {
         getDistilleries().then(setDistilleries )
@@ -79,6 +79,7 @@ export const EditDistillery = () => {
             <button type="submit"
                 onClick={evt => {
                     evt.preventDefault()
+                    window.alert("Distillery has been updated!")
 
                     const newTriedDistillery = {
                         id: updateTriedDistillery.id,

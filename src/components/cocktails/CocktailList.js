@@ -44,7 +44,8 @@ export const CocktailList = (props) => {
                         <div className="cocktail_name">{cocktail.name}</div>
                         <div className="cocktail_ingredients">{cocktail.ingredients}</div>
                         <div className="cocktail_howToMake">{cocktail.how_to_make}</div>
-                        <div className="cocktail_cocktailImg">{cocktail.cocktail_img}</div>
+                        <div className="cocktail_cocktailImg">
+                        <img src={cocktail.cocktail_img} height="205" width="175"/></div>     
                         <div className="cocktail_type">{cocktail?.type_of_cocktail?.type}</div>
                          
                         <div>
@@ -60,6 +61,7 @@ export const CocktailList = (props) => {
                             {
                                 bourbonUserObject.staff
                                     ? <button className="delete_cocktail" onClick={() => {
+                                        window.alert("Cocktail has been deleted!")
                                         const cocktailDelete = {
                                             id: cocktail.id
                                         }

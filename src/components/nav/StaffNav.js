@@ -19,7 +19,7 @@ export const StaffNav = () => {
                 <Link className="navbar__link" to="/distilleries">Distilleries</Link>
             </li>
             <li className="navbar__item active">
-                <Link className="navbar__link" to="/users">Users</Link>
+                <Link className="navbar__link" to="/bourbonusers">Users</Link>
             </li>
 
 
@@ -35,4 +35,5 @@ export const StaffNav = () => {
             }
         </ul>
     )
+  
 }

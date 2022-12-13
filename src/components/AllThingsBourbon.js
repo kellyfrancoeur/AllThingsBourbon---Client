@@ -5,6 +5,7 @@ import { StaffRegister } from "./auth/StaffRegister"
 import { Authorized } from "./views/Authorized"
 import { NavBar } from "./nav/NavBar"
 import { ApplicationViews } from "./views/ApplicationViews"
+import "./AllThingsBourbon.css"
 
 
 export const AllThingsBourbon = () => {

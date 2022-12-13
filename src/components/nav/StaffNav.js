@@ -5,12 +5,10 @@ export const StaffNav = () => {
     const navigate = useNavigate()
 
     return (
-        <ul className="navbar">
+        <nav id="main-navbar">
+        <ul id="links">
             <li className="navbar__item active">
                 <Link className="navbar__link" to="/bourbons">Bourbons</Link>
-            </li>
-            <li className="navbar__item active">
-                <Link className="navbar__link" to="/articles">Articles</Link>
             </li>
             <li className="navbar__item active">
                 <Link className="navbar__link" to="/cocktails">Cocktails</Link>
@@ -34,6 +32,8 @@ export const StaffNav = () => {
                     : ""
             }
         </ul>
+        </nav>
     )
+
   
 }

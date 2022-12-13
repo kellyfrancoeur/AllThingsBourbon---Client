@@ -8,20 +8,15 @@ import { UpdateDistillery } from "../distilleries/UpdateDistillery"
 import { UpdateCocktail } from "../cocktails/UpdateCocktail"
 import { CocktailList } from "../cocktails/CocktailList"
 import { NewCocktailForm } from "../cocktails/NewCocktailForm"
-import { MemberList } from "../members/ManageBourbonMembers"
+import { MemberList } from "../users/ManageBourbonMembers"
+import { StaffHomePage } from "../homepage/StaffHomePage"
 
 
 
 export const StaffViews = () => {
 	return (
         <Routes>
-            <Route path="/" element={
-                <>
-                    {/* <h1>All Things Bourbon</h1> */}
-
-                    <Outlet />
-                </>
-            } >
+                <Route path="/" element={<StaffHomePage/>} />
 
                 <Route path = "distilleries" element = {<DistilleryList/>}/>
 				<Route path="distilleries/add" element={ <NewDistilleryForm /> } />
@@ -34,7 +29,7 @@ export const StaffViews = () => {
                 <Route path = "cocktails/:cocktailId/update" element = {<UpdateCocktail/>}/>
                 <Route path = "bourbonusers" element = {<MemberList/>}/>
                 
-            </Route>
+            {/* </Route> */}
         </Routes>
     )
 }

@@ -1,0 +1,133 @@
+@media (min-width: 1500px) {
+    .logincontainerright {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            width: 50vw;
+        }
+
+        .logincard {
+            padding-left: 75px;
+            justify-self: center;
+            width: 33vw;
+        }
+
+        .loginlogo {
+            background-image: url(https://i.postimg.cc/WpxJRMc2/logo2.png);
+            height: 45vh;
+            width: 40vw;
+            background-position: center;
+            background-size: cover;
+        }
+}
+@media (min-width: 840px) and (max-width: 1499px) {
+    .loginlogo {
+            background-image: url(https://i.postimg.cc/WpxJRMc2/logo2.png);
+            height: 300px;
+            width: 60vw;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .logincontainerright {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            width: 60vw;
+        }
+
+        .logincard {
+            padding-left: 100px;
+            justify-self: center;
+            width: 33vw;
+            height: 50%;
+        }
+}
+
+fieldset {
+    min-width: 0;
+    padding: 1rem 0;
+    margin: 0;
+    border: 0;
+}
+
+.form--login {
+    background-position-x: right;
+    z-index: 1;
+    min-height: 25rem;
+    min-width: 45rem;
+    background-color: black;
+    background-blend-mode: overlay;
+    background-repeat: no-repeat;
+}
+.form-control {
+    text-align: right;
+    display: block;
+    width: 80%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    -webkit-transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    overflow-y: hidden;
+}
+
+
+.loginscreen {
+    display: flex;
+    flex-direction: row;
+}
+
+.logincontainerright {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 50vw;
+    background-color: black;
+}
+
+.logincontainerleft {
+    width: 60vw;
+    height: 100;
+    background-image: url(https://static.americasbestracing.net/s3fs-public/styles/large_hero_16_9/public/article/SilverDollarHero.jpg?SbGCssy84HC1m4ILM2z88RbTYmfkwVyg&itok=4u1dxCdW&c=d4f3fdb0edec7690c243a8a738bb72b9);
+    background-size: cover;
+    margin:-75px;
+}
+
+.loginLinks {
+    position: fixed;
+    right: 0px; bottom: 0px;
+    width: 200px;
+    height:40px;
+    padding: 5px;
+    text-decoration-color: white;
+  }
+
+#login{
+    text-decoration-color: rgb(248, 224, 8);;
+}
+a {
+    color: rgb(248, 224, 8);;
+}
+
+.align-right {
+    text-align: center;
+    margin: 0rem 0rem 0rem 26rem;
+  }

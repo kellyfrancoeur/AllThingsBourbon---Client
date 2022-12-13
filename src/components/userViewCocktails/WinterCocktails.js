@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react"
 import { getCocktails } from "../../managers/CocktailManager.js"
+import "./userView.css"
 
 export const WinterCocktails = (props) => {
     const [cocktails, setCocktails] = useState([])
@@ -11,17 +12,24 @@ export const WinterCocktails = (props) => {
     )
 
     return (<>
-        <h2>Winter Cocktails</h2>
+        <h1 id="cTitle1">Winter Cocktails</h1>
         <article className="cocktails">
             {
                 cocktails.map((cocktail) => {
                     if (cocktail.type_of_cocktail.id === 3) {
                         return <section key={`cocktail--${cocktail.id}`} className="cocktail">
-                            <div className="cocktail_name"><b><u>{cocktail.name}</u></b></div>
-                            <div className="cocktail_ingredients"><b>Ingredients:</b> {cocktail.ingredients}</div>
-                            <div className="cocktail_howToMake"><b>How to Make It:</b> {cocktail.how_to_make}</div>
-                            <div className="cocktail_cocktailImg">
-                                <img src={cocktail.cocktail_img} height="205" width="175" /></div>
+                            <div className="cocktailView">
+                                <div className="cocktailImg">
+                                    <img src={cocktail.cocktail_img} height="400" width="275" />
+                                </div>
+                                <div className="cocktailInfo">
+                                    <h3 id="cTitle3"><u>{cocktail.name}</u></h3>
+                                    <div className="cocktailIngredients"><b><u>What You Need:</u></b></div>
+                                    <div>{cocktail.ingredients}</div>
+                                    <div className="cocktailHowToMake"><b><u>How to Make it:</u></b></div>
+                                    <div>{cocktail.how_to_make}</div>
+                                </div>
+                            </div>
                         </section>
                     }
                 })

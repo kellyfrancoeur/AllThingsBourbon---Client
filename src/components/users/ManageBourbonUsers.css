@@ -1,0 +1,15 @@
+#uTitle1{
+    font-size: 5rem;
+    color: rgb(248, 224, 8);
+    text-align: left;
+    font-family: "Economica";
+    line-height: 0.8;
+    margin: 5rem 0rem 5rem 0rem;
+}
+   
+.userInfo {
+    font-size: 20px;
+    color: white;
+}
+
+

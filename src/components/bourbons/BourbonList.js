@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
-import { Link } from "react-router-dom"
 import { getBourbons, deleteBourbon } from "../../managers/BourbonManager.js"
-
+import "./BourbonList.css"
 
 export const BourbonList = (props) => {
     const [bourbons, setBourbons] = useState([])
@@ -28,32 +27,41 @@ export const BourbonList = (props) => {
     )
 
     return (<>
-        <h2>Bourbons</h2>
-        <div>
+        <div className="add_bourbon">
             {
                 bourbonUserObject.staff
-                    ? <button className="add_bourbon" onClick={() => {
+                    ? <button onClick={() => {
                         navigate({ pathname: "/bourbons/add" })
                     }}>Add A Bourbon</button>
                     : ""
             }
         </div>
+        <h1 id="bTitle1">Bourbons</h1>
         <article className="bourbons">
             {
                 bourbons.map(bourbon => {
                     return <section key={`bourbon--${bourbon.id}`} className="bourbon">
-                        <div className="bourbon_name"><u><b>{bourbon.name}</b></u></div>
-                        <div className="bourbon_type"><b>Type of Bourbon:</b>{bourbon?.type_of_bourbon?.type}</div>
-                        <div className="bourbon_proof"><b>Proof:</b>{bourbon.proof}</div>
-                        <div className="bourbon_aroma"><b>Aroma:</b>{bourbon.aroma}</div>
-                        <div className="bourbon_taste"><b>Taste:</b>{bourbon.taste}</div>
-                        <div className="bourbon_finish"><b>Finish:</b>{bourbon.finish}</div>
-                        <div className="bourbon_description"><b>Description:</b>{bourbon.description}</div>
-                        <div className="bourbon_madeIn"><b>Made In:</b>{bourbon.made_in}</div>
-                        <a target="_blank" href={bourbon.link_to_buy}>Buy Bourbon</a>
-                        <div className="bourbon_bourbonImg">
-                            <img src={bourbon.bourbon_img} height="205" width="175"/></div>
-                         
+                        <div className="bourbonView">
+                        <div className="bourbonImg">
+                            <img src={bourbon.bourbon_img} height="400" width="275"/>
+                        </div>
+                        <div className="bourbonInfo"> 
+                        <h3 id="bTitle3"><u><b>{bourbon.name}</b></u></h3>
+                        <div className="bourbonType"><b><u>Type of Bourbon:</u></b></div> 
+                        <div>{bourbon?.type_of_bourbon?.type}</div>
+                        <div className="bourbonProof"><b><u>Proof:</u></b></div> 
+                        <div>{bourbon.proof}</div>
+                        <div className="bourbonAroma"><b><u>Aroma:</u></b></div> 
+                        <div>{bourbon.aroma}</div>
+                        <div className="bourbonTaste"><b><u>Taste:</u></b></div> 
+                        <div>{bourbon.taste}</div>
+                        <div className="bourbonFinish"><b><u>Finish:</u></b></div> 
+                        <div>{bourbon.finish}</div>
+                        <div className="bourbonDescription"><b><u>Description:</u></b></div> 
+                        <div>{bourbon.description}</div>
+                        <div className="bourbonMadeIn"><b><u>Made In:</u></b></div> 
+                        <div>{bourbon.made_in}</div>
+                        <div className="buyBourbon"><a target="_blank" href={bourbon.link_to_buy}>Buy Bourbon</a></div>
                         <div>
                             {
                                 bourbonUserObject.staff
@@ -77,6 +85,8 @@ export const BourbonList = (props) => {
                                     >Delete Bourbon</button>
                                     : ""
                             }</div>
+                            </div>
+                            </div>
                     </section>
                 })
             }

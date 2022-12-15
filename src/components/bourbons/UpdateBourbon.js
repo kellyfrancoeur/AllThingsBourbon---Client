@@ -2,7 +2,7 @@ import { useState, useEffect } from "react"
 import { useNavigate, useParams } from "react-router-dom";
 import { getBourbonById, updateBourbon } from "../../managers/BourbonManager";
 import { getBourbonTypes } from "../../managers/BourbonTypeManager"
-
+import "./StaffPage.css"
 
 export const UpdateBourbon = () => {
     const navigate = useNavigate()
@@ -41,124 +41,126 @@ export const UpdateBourbon = () => {
 
     return (
         <form className="bourbonForm">
-            <h2 className="bourbonForm__description">Update Bourbon</h2>
+            <h1 id="mTitle2">Update Bourbon</h1>
             <fieldset>
-                <div className="form-group">
-                    <label htmlFor="name">Name of Bourbon: </label>
+                <div className="formGroup">
+                <h2 id="mTitle4"><label htmlFor="name">Name of Bourbon: </label></h2>
                     <input type="text" 
                         id="name" 
                         required autoFocus 
-                        className="form-control"
+                        className="formControl"
                         value={updatedBourbon.name}
                         onChange={changeBourbonState}
                     />
                 </div>
             </fieldset>
             <fieldset>
-                <div className="form-group">
-                    <label htmlFor="proof">Proof: </label>
+                <div className="formGroup">
+                <h2 id="mTitle4"><label htmlFor="proof">Proof: </label></h2>
                     <input type="number" 
                         id="proof" 
                         required autoFocus 
-                        className="form-control"
+                        className="formControl1"
                         value={updatedBourbon.proof}
                         onChange={changeBourbonState}
                     />
                 </div>
             </fieldset>
             <fieldset>
-                <div className="form-group">
-                    <label htmlFor="aroma">Aroma: </label>
+                <div className="formGroup">
+                <h2 id="mTitle4"><label htmlFor="aroma">Aroma: </label></h2>
                     <input type="text" 
                         id="aroma" 
                         required autoFocus 
-                        className="form-control"
+                        className="formControl"
                         value={updatedBourbon.aroma}
                         onChange={changeBourbonState}
                     />
                 </div>
             </fieldset>
             <fieldset>
-                <div className="form-group">
-                    <label htmlFor="taste">Taste: </label>
+                <div className="formGroup">
+                <h2 id="mTitle4"><label htmlFor="taste">Taste: </label></h2>
                     <input type="text" 
                         id="taste" 
                         required autoFocus 
-                        className="form-control"
+                        className="formControl"
                         value={updatedBourbon.taste}
                         onChange={changeBourbonState}
                     />
                 </div>
             </fieldset>
             <fieldset>
-                <div className="form-group">
-                    <label htmlFor="finish">Finish: </label>
+                <div className="formGroup">
+                <h2 id="mTitle4"><label htmlFor="finish">Finish: </label></h2>
                     <input type="text" 
                         id="finish" 
                         required autoFocus 
-                        className="form-control"
+                        className="formControl"
                         value={updatedBourbon.finish}
                         onChange={changeBourbonState}
                     />
                 </div>
             </fieldset>
             <fieldset>
-                <div className="form-group">
-                    <label htmlFor="description">Description of Bourbon: </label>
+                <div className="formGroup">
+                <h2 id="mTitle4"><label htmlFor="description">Description of Bourbon: </label></h2>
                     <input type="text" 
                         id="description" 
                         required autoFocus 
-                        className="form-control"
+                        className="formControl"
                         value={updatedBourbon.description}
                         onChange={changeBourbonState}
                     />
                 </div>
             </fieldset>
             <fieldset>
-                <div className="form-group">
-                    <label htmlFor="made_in">Made In: </label>
+                <div className="formGroup">
+                <h2 id="mTitle4"><label htmlFor="made_in">Made In: </label></h2>
                     <input type="text" 
                         id="made_in" 
                         required autoFocus 
-                        className="form-control"
+                        className="formControl"
                         value={updatedBourbon.made_in}
                         onChange={changeBourbonState}
                     />
                 </div>
             </fieldset>
             <fieldset>
-                <div className="form-group">
-                    <label htmlFor="link_to_buy">Purchase Bourbon: </label>
+                <div className="formGroup">
+                <h2 id="mTitle4"><label htmlFor="link_to_buy">Purchase Bourbon: </label></h2>
                     <input type="text" 
                         id="link_to_buy" 
                         required autoFocus 
+                        className="formControl"
                         value={updatedBourbon.link_to_buy}
                         onChange={changeBourbonState}
                     />
                 </div>
             </fieldset>
             <fieldset>
-                <div className="form-group">
-                    <label htmlFor="bourbon_img">Image of Bourbon: </label>
+                <div className="formGroup">
+                <h2 id="mTitle4"><label htmlFor="bourbon_img">Image of Bourbon: </label></h2>
                     <input type="text" 
                         id="bourbon_img" 
                         required autoFocus 
-                        className="form-control"
+                        className="formControl"
                         value={updatedBourbon.bourbon_img}
                         onChange={changeBourbonState}
                     />
                 </div>
             </fieldset>
             <fieldset>
-                <div className="form-group">
-                    <label htmlFor="type">Type of Bourbon:</label>
-                    <select id="type" className="drop_down" value={updatedBourbon.type}
+                <div className="formGroup">
+                <h2 id="mTitle4"><label htmlFor="type">Type of Bourbon:</label></h2>
+                    <select id="types" className="drop_down" value={updatedBourbon.bourbonTypes}
                     onChange={changeBourbonState}>
                         
                         <option value={0}>Select Type</option>
                         {
                             bourbonTypes.map((bourbonType) =>{
-                                return <option value={`${bourbonType.id}`} key={`bourbonType--${bourbonType.id}`}>{bourbonType.type}</option>
+                                const isSelected = bourbonType.id === updatedBourbon.type_of_bourbon.id
+                                return <option selected={isSelected ?true:false} value={`${bourbonType.id}`} key={`bourbonType--${bourbonType.id}`}>{bourbonType.type}</option>
                             }
 
                             )
@@ -189,7 +191,7 @@ export const UpdateBourbon = () => {
                     updateBourbon(bourbon)
                         .then(() => navigate("/bourbons"))
                 }}
-                className="btn btn-primary">Update Bourbon</button>
+                className="addNew">Update Bourbon</button>
         </form> 
     )
 }

@@ -12,7 +12,7 @@ export const StandardBourbons = (props) => {
     )
 
     return (<>
-        <h1 id="bTitle1">Standard Bourbons</h1>
+        <h1 id="bTitle2">Standard Bourbons</h1>
         <article className="bourbons">
             {
                 bourbons.map((bourbon) => {

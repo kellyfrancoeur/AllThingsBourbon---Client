@@ -12,7 +12,7 @@ export const SmallSingleBourbons = (props) => {
     )
 
     return (<>
-        <h1 id="bTitle1">Small Batch & Single Barrel Bourbons</h1>
+        <h1 id="bTitle2">Small Batch & Single Barrel Bourbons</h1>
         <article className="bourbons">
             {
                 bourbons.map((bourbon) => {

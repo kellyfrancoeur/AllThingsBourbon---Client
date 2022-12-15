@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 import { createBourbon } from "../../managers/BourbonManager"
 import { getBourbonTypes } from "../../managers/BourbonTypeManager"
+import "./StaffPage.css"
 
 export const NewBourbonForm = () => {
     const navigate = useNavigate()
@@ -35,14 +36,14 @@ export const NewBourbonForm = () => {
 
     return (
         <form className="bourbonForm">
-            <h2 className="bourbonForm__description">Create A New Bourbon</h2>
+            <h1 id="mTitle2">Add A New Bourbon</h1>
             <fieldset>
-                <div className="form-group">
-                    <label htmlFor="name">Name of Bourbon: </label>
+                <div className="formGroup">
+                <h2 id="mTitle4"><label htmlFor="name">Name of Bourbon: </label></h2>
                     <input type="text" 
                         name="name" 
                         required autoFocus 
-                        className="form-control"
+                        className="formControl"
                         placeholder="Name of Bourbon"
                         value={newBourbon.name}
                         onChange={changeBourbonState}
@@ -50,12 +51,12 @@ export const NewBourbonForm = () => {
                 </div>
             </fieldset>
             <fieldset>
-                <div className="form-group">
-                    <label htmlFor="proof">Proof: </label>
+                <div className="formGroup">
+                <h2 id="mTitle4"><label htmlFor="proof">Proof: </label></h2>
                     <input type="number" 
                         name="proof" 
                         required autoFocus 
-                        className="form-control"
+                        className="formControl1"
                         placeholder="Proof of Bourbon"
                         value={newBourbon.proof}
                         onChange={changeBourbonState}
@@ -63,12 +64,12 @@ export const NewBourbonForm = () => {
                 </div>
             </fieldset>
             <fieldset>
-                <div className="form-group">
-                    <label htmlFor="aroma">Aroma: </label>
+                <div className="formGroup">
+                <h2 id="mTitle4"><label htmlFor="aroma">Aroma: </label></h2>
                     <input type="text" 
                         name="aroma" 
                         required autoFocus 
-                        className="form-control"
+                        className="formControl"
                         placeholder="Aroma of Bourbon"
                         value={newBourbon.aroma}
                         onChange={changeBourbonState}
@@ -76,12 +77,12 @@ export const NewBourbonForm = () => {
                 </div>
             </fieldset>
             <fieldset>
-                <div className="form-group">
-                    <label htmlFor="taste">Taste: </label>
+                <div className="formGroup">
+                <h2 id="mTitle4"><label htmlFor="taste">Taste: </label></h2>
                     <input type="text" 
                         name="taste" 
                         required autoFocus 
-                        className="form-control"
+                        className="formControl"
                         placeholder="Taste of Bourbon"
                         value={newBourbon.taste}
                         onChange={changeBourbonState}
@@ -89,12 +90,12 @@ export const NewBourbonForm = () => {
                 </div>
             </fieldset>
             <fieldset>
-                <div className="form-group">
-                    <label htmlFor="finish">Finish: </label>
+                <div className="formGroup">
+                <h2 id="mTitle4"><label htmlFor="finish">Finish: </label></h2>
                     <input type="text" 
                         name="finish" 
                         required autoFocus 
-                        className="form-control"
+                        className="formControl"
                         placeholder="Finish of Bourbon"
                         value={newBourbon.finish}
                         onChange={changeBourbonState}
@@ -102,12 +103,12 @@ export const NewBourbonForm = () => {
                 </div>
             </fieldset>
             <fieldset>
-                <div className="form-group">
-                    <label htmlFor="description">Description of Bourbon: </label>
+                <div className="formGroup">
+                <h2 id="mTitle4"><label htmlFor="description">Description of Bourbon: </label></h2>
                     <input type="text" 
                         name="description" 
                         required autoFocus 
-                        className="form-control"
+                        className="formControl"
                         placeholder="Description of Bourbon"
                         value={newBourbon.description}
                         onChange={changeBourbonState}
@@ -115,12 +116,12 @@ export const NewBourbonForm = () => {
                 </div>
             </fieldset>
             <fieldset>
-                <div className="form-group">
-                    <label htmlFor="made_in">Made In: </label>
+                <div className="formGroup">
+                <h2 id="mTitle4"><label htmlFor="made_in">Made In: </label></h2>
                     <input type="text" 
                         name="made_in" 
                         required autoFocus 
-                        className="form-control"
+                        className="formControl"
                         placeholder="Bourbon was Made In..."
                         value={newBourbon.made_in}
                         onChange={changeBourbonState}
@@ -128,12 +129,12 @@ export const NewBourbonForm = () => {
                 </div>
             </fieldset>
             <fieldset>
-                <div className="form-group">
-                    <label htmlFor="link_to_buy">Purchase Bourbon: </label>
+                <div className="formGroup">
+                <h2 id="mTitle4"><label htmlFor="link_to_buy">Purchase Bourbon: </label></h2>
                     <input type="text" 
                         name="link_to_buy" 
                         required autoFocus 
-                        className="form-control"
+                        className="formControl"
                         placeholder="Link to Purchase Bourbon"
                         value={newBourbon.link_to_buy}
                         onChange={changeBourbonState}
@@ -141,21 +142,21 @@ export const NewBourbonForm = () => {
                 </div>
             </fieldset>
             <fieldset>
-                <div className="form-group">
-                    <label htmlFor="bourbon_img">Image of Bourbon: </label>
+                <div className="formGroup">
+                <h2 id="mTitle4"><label htmlFor="bourbon_img">Image of Bourbon: </label></h2>
                     <input type="text" 
                         name="bourbon_img" 
                         required autoFocus 
-                        className="form-control"
-                        placeholder="Image of Bourbon"
+                        className="formControl"
+                        placeholder="Link to Image of Bourbon"
                         value={newBourbon.bourbon_img}
                         onChange={changeBourbonState}
                     />
                 </div>
             </fieldset>
             <fieldset>
-                <div className="form-group">
-                    <label htmlFor="type">Type of Bourbon:</label>
+                <div className="formGroup">
+                <h2 id="mTitle4"><label htmlFor="type">Type of Bourbon:</label></h2>
                     <select name="type" className="drop_down" value={newBourbon.type}
                     onChange={changeBourbonState}>
                         
@@ -192,7 +193,7 @@ export const NewBourbonForm = () => {
                     createBourbon(bourbon)
                         .then(() => navigate("/bourbons"))
                 }}
-                className="btn btn-primary">Add New Bourbon</button>
+                className="addNew">Add New Bourbon</button>
         </form>
     )
 }

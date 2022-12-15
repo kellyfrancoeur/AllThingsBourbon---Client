@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 import { useNavigate, useParams } from "react-router-dom"
 import { updateDistilleryVisited, getDistilleryVisitedById } from "../../managers/DistilleriesVisitedManager"
 import { getDistilleries } from "../../managers/DistilleriesManager"
+import "./MemberPage.css"
 
 export const EditDistillery = () => {
     const navigate = useNavigate()
@@ -33,17 +34,18 @@ export const EditDistillery = () => {
 
     return (
         <form className="distilleryForm">
-            <h2 className="distilleryForm__description">Edit Distillery</h2>
+            <h1 id="mTitle2">Update Distillery</h1>
             <fieldset>
-                <div className="form-group">
-                    <label htmlFor="distillery">Distillery:</label>
-                    <select id="distillery" className="drop_down" value={updateTriedDistillery.name}
+                <div className="formGroup">
+                <h2 id="mTitle4"><label htmlFor="distillery">Distillery:</label></h2>
+                    <select id="distillery" className="drop_down" value={updateTriedDistillery.distilleries}
                     onChange={changeTriedDistilleryState}>
                         
                         <option value={0}>Select Distillery</option>
                         {
                             distilleries.map((distillery) =>{
-                                return <option value={`${distillery.id}`} key={`distillery--${distillery.id}`}>{distillery.name}</option>
+                                const isSelected = distillery.id === updateTriedDistillery.distillery.id 
+                                return <option selected={isSelected ?true:false} value={`${distillery.id}`} key={`distillery--${distillery.id}`}>{distillery.name}</option>
                             }
 
                             )
@@ -53,24 +55,25 @@ export const EditDistillery = () => {
                 </div>
             </fieldset>
             <fieldset>
-                <div className="form-group">
-                    <label htmlFor="name">Comments: </label>
+                <div className="formGroup">
+                <h2 id="mTitle4"><label htmlFor="name">Comments: </label></h2>
                     <input type="text" 
                         id="comments" 
                         required autoFocus 
-                        className="form-control"
+                        className="formControl"
                         value={updateTriedDistillery.comments}
                         onChange={changeTriedDistilleryState}
                     />
                 </div>
             </fieldset>
             <fieldset>
-                <div className="form-group">
-                    <label htmlFor="rating">Rating: </label>
+                <div className="formGroup">
+                <h2 id="mTitle4"><label htmlFor="rating">Rating: </label></h2>
                     <input type="number" 
                         id="rating" 
                         required autoFocus 
-                        className="form-control"
+                        className="formControl1"
+                        min="0" max="5"
                         value={updateTriedDistillery.rating}
                         onChange={changeTriedDistilleryState}
                     />
@@ -91,7 +94,7 @@ export const EditDistillery = () => {
                     updateDistilleryVisited(newTriedDistillery)
                         .then(() => navigate({ pathname: "/mybourbons" }))
                 }}
-                className="btn btn-primary">Edit Distillery</button>
+                className="addNew">Update Distillery</button>
             </form>
             )
 }

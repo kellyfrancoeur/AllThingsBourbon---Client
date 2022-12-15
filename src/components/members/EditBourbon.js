@@ -3,6 +3,7 @@ import { useNavigate, useParams } from "react-router-dom"
 import { updateBourbonTried, getBourbonTriedById } from "../../managers/BourbonsTriedManager"
 import { getBourbons } from "../../managers/BourbonManager"
 import { getDescriptors } from "../../managers/DescriptorsManager"
+import "./MemberPage.css"
 
 export const EditBourbon = () => {
     const navigate = useNavigate()
@@ -19,7 +20,14 @@ export const EditBourbon = () => {
     })
     
     useEffect(() => {
-        getBourbonTriedById(bourbonTriedId).then(setUpdatedTriedBourbon)
+        getBourbonTriedById(bourbonTriedId).then(data =>{
+            setUpdatedTriedBourbon(data)
+            const selectedDescriptors=new Set()
+            for (const descriptor of data.descriptors) {
+                selectedDescriptors.add(descriptor.id)
+            }
+            setChosenDescriptors(selectedDescriptors)
+        })
     },
         [bourbonTriedId])
 
@@ -42,17 +50,18 @@ export const EditBourbon = () => {
 
     return (
         <form className="bourbonForm">
-            <h2 className="bourbonForm__description">Add A New Bourbon</h2>
+            <h1 id="mTitle2">Update Bourbon</h1>
             <fieldset>
-                <div className="form-group">
-                    <label htmlFor="bourbon">Bourbon:</label>
-                    <select id="bourbon" className="drop_down" value={updateTriedBourbon.name}
+                <div className="formGroup">
+                <h2 id="mTitle4"><label htmlFor="bourbon">Bourbon:</label></h2>
+                    <select id="bourbon" className="drop_down" value={updateTriedBourbon.bourbons}
                     onChange={changeTriedBourbonState}>
                         
                         <option value={0}>Select Bourbon</option>
                         {
                             bourbons.map((bourbon) =>{
-                                return <option value={`${bourbon.id}`} key={`bourbon--${bourbon.id}`}>{bourbon.name}</option>
+                                const isSelected = bourbon.id === updateTriedBourbon.bourbon.id
+                                return <option selected={isSelected ?true:false} value={`${bourbon.id}`} key={`bourbon--${bourbon.id}`}>{bourbon.name}</option>
                             }
 
                             )
@@ -62,32 +71,34 @@ export const EditBourbon = () => {
                 </div>
             </fieldset>
             <fieldset>
-                <div className="form-group">
-                    <label htmlFor="name">Comments: </label>
+                <div className="formGroup">
+                <h2 id="mTitle4"><label htmlFor="name">Comments: </label></h2>
                     <input type="text" 
                         id="comments" 
                         required autoFocus 
-                        className="form-control"
+                        className="formControl"
                         value={updateTriedBourbon.comments}
                         onChange={changeTriedBourbonState}
                     />
                 </div>
             </fieldset>
             <fieldset>
-                <div className="form-group">
-                    <label htmlFor="rating">Rating: </label>
+                <div className="formGroup">
+                <h2 id="mTitle4"><label htmlFor="rating">Rating: </label></h2>
                     <input type="number" 
                         id="rating" 
                         required autoFocus 
-                        className="form-control"
+                        className="formControl1"
+                        min="0" max="5"
                         value={updateTriedBourbon.rating}
                         onChange={changeTriedBourbonState}
                     />
                 </div>
             </fieldset>
             <fieldset>
-                <div className="form-group">
-                    <label htmlFor="descriptor">Descriptor:</label>
+                <div className="formGroup">
+                <h2 id="mTitle4"><label htmlFor="descriptor">Descriptors:</label></h2>
+                <div className="descriptorList">
                     {
                         descriptors.map((descriptor) =>{
                             return<>
@@ -95,12 +106,13 @@ export const EditBourbon = () => {
                             <input
                                 type="checkbox"
                                 className="addDescriptor"
-                                value={updateTriedBourbon.descriptors}
+                                defaultChecked={chosenDescriptors.has(descriptor.id)}
+                                checked={chosenDescriptors.has(descriptor.id)}
                                 onChange={
                                     (evt) => {
                                         const copy = new Set(chosenDescriptors)
                                         if(copy.has(descriptor.id)){
-                                            copy.remove(descriptor.id)
+                                            copy.delete(descriptor.id)
                                         } else {
                                             copy.add(descriptor.id)
                                         }
@@ -112,6 +124,7 @@ export const EditBourbon = () => {
                         }
                         )
                     }
+                    </div>
                 </div>
             </fieldset>
             <button type="submit"
@@ -130,7 +143,7 @@ export const EditBourbon = () => {
                     updateBourbonTried(newTriedBourbon)
                         .then(() => navigate({ pathname: "/mybourbons" }))
                 }}
-                className="btn btn-primary">Add Bourbon</button>
+                className="addNew">Update Bourbon</button>
             </form>
             )
 }

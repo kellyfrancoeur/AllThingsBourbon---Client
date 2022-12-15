@@ -1,29 +1,49 @@
 import React, { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
-import { getBourbons, deleteBourbon } from "../../managers/BourbonManager.js"
+import { deleteBourbon } from "../../managers/BourbonManager.js"
 import "./BourbonList.css"
 
-export const BourbonList = (props) => {
+export const BourbonList = ({searchTermState}) => {
     const [bourbons, setBourbons] = useState([])
+    const [filterBourbons, setFiltered] = useState([])
     const navigate = useNavigate()
 
     const localBourbonUser = localStorage.getItem("bourbon_user")
     const bourbonUserObject = JSON.parse(localBourbonUser)
 
-    // useEffect(
-    //     () => {
-    //         const searchedBourbons = bourbons.filter(distillery => {
-    //             return distillery.name.toLowerCase().includes(searchTermState.toLowerCase())
-    //                 || distillery.location.toLowerCase().includes(searchTermState.toLowerCase())
-    //         })
-    //         setBourbons(searchedBourbons)
-    //     },
-    //     [searchTermState]
-    // )
+    useEffect(
+        () => {
+            const searchedBourbons = bourbons.filter(bourbon => {
+                return bourbon?.name?.toLowerCase().includes(searchTermState.toLowerCase())
+                    || bourbon?.type_of_bourbon?.type.toLowerCase().includes(searchTermState.toLowerCase())
+            })
+            setFiltered(searchedBourbons)
+        },
+        [searchTermState]
+    )
 
-    useEffect(() => {
-        getBourbons().then(data => setBourbons(data))
-    }, []
+    const getAllBourbons = () => {
+        fetch("http://localhost:8000/bourbons", {
+        headers: {
+            "Accept": "application/json",
+            "Content-Type": "application/json",
+            "Authorization": `Token ${JSON.parse(localStorage.getItem("bourbon_user")).token}`
+        }
+    })
+            .then(response => response.json())
+            .then((bourbonArray) => {
+                setFiltered(bourbonArray)
+                setBourbons(bourbonArray)
+            })
+
+    }
+
+
+    useEffect(
+        () => {
+            getAllBourbons()
+        },
+        []
     )
 
     return (<>
@@ -39,7 +59,7 @@ export const BourbonList = (props) => {
         </div>
         <article className="bourbons">
             {
-                bourbons.map(bourbon => {
+                filterBourbons.map(bourbon => {
                     return <section key={`bourbon--${bourbon.id}`} className="bourbon">
                         <div className="bourbonView">
                         <div className="bourbonImg">

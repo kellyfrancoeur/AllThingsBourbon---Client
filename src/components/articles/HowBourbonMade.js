@@ -35,7 +35,7 @@ export const HowBourbonIsMade = () => {
                             </div>
                             <section id="ing">
                                 <h4 id="aTitle4">What Ingredients Make Up Bourbon?</h4>
-                                <section id="ingredients">
+                                <section id="bingredients">
                                     <div className="whatIng">
                                         <div className="pic">
                                             <img src="https://distilling.com/distillermagazine/wp-content/uploads/2019/02/17F-Shots-Feature.jpg" height="475" width="600"></img>

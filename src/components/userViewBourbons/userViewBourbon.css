@@ -1,4 +1,4 @@
-#bTitle1{
+#bTitle2{
     font-size: 5rem;
     color: rgb(248, 224, 8);
     text-align: center;
@@ -12,7 +12,7 @@
     color: white;
     text-align: left;
     font-family: "Economica";
-  }
+}
 
 .bourbonView {
     display: grid;

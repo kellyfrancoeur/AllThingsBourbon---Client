@@ -1,13 +1,15 @@
+import "./BourbonList.css"
+
 export const BourbonSearch = ({setterFunction}) => {
     return (
-        <div>
-        <input 
+        <div className="bourbonSearch">
+        <input id="search"
             onChange ={
                 (changeEvent) => {
                 setterFunction(changeEvent.target.value)
             }
         }
-            type="text" placeholder= "Enter Search Terms"/>
+            type="text" placeholder= "Search Bourbons"/>
         </div>
     )
 }

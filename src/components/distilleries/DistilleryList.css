@@ -4,7 +4,7 @@
     text-align: center;
     font-family: "Fredoka One";
     line-height: 0.8;
-    margin: 5rem 0rem 10rem 0rem;
+    margin: 5rem 0rem 0rem 0rem;
 }
 
 #dTitle3{
@@ -22,7 +22,7 @@
     margin: 0rem 10rem 5rem 10rem;
 
 }
-
+ 
 .distilleryImg {
     max-width: 100%;
     max-height:100%;
@@ -30,10 +30,11 @@
      
 .distilleryInfo {
     font-size: 20px;
-    color: white; 
+    color: white;
+    font-family: "Economica"; 
 }
 
 .add_distillery{
-    margin: 3rem 0rem 0rem 75rem;
+    margin: 0rem 0rem 5rem 44rem;
 }
   

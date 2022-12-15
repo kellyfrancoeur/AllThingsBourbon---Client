@@ -1,4 +1,4 @@
-.bourbonHistory{
+.bourbonTypes{
     margin: 0rem 3rem 0rem 3rem;
 }
 #aTitle1{
@@ -21,128 +21,100 @@
   color: white;
 }
 
-#earlyHistory{
-  margin: 0rem 3rem 0rem 3.5rem;
+#standandbourbon{
+  margin: 0rem 5rem 0rem 5rem;
   color: white; 
 }
 
-#historicalContext{
-  margin: 0rem 2.5rem 0rem 3.5rem;
+#kentuckybourbon{
+  margin: 0rem 5rem 0rem 5rem;
   color: white; 
 }
 
-#name{
-  margin: 0rem 3rem 0rem 3.5rem;
+#straightbourbon{
+  margin: 0rem 5rem 0rem 5rem;
   color: white; 
 }
 
-#invented{
-  margin: 0rem 3rem 0rem 3.5rem;
+#smallbourbon{
+  margin: 0rem 5rem 0rem 5rem;
   color: white; 
 }
 
-#popular{
-    margin: 0rem 3rem 0rem 3.5rem;
+#sourbourbon{
+    margin: 0rem 5rem 0rem 7rem;
     color: white; 
 }
 
-#glassBottles{
-    margin: 0rem 3rem 0rem 3.5rem;
+#bottledbourbon{
+    margin: 0rem 5rem 0rem 5rem;
     color: white; 
 }
 
-#prohibition{
-    margin: 0rem 3rem 0rem 3.5rem;
+#blendedbourbon{
+    margin: 0rem 7rem 0rem 7rem;
     color: white; 
 }
 
-#renaissance{
-    margin: 0rem 3rem 0rem 3.5rem;
+#highryebourbon{
+    margin: 0rem 3rem 3rem 5rem;
     color: white; 
 }
 
-#ageStatement{
-    margin: 0rem 0rem 0rem 3.5rem;
-    color: white; 
+.bourbonstandard {
+  display: grid;
+  align-items:center; 
+  grid-template-columns: 1fr 1fr ;
+  column-gap: 20px;
 }
 
-#century{
-    margin: 0rem 3rem 4rem 3.5rem;
-    color: white; 
-}
-
-.history {
+.bourbonkentucky {
   display: grid;
   align-items:center; 
   grid-template-columns: 1fr 1fr ;
   column-gap: 0px;
 }
 
-.context {
+.bourbonstraight {
+  display: grid;
+  align-items:center; 
+  grid-template-columns: 1fr 1fr ;
+  column-gap: 0px;
+}
+
+.bourbonsmall {
   display: grid;
   align-items:center; 
   grid-template-columns: 1fr 1fr ;
   column-gap: 50px;
 }
 
-.bourbonName {
+.bourbonsour{
   display: grid;
   align-items:center; 
   grid-template-columns: 1fr 1fr ;
   column-gap: 0px;
 }
 
-.inventedBourbon {
-  display: grid;
-  align-items:center; 
-  grid-template-columns: 1fr 1fr ;
-  column-gap: 50px;
-}
-
-.bourbonPop{
-  display: grid;
-  align-items:center; 
-  grid-template-columns: 1fr 1fr ;
-  column-gap: 0px;
-}
-
-.bottles {
+.bourbonbottled {
     display: grid;
     align-items:center; 
     grid-template-columns: 1fr 1fr ;
     column-gap: 100px;
 }
 
-.effects {
+.bourbonblended {
     display: grid;
     align-items:center; 
     grid-template-columns: 1fr 1fr ;
-    column-gap: 50px;
+    column-gap: 0px;
 }
 
-.bourbonRen {
+.bourbonhighrye {
     display: grid;
     align-items:center; 
     grid-template-columns: 1fr 1fr ;
-    column-gap: 75px;
-}
-
-.statement {
-    display: grid;
-    align-items:center; 
-    grid-template-columns: 1fr 1fr ;
-    column-gap: 00px;
-}
-
-.bourbonCent {
-    display: grid;
-    align-items:center; 
-    grid-template-columns: 1fr 1fr ;
-    column-gap: 50px;
-}
-
-#hist{
-  padding: 0rem 0rem 0.8rem 0rem;
+    column-gap: 100px;
 }
 
 .shortcutLinks {
@@ -150,7 +122,26 @@
     align-items:center; 
     grid-template-columns: 1fr 1fr ;
     column-gap: 100px;
-    margin: 0rem 0rem 2rem 0rem;
+}
+
+#type{
+  padding: 0rem 0rem 1rem 0rem;
+}
+
+.stubborn1{
+    margin: 1rem 2rem 0rem 0rem;
+}
+
+.stubborn2{
+    margin: 1rem 0rem 0rem 2rem;
+}
+
+.stubborn3{
+    margin: 1rem 2rem 0rem 0rem;
+}
+
+.stubborn4{
+    margin: 1rem 2rem 3rem 0rem;
 }
 
 .pic {
@@ -165,6 +156,7 @@
 p{
   font-size: 20px;
   font-family: "Economica";
+  margin: 1rem 2rem 0rem 0rem;
 }
 
 .shortcut{
@@ -176,7 +168,7 @@ p{
 
 .intro{
     text-align: left;
-    margin: 0rem 0rem 0rem 10rem;
+    margin: 0rem 8rem 0rem 10rem;
 }
 
 .help{

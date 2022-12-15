@@ -17,8 +17,8 @@ export const MemberList = (props) => {
                 bourbonUsers.map(bourbonUser => {
                     return <section key={`bourbonUser--${bourbonUser.id}`} className="bourbonUser">
                         <div className="userInfo">
-                        <div className="bourbonUserName"><u><b>{bourbonUser.full_name}</b></u></div>
-                        <div className="bourbonUserBday">{bourbonUser.birthday}</div>
+                            <div className="bourbonUserName"><u><b>{bourbonUser.full_name}</b></u></div>
+                            <div className="bourbonUserBday">{bourbonUser.birthday}</div>
                         </div>
                         <div>
                             <button className="delete_member" onClick={() => {
@@ -35,6 +35,9 @@ export const MemberList = (props) => {
                 })
             }
         </article>
+            <div className="peepsAtBar">
+                <img src="https://restaurantclicks.com/wp-content/uploads/2021/04/bar-manayunk.jpg" height="800" width="900"></img>
+            </div>
     </>
     )
 }

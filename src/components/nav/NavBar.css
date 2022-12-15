@@ -9,8 +9,12 @@
     list-style-type: none;
 }
 
-.navbar__logout {
+.staffLogo {
     margin-left: auto;
+}
+
+.staffHome{
+  margin-left: auto;
 }
 
  

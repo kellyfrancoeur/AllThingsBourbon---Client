@@ -1,0 +1,60 @@
+#mTitle2{
+    font-size: 5rem;
+    color: rgb(248, 224, 8);
+    text-align: center;
+    font-family: "Fredoka One";
+    line-height: 0.8;
+    margin: 5rem 0rem 10rem 0rem;
+}
+
+#mTitle3{
+    font-size: 2.5rem;
+    color: white;
+    text-align: center;
+    font-family: "Economica";
+    line-height: 0;
+}
+
+#mTitle4{
+    font-size: 2.5rem;
+    color: white;
+    text-align: left;
+    font-family: "Economica";
+}
+
+.addButton{
+    margin: 0rem 0rem 3rem 0rem;
+}
+
+.formGroup{
+    font-size: 20px;
+    color: white;
+    font-family: "Economica";
+}
+
+.formControl {
+    text-align: left;
+    display: flex;
+    width: 40%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .345rem .40rem;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 1.5;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    -webkit-transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.drop_down{
+    width: 265px;
+    height: 35px;
+    font-size: 19px;
+}
+
+.addNew{
+    margin: 2rem 0rem 3rem 0rem;
+}

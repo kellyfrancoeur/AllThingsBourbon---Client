@@ -2,7 +2,7 @@ import { useState, useEffect } from "react"
 import { useNavigate, useParams } from "react-router-dom";
 import { getCocktailById, updateCocktail } from "../../managers/CocktailManager";
 import { getCocktailTypes } from "../../managers/CocktailTypeManager"
-
+import "./StaffPage.css"
 
 export const UpdateCocktail = () => {
     const navigate = useNavigate()
@@ -36,65 +36,66 @@ export const UpdateCocktail = () => {
 
     return (
         <form className="cocktailForm">
-            <h2 className="cocktailForm__description">Create A New Cocktail</h2>
+            <h1 id="mTitle2">Update Cocktail</h1>
             <fieldset>
-                <div className="form-group">
-                    <label htmlFor="name">Name of Cocktail: </label>
+                <div className="formGroup">
+                <h2 id="mTitle4"><label htmlFor="name">Name of Cocktail: </label></h2>
                     <input type="text" 
                         id="name" 
                         required autoFocus 
-                        className="form-control"
+                        className="formControl"
                         value={updatedCocktail.name}
                         onChange={changeCocktailState}
                     />
                 </div>
             </fieldset>
             <fieldset>
-                <div className="form-group">
-                    <label htmlFor="ingredients">Ingredients: </label>
+                <div className="formGroup">
+                <h2 id="mTitle4"><label htmlFor="ingredients">Ingredients: </label></h2>
                     <input type="text" 
                         id="ingredients" 
                         required autoFocus 
-                        className="form-control"
+                        className="formControl"
                         value={updatedCocktail.ingredients}
                         onChange={changeCocktailState}
                     />
                 </div>
             </fieldset>
             <fieldset>
-                <div className="form-group">
-                    <label htmlFor="how_to_make">How to Make Cocktail: </label>
+                <div className="formGroup">
+                <h2 id="mTitle4"><label htmlFor="how_to_make">How to Make Cocktail: </label></h2>
                     <input type="text" 
                         id="how_to_make" 
                         required autoFocus 
-                        className="form-control"
+                        className="formControl"
                         value={updatedCocktail.how_to_make}
                         onChange={changeCocktailState}
                     />
                 </div>
             </fieldset>
             <fieldset>
-                <div className="form-group">
-                    <label htmlFor="cocktail_img">Image of Cocktail: </label>
+                <div className="formGroup">
+                <h2 id="mTitle4"><label htmlFor="cocktail_img">Image of Cocktail: </label></h2>
                     <input type="text" 
                         id="cocktail_img" 
                         required autoFocus 
-                        className="form-control"
+                        className="formControl"
                         value={updatedCocktail.cocktail_img}
                         onChange={changeCocktailState}
                     />
                 </div>
             </fieldset>
             <fieldset>
-                <div className="form-group">
-                    <label htmlFor="type">Type of Cocktail:</label>
-                    <select id="type" className="drop_down" value={updatedCocktail.type}
+                <div className="formGroup">
+                <h2 id="mTitle4"><label htmlFor="type">Type of Cocktail:</label></h2>
+                    <select id="types" className="drop_down" value={updatedCocktail.cocktailTypes}
                     onChange={changeCocktailState}>
                         
                         <option value={0}>Select Type</option>
                         {
                             cocktailTypes.map((cocktailType) =>{
-                                return <option value={`${cocktailType.id}`} key={`cocktailType--${cocktailType.id}`}>{cocktailType.type}</option>
+                                const isSelected = cocktailType.id === updatedCocktail.type_of_cocktail.id
+                                return <option selected={isSelected ?true:false} value={`${cocktailType.id}`} key={`cocktailType--${cocktailType.id}`}>{cocktailType.type}</option>
                             }
 
                             )
@@ -120,7 +121,7 @@ export const UpdateCocktail = () => {
                     updateCocktail(cocktail)
                         .then(() => navigate("/cocktails"))
                 }}
-                className="btn btn-primary">Update cocktail</button>
+                className="addNew">Update cocktail</button>
         </form>
     )
 }

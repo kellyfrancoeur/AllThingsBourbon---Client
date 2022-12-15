@@ -70,7 +70,7 @@ export const HistoryOfBourbon = () => {
                             </section>
                             <section id="bourbonname">
                                 <h4 id="aTitle4">How Bourbon Whiskey Got It's Name</h4>
-                                <section id="name">
+                                <section id="bname">
                                     <div className="bourbonName">
                                         <div className="pic">
                                             <img src="https://64parishes.org/wp-content/uploads/1983.162.15_web.jpg" height="550" width="550"></img>

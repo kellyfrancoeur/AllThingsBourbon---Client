@@ -14,15 +14,18 @@ export const DistilleriesVisited = () => {
     return (<>
         <article className="myDistilleries">
             <div>
-                <button className="add_distillery" onClick={() => {
+                <button className="addButton" onClick={() => {
                     navigate({ pathname: `/distilleriesvisited/add` })
                 }}>Add A Distillery</button>
             </div>
             {
                 visitedDistilleries.map(visitedDistillery => {
                     return <section key={`visitedDistillery--${visitedDistillery.id}`}>
-                        <div>{visitedDistillery?.distillery?.name}</div>
+                        <div className="triedInfo">
+                        <div id="label">{visitedDistillery?.distillery?.name}</div>
+                        <div id="comments">Thoughts:</div>
                         <div>{visitedDistillery.comments}</div>
+                        <div id="rating">Rating:</div>
                         <div>{visitedDistillery.rating}</div>
                         <div>
                             <button className="edit_distillery" onClick={() => {
@@ -39,6 +42,7 @@ export const DistilleriesVisited = () => {
                                     .then(() => { window.location.reload() })
                             }}
                             >Delete</button>
+                        </div>
                         </div>
                     </section>
 

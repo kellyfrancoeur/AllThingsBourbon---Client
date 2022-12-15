@@ -30,14 +30,14 @@ export const NewCocktailForm = () => {
 
     return (
         <form className="cocktailForm">
-            <h2 className="cocktailForm__description">Create A New Cocktail</h2>
+            <h1 id="mTitle2">Add A New Cocktail</h1>
             <fieldset>
-                <div className="form-group">
-                    <label htmlFor="name">Name of Cocktail: </label>
+                <div className="formGroup">
+                <h2 id="mTitle4"><label htmlFor="name">Name of Cocktail: </label></h2>
                     <input type="text" 
                         name="name" 
                         required autoFocus 
-                        className="form-control"
+                        className="formControl"
                         placeholder="Name of Cocktail"
                         value={newCocktail.name}
                         onChange={changeCocktailState}
@@ -45,12 +45,12 @@ export const NewCocktailForm = () => {
                 </div>
             </fieldset>
             <fieldset>
-                <div className="form-group">
-                    <label htmlFor="ingredients">Ingredients: </label>
+                <div className="formGroup">
+                <h2 id="mTitle4"><label htmlFor="ingredients">Ingredients: </label></h2>
                     <input type="text" 
                         name="ingredients" 
                         required autoFocus 
-                        className="form-control"
+                        className="formControl"
                         placeholder="Ingredients of Cocktail"
                         value={newCocktail.ingredients}
                         onChange={changeCocktailState}
@@ -58,12 +58,12 @@ export const NewCocktailForm = () => {
                 </div>
             </fieldset>
             <fieldset>
-                <div className="form-group">
-                    <label htmlFor="how_to_make">How to Make Cocktail: </label>
+                <div className="formGroup">
+                <h2 id="mTitle4"><label htmlFor="how_to_make">How to Make Cocktail: </label></h2>
                     <input type="text" 
                         name="how_to_make" 
                         required autoFocus 
-                        className="form-control"
+                        className="formControl"
                         placeholder="How to Make Cocktail"
                         value={newCocktail.how_to_make}
                         onChange={changeCocktailState}
@@ -71,12 +71,12 @@ export const NewCocktailForm = () => {
                 </div>
             </fieldset>
             <fieldset>
-                <div className="form-group">
-                    <label htmlFor="cocktail_img">Image of Cocktail: </label>
+                <div className="formGroup">
+                <h2 id="mTitle4"><label htmlFor="cocktail_img">Image of Cocktail: </label></h2>
                     <input type="text" 
                         name="cocktail_img" 
                         required autoFocus 
-                        className="form-control"
+                        className="formControl"
                         placeholder="Image of Cocktail"
                         value={newCocktail.cocktail_img}
                         onChange={changeCocktailState}
@@ -84,8 +84,8 @@ export const NewCocktailForm = () => {
                 </div>
             </fieldset>
             <fieldset>
-                <div className="form-group">
-                    <label htmlFor="type">Type of Cocktail:</label>
+                <div className="formGroup">
+                <h2 id="mTitle4"><label htmlFor="type">Type of Cocktail:</label></h2>
                     <select name="type" className="drop_down" value={newCocktail.type}
                     onChange={changeCocktailState}>
                         
@@ -117,7 +117,7 @@ export const NewCocktailForm = () => {
                     createCocktail(cocktail)
                         .then(() => navigate("/cocktails"))
                 }}
-                className="btn btn-primary">Add New Cocktail</button>
+                className="addNew">Add New Cocktail</button>
         </form>
     )
 }

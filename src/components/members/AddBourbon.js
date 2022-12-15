@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom"
 import { createBourbonTried } from "../../managers/BourbonsTriedManager"
 import { getBourbons } from "../../managers/BourbonManager"
 import { getDescriptors } from "../../managers/DescriptorsManager"
+import "./MemberPage.css"
 
 export const AddBourbon = () => {
     const navigate = useNavigate()
@@ -37,10 +38,10 @@ export const AddBourbon = () => {
 
     return (
         <form className="bourbonForm">
-            <h2 className="bourbonForm__description">Add A New Bourbon</h2>
+            <h1 id="mTitle2">Add A New Bourbon</h1>
             <fieldset>
-                <div className="form-group">
-                    <label htmlFor="bourbon">Bourbon:</label>
+                <div className="formGroup">
+                    <h2 id="mTitle4"><label htmlFor="bourbon">Bourbon:</label></h2>
                     <select name="bourbon" className="drop_down" value={triedNewBourbon.name}
                     onChange={changeTriedBourbonState}>
                         
@@ -57,12 +58,12 @@ export const AddBourbon = () => {
                 </div>
             </fieldset>
             <fieldset>
-                <div className="form-group">
-                    <label htmlFor="name">Comments: </label>
+                <div className="formGroup">
+                <h2 id="mTitle4"><label htmlFor="name">Comments: </label></h2>
                     <input type="text" 
                         name="comments" 
                         required autoFocus 
-                        className="form-control"
+                        className="formControl"
                         placeholder="What did you think?"
                         value={triedNewBourbon.comments}
                         onChange={changeTriedBourbonState}
@@ -70,21 +71,22 @@ export const AddBourbon = () => {
                 </div>
             </fieldset>
             <fieldset>
-                <div className="form-group">
-                    <label htmlFor="rating">Rating: </label>
+                <div className="formGroup">
+                <h2 id="mTitle4"><label htmlFor="rating">Rating: </label></h2>
                     <input type="number" 
                         name="rating" 
                         required autoFocus 
-                        className="form-control"
-                        placeholder="How Would You Rate It?"
+                        className="formControl1"
+                        min="0" max="5"
                         value={triedNewBourbon.rating}
                         onChange={changeTriedBourbonState}
                     />
                 </div>
             </fieldset>
             <fieldset>
-                <div className="form-group">
-                    <label htmlFor="descriptor">Descriptor:</label>
+                <div className="formGroup">
+                <h2 id="mTitle4"><label htmlFor="descriptor">Descriptors:</label></h2>
+                <div className="descriptorList">
                     {
                         descriptors.map((descriptor) =>{
                             return<>
@@ -104,11 +106,14 @@ export const AddBourbon = () => {
                                         setChosenDescriptors(copy)
                                     }
                                 }
+                                
                                 />
+                                
                             </>
                         }
                         )
                     }
+                    </div>
                 </div>
             </fieldset>
             <button type="submit"
@@ -126,7 +131,7 @@ export const AddBourbon = () => {
                     createBourbonTried(newTriedBourbon)
                         .then(() => navigate({ pathname: "/mybourbons" }))
                 }}
-                className="btn btn-primary">Add Bourbon</button>
+                className="addNew">Add Bourbon</button>
             </form>
             )
 }

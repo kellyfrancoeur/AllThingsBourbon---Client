@@ -27,10 +27,10 @@ export const AddCocktail = () => {
 
     return (
         <form className="cocktailForm">
-            <h2 className="cocktailForm__description">Add A New Cocktail</h2>
+            <h1 id="mTitle2">Add A New Cocktail</h1>
             <fieldset>
-                <div className="form-group">
-                    <label htmlFor="cocktail">Cocktail:</label>
+                <div className="formGroup">
+                <h2 id="mTitle4"><label htmlFor="cocktail">Cocktail:</label></h2>
                     <select name="cocktail" className="drop_down" value={triedNewCocktail.name}
                     onChange={changeTriedCocktailState}>
                         
@@ -47,12 +47,12 @@ export const AddCocktail = () => {
                 </div>
             </fieldset>
             <fieldset>
-                <div className="form-group">
-                    <label htmlFor="name">Comments: </label>
+                <div className="formGroup">
+                <h2 id="mTitle4"><label htmlFor="name">Comments: </label></h2>
                     <input type="text" 
                         name="comments" 
                         required autoFocus 
-                        className="form-control"
+                        className="formControl"
                         placeholder="What did you think?"
                         value={triedNewCocktail.comments}
                         onChange={changeTriedCocktailState}
@@ -60,13 +60,13 @@ export const AddCocktail = () => {
                 </div>
             </fieldset>
             <fieldset>
-                <div className="form-group">
-                    <label htmlFor="rating">Rating: </label>
+                <div className="formGroup">
+                <h2 id="mTitle4"><label htmlFor="rating">Rating: </label></h2>
                     <input type="number" 
                         name="rating" 
                         required autoFocus 
-                        className="form-control"
-                        placeholder="How Would You Rate It?"
+                        className="formControl1"
+                        min="0" max="5"
                         value={triedNewCocktail.rating}
                         onChange={changeTriedCocktailState}
                     />
@@ -86,7 +86,7 @@ export const AddCocktail = () => {
                     createCocktailTried(newTriedCocktail)
                         .then(() => navigate({ pathname: "/mybourbons" }))
                 }}
-                className="btn btn-primary">Add Cocktail</button>
+                className="addNew">Add Cocktail</button>
             </form>
             )
 }

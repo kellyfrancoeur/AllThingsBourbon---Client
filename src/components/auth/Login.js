@@ -38,15 +38,18 @@ export const Login = () => {
                 <div>User does not exist</div>
                 <button className="button--close" onClick={e => existDialog.current.close()}>Close</button>
             </dialog>
-
-            <section className="logincontainerleft"></section>
-            <section className="logincontainerright">
+            <div className="welcome">
+            <div className="allThings">
+            <h1 id="wTitle1">All Things</h1> 
+            <h2 id="wTitle2">Bourbon</h2>
+            </div>
+            <h3 id="wTitle3">For the Bourbon Aficionado</h3></div>
+            {/* <section className="logincontainerleft"></section> */}
             <div className="logincard">
                 <form className="form--login" onSubmit={handleLogin}>
                 <div className="loginlogo"></div>
-                    <h2 id="signIn">Please sign in</h2>
                     <fieldset>
-                        <label htmlFor="inputUsername"> Username </label>
+                        <label htmlFor="inputUsername"></label>
                         <input type="username" id="info"
                             value={username}
                             onChange={evt => setUsername(evt.target.value)}
@@ -55,7 +58,7 @@ export const Login = () => {
                             required autoFocus />
                     </fieldset>
                     <fieldset>
-                        <label htmlFor="inputPassword"> Password </label>
+                        <label htmlFor="inputPassword"></label>
                         <input type="password" id="info"
                             value={password}
                             onChange={evt => setPassword(evt.target.value)}
@@ -72,7 +75,6 @@ export const Login = () => {
                     </fieldset>
                 </form>
                 </div>
-            </section>
             <div className="loginLinks">
                 <section className="link--register">
                     <Link to="/register">Not a member yet?</Link>
@@ -82,6 +84,8 @@ export const Login = () => {
                 
                 </section>
             </div>
+            <section className="logincontainerright">
+            </section>
         </main>
     )
 }

@@ -7,7 +7,7 @@ export const StaffNav = () => {
     return (
         <nav id="main-navbar">
         <ul id="links">
-            <li className="navbar__item active">
+            {/* <li className="navbar__item active">
                 <Link className="navbar__link" to="/bourbons">Bourbons</Link>
             </li>
             <li className="navbar__item active">
@@ -15,15 +15,15 @@ export const StaffNav = () => {
             </li>
             <li className="navbar__item active">
                 <Link className="navbar__link" to="/distilleries">Distilleries</Link>
-            </li>
-            <li className="navbar__item active">
-                <Link className="navbar__link" to="/bourbonusers">Users</Link>
+            </li> */}
+            <li className="staffHome">
+                <Link to="/">Home</Link>
             </li>
 
 
             {
                 localStorage.getItem("bourbon_user")
-                    ? <li className="navbar__item navbar__logout">
+                    ? <li className="staffLogout">
                         <Link className="navbar__link" to="" onClick={() => {
                             localStorage.removeItem("bourbon_user")
                             navigate("/login", {replace: true})

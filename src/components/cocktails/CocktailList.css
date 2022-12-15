@@ -4,12 +4,12 @@
     text-align: center;
     font-family: "Fredoka One";
     line-height: 0.8;
-    margin: 5rem 0rem 10rem 0rem;
+    margin: 3rem 0rem 0rem 0rem;
 }
 
 #cTitle3{
     font-size: 1.5rem;
-    color: rgb(248, 224, 8);
+    color: white;
     text-align: left;
     font-family: "Economica";
   }
@@ -26,6 +26,7 @@
 .cocktailImg {
     max-width: 100%;
     max-height:100%;
+    margin: 0rem 0rem 0rem 5rem;
 }
      
 .cocktailInfo {
@@ -34,7 +35,7 @@
 }
 
 .add_cocktail{
-    margin: 3rem 0rem 0rem 75rem;
+    margin: 0rem 0rem 5rem 44rem;
 }
 
 .cocktailIngredients{

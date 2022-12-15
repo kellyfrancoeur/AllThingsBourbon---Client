@@ -12,7 +12,7 @@ export const CreativeTwists = (props) => {
     )
 
     return (<>
-        <h1 id="cTitle1">Creative Twists on Classic Cocktails</h1>
+        <h1 id="cTitle2">Creative Twists on Classic Cocktails</h1>
         <article className="cocktails">
             {
                 cocktails.map((cocktail) => {

@@ -27,6 +27,7 @@ export const CocktailList = (props) => {
     )
 
     return (<>
+        <h1 id="cTitle1">Cocktails</h1>
         <div className="add_cocktail">
             {
                 bourbonUserObject.staff
@@ -36,7 +37,6 @@ export const CocktailList = (props) => {
                     : ""
             }
         </div>
-        <h1 id="cTitle1">Cocktails</h1>
         <article className="cocktails">
             {
                 cocktails.map(cocktail => {

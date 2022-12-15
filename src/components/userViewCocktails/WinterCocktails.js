@@ -12,7 +12,7 @@ export const WinterCocktails = (props) => {
     )
 
     return (<>
-        <h1 id="cTitle1">Winter Cocktails</h1>
+        <h1 id="cTitle2">Winter Cocktails</h1>
         <article className="cocktails">
             {
                 cocktails.map((cocktail) => {

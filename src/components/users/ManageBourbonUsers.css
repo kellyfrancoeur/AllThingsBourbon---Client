@@ -10,6 +10,14 @@
 .userInfo {
     font-size: 20px;
     color: white;
+    font-family: "Economica";
 }
 
+.delete_member{
+    margin: 0rem 0rem 2rem 0rem;
+}
 
+.peepsAtBar{
+    float: right;
+    margin: -13rem 3rem 0rem 0rem;
+}

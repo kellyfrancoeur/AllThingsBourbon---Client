@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react"
 import { useNavigate } from "react-router-dom"
-
+import "./Register.css"
 
 export const Register = () => {
     const [member, setMember] = useState({ "account_type": "member" })
@@ -46,7 +46,7 @@ export const Register = () => {
         setMember(copy)
     }
 
-
+ 
     return (
         <main style={{ textAlign: "center" }}>
             <dialog className="dialog dialog--password" ref={conflictDialog}>
@@ -58,50 +58,58 @@ export const Register = () => {
                     }}>Close</button>
             </dialog>
 
-            <form className="form--login" onSubmit={handleRegister}>
-                <h1 className="h3 mb-3 font-weight-normal">Register New Account</h1>
+            <form className="registerLogin" onSubmit={handleRegister}>
+                <h1 className="rTitle1">Register New Account</h1>
+                <section className="register">
                 <fieldset>
-                    <label htmlFor="first_name"> First Name </label>
+                    <label htmlFor="first_name">  </label>
                     <input onChange={updateMember}
                         type="text" id="first_name"
-                        className="form-control" required autoFocus />
+                        placeholder="First Name"
+                        className="formControl" required autoFocus />
                 </fieldset>
                 <fieldset>
-                    <label htmlFor="last_name"> Last Name </label>
+                    <label htmlFor="last_name"> </label>
                     <input onChange={updateMember}
                         type="text" id="last_name"
-                        className="form-control" required />
+                        placeholder="Last Name"
+                        className="formControl" required />
                 </fieldset>
                 <fieldset>
-                    <label htmlFor="birthday"> Birthday </label>
+                    <label htmlFor="birthday"> </label>
                     <input onChange={updateMember}
                         type="text"
                         id="birthday"
-                        className="form-control" required />
+                        placeholder="Birthday (YYYY-MM-DD)"
+                        className="formControl" required />
                 </fieldset>
                 <fieldset>
-                    <label htmlFor="email"> Email address </label>
+                    <label htmlFor="email">  </label>
                     <input onChange={updateMember}
                         type="email"
                         id="email"
-                        className="form-control" required />
+                        placeholder="Email"
+                        className="formControl" required />
                 </fieldset>
                 <fieldset>
-                    <label htmlFor="username"> Username </label>
+                    <label htmlFor="username"> </label>
                     <input onChange={updateMember}
                         type="username"
                         id="username"
-                        className="form-control" required />
+                        placeholder="Create A Username"
+                        className="formControl" required />
                 </fieldset>
                 <fieldset>
-                    <label htmlFor="password"> Password </label>
+                    <label htmlFor="password">  </label>
                     <input onChange={updateMember}
                         type="password"
                         id="password"
-                        className="form-control" required />
+                        placeholder="Create A Password"
+                        className="formControl" required />
                 </fieldset>
+                </section>
                 <fieldset>
-                    <button type="submit"> Register </button>
+                    <button type="submit"> Register New Member </button>
                 </fieldset>
             </form>
         </main>

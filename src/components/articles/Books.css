@@ -1,0 +1,22 @@
+.booksonBourbon{
+    margin: auto;
+    width: 28%;
+    padding: 10px;
+}
+
+#book{
+    border: 1px solid white;
+    margin: auto;
+    width: 27.5%;
+    padding: 10px;
+}
+
+#buy{
+    font-size: 30px;
+    text-align: center;
+    margin: 2rem 0rem 2rem 0rem;
+}
+
+#sum{
+    margin: 0rem 7rem 0rem 7rem;
+}

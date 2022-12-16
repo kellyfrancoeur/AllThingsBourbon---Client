@@ -1,8 +1,9 @@
-.body, body{
+.body,
+body {
   background-color: black;
 }
 
-#title1{
+#title1 {
   font-size: 5rem;
   color: rgb(248, 224, 8);
   text-align: center;
@@ -10,7 +11,7 @@
   line-height: 0.8;
 }
 
-#title2{
+#title2 {
   font-size: 5rem;
   color: white;
   text-align: center;
@@ -19,99 +20,99 @@
   line-height: 0.2;
 }
 
-#title3{
+#title3 {
   font-size: 1.5rem;
   color: white;
   text-align: center;
   font-family: "Economica";
 }
 
-#title4{
+#title4 {
   font-size: 3.5rem;
   text-align: center;
   color: rgb(248, 224, 8);
   font-family: "Fredoka One";
 }
 
-.memberHome{
+.memberHome {
   margin: 0rem 0rem 0rem 4rem;
   color: white;
 }
 
-.video{
+.video {
   margin: 4rem 26rem 5rem 26rem;
-  color: white; 
+  color: white;
 }
 
-.whatIsBourbon{
+.whatIsBourbon {
   margin: 0rem 7rem 5rem 0rem;
-  color: white; 
+  color: white;
 }
 
-.diff{
+.diff {
   margin: 0rem 0rem 5rem 0rem;
-  color: white; 
+  color: white;
 }
 
-.taste{
+.taste {
   margin: 0rem 7rem 5rem 0rem;
-  color: white; 
+  color: white;
 }
 
-.similar{
+.similar {
   margin: 0rem 7rem 5rem 0rem;
-  color: white; 
+  color: white;
 }
 
-.nutrition{
+.nutrition {
   margin: 0rem 5rem 5rem 0rem;
-  color: white; 
+  color: white;
 }
 
 .what {
   display: grid;
-  align-items:center; 
-  grid-template-columns: 1fr 1fr ;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
   column-gap: 100px;
 }
 
 .diff {
   display: grid;
-  align-items:center; 
-  grid-template-columns: 1fr 1fr ;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
   column-gap: 100px;
 }
 
 .tasty {
   display: grid;
-  align-items:center; 
-  grid-template-columns: 1fr 1fr ;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
   column-gap: 50px;
 }
 
 .subs {
   display: grid;
-  align-items:center; 
-  grid-template-columns: 1fr 1fr ;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
   column-gap: 150px;
 }
 
 .facts {
   display: grid;
-  align-items:center; 
-  grid-template-columns: 1fr 1fr ;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
   column-gap: 75px;
 }
 
 .bourbon {
   max-width: 100%;
-  max-height:100%;
+  max-height: 100%;
 }
-   
+
 .bourbonp {
   font-size: 20px;
 }
 
-p{
+p {
   font-size: 20px;
 }

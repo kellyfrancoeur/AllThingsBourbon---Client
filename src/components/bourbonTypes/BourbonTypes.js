@@ -90,8 +90,8 @@ export const TypesOfBourbons = () => {
                                             <p>Straight bourbon may be mixed with other straight bourbons as long as they were distilled in the same state. For this reason, an age statement must represent the youngest whiskey used. Typically, the terms “mixing” or “mingling” are used to avoid confusion with blended bourbon.</p>
                                         </div>
                                     </div>
-                                            <p>Furthermore, straight whiskey may not contain any additional colouring or flavouring agents like caramel or similar. However, other types of bourbon whiskeys may legally do so.</p>
-                                            <p>Straight whiskey isn’t exclusive to bourbon. In fact, other primarily rye or barley-based may also use the term if it respects the federal Standards of Identity for Distilled Spirits.</p>
+                                    <p>Furthermore, straight whiskey may not contain any additional colouring or flavouring agents like caramel or similar. However, other types of bourbon whiskeys may legally do so.</p>
+                                    <p>Straight whiskey isn’t exclusive to bourbon. In fact, other primarily rye or barley-based may also use the term if it respects the federal Standards of Identity for Distilled Spirits.</p>
                                 </section>
                             </section>
                             <section id="smallBatch">

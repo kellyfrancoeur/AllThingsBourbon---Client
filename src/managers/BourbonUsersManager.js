@@ -1,6 +1,6 @@
 export const getBourbonUsers = () => {
     return fetch("http://localhost:8000/bourbonusers", {
-        headers:{
+        headers: {
             "Authorization": `Token ${JSON.parse(localStorage.getItem("bourbon_user")).token}`
         }
     })

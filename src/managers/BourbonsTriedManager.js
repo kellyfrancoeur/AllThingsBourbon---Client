@@ -32,7 +32,7 @@ export const createBourbonTried = (bourbonTried) => {
 }
 
 export const updateBourbonTried = (bourbonTried) => {
-    return fetch (`http://localhost:8000/bourbonstried/${bourbonTried.id}`, {
+    return fetch(`http://localhost:8000/bourbonstried/${bourbonTried.id}`, {
         method: "PUT",
         headers: {
             "Accept": "application/json",
@@ -54,12 +54,12 @@ export const deleteBourbonTried = (bourbonTried) => {
     })
 }
 
-export const describedBourbon = (bourbonId) =>{
+export const describedBourbon = (bourbonId) => {
     return fetch(`http://localhost:8000/bourbonstried/${bourbonId}/descriptors`, {
         method: "POST",
         headers: {
-            "Authorization": `Token ${JSON.parse(localStorage.getItem("bourbon_user")).token}` 
+            "Authorization": `Token ${JSON.parse(localStorage.getItem("bourbon_user")).token}`
         }
     })
-    .then(response => response.json())
+        .then(response => response.json())
 }

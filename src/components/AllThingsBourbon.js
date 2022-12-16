@@ -11,19 +11,19 @@ import "./AllThingsBourbon.css"
 export const AllThingsBourbon = () => {
 
   return <Routes>
-  <Route path="/login" element={<Login />} />
-  <Route path="/register" element={<Register />} />
-  <Route path="/registerstaff" element={<StaffRegister />} />
+    <Route path="/login" element={<Login />} />
+    <Route path="/register" element={<Register />} />
+    <Route path="/registerstaff" element={<StaffRegister />} />
 
-  <Route path="*" element={
-    <Authorized>
-      <>
-        <NavBar />
-        <ApplicationViews />
-      </>
-    </Authorized>
+    <Route path="*" element={
+      <Authorized>
+        <>
+          <NavBar />
+          <ApplicationViews />
+        </>
+      </Authorized>
 
-  } />
-</Routes>
-  
+    } />
+  </Routes>
+
 }

@@ -1,7 +1,8 @@
-.howToServe{
-    margin: 0rem 3rem 0rem 3rem;
+.howToServe {
+  margin: 0rem 3rem 0rem 3rem;
 }
-#aTitle1{
+
+#aTitle1 {
   font-size: 5rem;
   color: rgb(248, 224, 8);
   text-align: center;
@@ -9,112 +10,113 @@
   line-height: 0.8;
 }
 
-#aTitle4{
+#aTitle4 {
   font-size: 3.5rem;
   color: white;
   text-align: center;
   font-family: "Economica";
 }
 
-.intro{
+.intro {
   margin: 0rem 0rem 0rem 0rem;
   color: white;
 }
 
-#drinkingrules{
+#drinkingrules {
   margin: 0rem 4rem 0rem 2rem;
-  color: white; 
+  color: white;
 }
 
-#drinkbourbon{
+#drinkbourbon {
   margin: 0rem 5rem 0rem 0rem;
-  color: white; 
+  color: white;
 }
 
-#onrocks{
+#onrocks {
   margin: 0rem 5rem 0rem 2rem;
-  color: white; 
+  color: white;
 }
 
-#servebourbon{
+#servebourbon {
   margin: 0rem 1em 0rem 0rem;
-  color: white; 
+  color: white;
 }
 
 .bourbonrules {
   display: grid;
-  align-items:center; 
-  grid-template-columns: 1fr 1fr ;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
   column-gap: 20px;
 }
 
 .bourbondrink {
   display: grid;
-  align-items:center; 
-  grid-template-columns: 1fr 1fr ;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
   column-gap: 0px;
 }
 
 .bourbonrocks {
   display: grid;
-  align-items:center; 
-  grid-template-columns: 1fr 1fr ;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
   column-gap: 0px;
 }
 
 .bourbonserved {
   display: grid;
-  align-items:center; 
-  grid-template-columns: 1fr 1fr ;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
   column-gap: 50px;
 }
 
-#serving{
-    padding: 0rem 0rem 3rem 0rem;
+#serving {
+  padding: 0rem 0rem 3rem 0rem;
 }
 
-.stubborn1{
-    margin: 1rem 0rem 0rem 2rem;
+.stubborn1 {
+  margin: 1rem 0rem 0rem 2rem;
 }
 
-.stubborn2{
-    margin: 1rem 2rem 0rem 0rem;
+.stubborn2 {
+  margin: 1rem 2rem 0rem 0rem;
 }
 
-.stubborn3{
-    margin: 1rem 5rem 3rem 2rem;
+.stubborn3 {
+  margin: 1rem 5rem 3rem 2rem;
 }
 
 .pic {
   max-width: 100%;
-  max-height:100%;
+  max-height: 100%;
 }
-   
+
 .text {
   font-size: 20px;
 }
 
-p{
+p {
   font-size: 20px;
   font-family: "Economica";
   margin: 1rem 2rem 0rem 0rem;
 }
 
-.shortcut{
-    margin: 0rem 0rem 0rem 10rem;
-}
-.introPic{
-    margin: 0rem 10rem 1rem 1rem;
+.shortcut {
+  margin: 0rem 0rem 0rem 10rem;
 }
 
-.intro{
-    text-align: left;
-    margin: 0rem 8rem 3rem 10rem;
+.introPic {
+  margin: 0rem 10rem 1rem 1rem;
 }
 
-.help{
-    text-align: left;
-    color: white;
-    margin: 0rem 0rem 7rem 10rem; 
-    font-family: "Economica";
+.intro {
+  text-align: left;
+  margin: 0rem 8rem 3rem 10rem;
+}
+
+.help {
+  text-align: left;
+  color: white;
+  margin: 0rem 0rem 7rem 10rem;
+  font-family: "Economica";
 }

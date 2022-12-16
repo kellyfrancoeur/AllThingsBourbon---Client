@@ -1,7 +1,8 @@
-.bourbonTypes{
-    margin: 0rem 3rem 0rem 3rem;
+.bourbonTypes {
+  margin: 0rem 3rem 0rem 3rem;
 }
-#aTitle1{
+
+#aTitle1 {
   font-size: 5rem;
   color: rgb(248, 224, 8);
   text-align: center;
@@ -9,171 +10,172 @@
   line-height: 0.8;
 }
 
-#aTitle4{
+#aTitle4 {
   font-size: 3.5rem;
   color: white;
   text-align: center;
   font-family: "Economica";
 }
 
-.intro{
+.intro {
   margin: 0rem 0rem 0rem 0rem;
   color: white;
 }
 
-#standandbourbon{
+#standandbourbon {
   margin: 0rem 5rem 0rem 5rem;
-  color: white; 
+  color: white;
 }
 
-#kentuckybourbon{
+#kentuckybourbon {
   margin: 0rem 5rem 0rem 5rem;
-  color: white; 
+  color: white;
 }
 
-#straightbourbon{
+#straightbourbon {
   margin: 0rem 5rem 0rem 5rem;
-  color: white; 
+  color: white;
 }
 
-#smallbourbon{
+#smallbourbon {
   margin: 0rem 5rem 0rem 5rem;
-  color: white; 
+  color: white;
 }
 
-#sourbourbon{
-    margin: 0rem 5rem 0rem 7rem;
-    color: white; 
+#sourbourbon {
+  margin: 0rem 5rem 0rem 7rem;
+  color: white;
 }
 
-#bottledbourbon{
-    margin: 0rem 5rem 0rem 5rem;
-    color: white; 
+#bottledbourbon {
+  margin: 0rem 5rem 0rem 5rem;
+  color: white;
 }
 
-#blendedbourbon{
-    margin: 0rem 7rem 0rem 7rem;
-    color: white; 
+#blendedbourbon {
+  margin: 0rem 7rem 0rem 7rem;
+  color: white;
 }
 
-#highryebourbon{
-    margin: 0rem 3rem 3rem 5rem;
-    color: white; 
+#highryebourbon {
+  margin: 0rem 3rem 3rem 5rem;
+  color: white;
 }
 
 .bourbonstandard {
   display: grid;
-  align-items:center; 
-  grid-template-columns: 1fr 1fr ;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
   column-gap: 20px;
 }
 
 .bourbonkentucky {
   display: grid;
-  align-items:center; 
-  grid-template-columns: 1fr 1fr ;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
   column-gap: 0px;
 }
 
 .bourbonstraight {
   display: grid;
-  align-items:center; 
-  grid-template-columns: 1fr 1fr ;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
   column-gap: 0px;
 }
 
 .bourbonsmall {
   display: grid;
-  align-items:center; 
-  grid-template-columns: 1fr 1fr ;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
   column-gap: 50px;
 }
 
-.bourbonsour{
+.bourbonsour {
   display: grid;
-  align-items:center; 
-  grid-template-columns: 1fr 1fr ;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
   column-gap: 0px;
 }
 
 .bourbonbottled {
-    display: grid;
-    align-items:center; 
-    grid-template-columns: 1fr 1fr ;
-    column-gap: 100px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 100px;
 }
 
 .bourbonblended {
-    display: grid;
-    align-items:center; 
-    grid-template-columns: 1fr 1fr ;
-    column-gap: 0px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 0px;
 }
 
 .bourbonhighrye {
-    display: grid;
-    align-items:center; 
-    grid-template-columns: 1fr 1fr ;
-    column-gap: 100px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 100px;
 }
 
 .shortcutLinks {
-    display: grid;
-    align-items:center; 
-    grid-template-columns: 1fr 1fr ;
-    column-gap: 100px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 100px;
 }
 
-#type{
+#type {
   padding: 0rem 0rem 1rem 0rem;
 }
 
-.stubborn1{
-    margin: 1rem 2rem 0rem 0rem;
+.stubborn1 {
+  margin: 1rem 2rem 0rem 0rem;
 }
 
-.stubborn2{
-    margin: 1rem 0rem 0rem 2rem;
+.stubborn2 {
+  margin: 1rem 0rem 0rem 2rem;
 }
 
-.stubborn3{
-    margin: 1rem 2rem 0rem 0rem;
+.stubborn3 {
+  margin: 1rem 2rem 0rem 0rem;
 }
 
-.stubborn4{
-    margin: 1rem 2rem 3rem 0rem;
+.stubborn4 {
+  margin: 1rem 2rem 3rem 0rem;
 }
 
 .pic {
   max-width: 100%;
-  max-height:100%;
+  max-height: 100%;
 }
-   
+
 .text {
   font-size: 20px;
 }
 
-p{
+p {
   font-size: 20px;
   font-family: "Economica";
   margin: 1rem 2rem 0rem 0rem;
 }
 
-.shortcut{
-    margin: 0rem 0rem 0rem 10rem;
-}
-.introPic{
-    margin: 0rem 10rem 0rem 1rem;
+.shortcut {
+  margin: 0rem 0rem 0rem 10rem;
 }
 
-.intro{
-    text-align: left;
-    margin: 0rem 8rem 0rem 10rem;
+.introPic {
+  margin: 0rem 10rem 0rem 1rem;
 }
 
-.help{
-    text-align: left;
-    color: white;
-    margin: 0rem 0rem 7rem 10rem; 
-    font-family: "Economica";
+.intro {
+  text-align: left;
+  margin: 0rem 8rem 0rem 10rem;
+}
+
+.help {
+  text-align: left;
+  color: white;
+  margin: 0rem 0rem 7rem 10rem;
+  font-family: "Economica";
 }

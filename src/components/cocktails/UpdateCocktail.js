@@ -13,19 +13,19 @@ export const UpdateCocktail = () => {
         name: "",
         ingredients: "",
         how_to_make: "",
-        cocktail_img:"",
+        cocktail_img: "",
         type_of_cocktail: 0
-    }) 
+    })
 
     useEffect(() => {
         getCocktailById(cocktailId).then(setUpdatedCocktail)
     },
         [cocktailId])
 
-        useEffect(() => {
-            getCocktailTypes().then(setCocktailTypes)
-        }, []
-        )
+    useEffect(() => {
+        getCocktailTypes().then(setCocktailTypes)
+    }, []
+    )
 
     const changeCocktailState = (evt) => {
         const copy = { ...updatedCocktail }
@@ -39,10 +39,10 @@ export const UpdateCocktail = () => {
             <h1 id="mTitle2">Update Cocktail</h1>
             <fieldset>
                 <div className="formGroup">
-                <h2 id="mTitle4"><label htmlFor="name">Name of Cocktail: </label></h2>
-                    <input type="text" 
-                        id="name" 
-                        required autoFocus 
+                    <h2 id="mTitle4"><label htmlFor="name">Name of Cocktail: </label></h2>
+                    <input type="text"
+                        id="name"
+                        required autoFocus
                         className="formControl"
                         value={updatedCocktail.name}
                         onChange={changeCocktailState}
@@ -51,10 +51,10 @@ export const UpdateCocktail = () => {
             </fieldset>
             <fieldset>
                 <div className="formGroup">
-                <h2 id="mTitle4"><label htmlFor="ingredients">Ingredients: </label></h2>
-                    <input type="text" 
-                        id="ingredients" 
-                        required autoFocus 
+                    <h2 id="mTitle4"><label htmlFor="ingredients">Ingredients: </label></h2>
+                    <input type="text"
+                        id="ingredients"
+                        required autoFocus
                         className="formControl"
                         value={updatedCocktail.ingredients}
                         onChange={changeCocktailState}
@@ -63,10 +63,10 @@ export const UpdateCocktail = () => {
             </fieldset>
             <fieldset>
                 <div className="formGroup">
-                <h2 id="mTitle4"><label htmlFor="how_to_make">How to Make Cocktail: </label></h2>
-                    <input type="text" 
-                        id="how_to_make" 
-                        required autoFocus 
+                    <h2 id="mTitle4"><label htmlFor="how_to_make">How to Make Cocktail: </label></h2>
+                    <input type="text"
+                        id="how_to_make"
+                        required autoFocus
                         className="formControl"
                         value={updatedCocktail.how_to_make}
                         onChange={changeCocktailState}
@@ -75,10 +75,10 @@ export const UpdateCocktail = () => {
             </fieldset>
             <fieldset>
                 <div className="formGroup">
-                <h2 id="mTitle4"><label htmlFor="cocktail_img">Image of Cocktail: </label></h2>
-                    <input type="text" 
-                        id="cocktail_img" 
-                        required autoFocus 
+                    <h2 id="mTitle4"><label htmlFor="cocktail_img">Image of Cocktail: </label></h2>
+                    <input type="text"
+                        id="cocktail_img"
+                        required autoFocus
                         className="formControl"
                         value={updatedCocktail.cocktail_img}
                         onChange={changeCocktailState}
@@ -87,19 +87,19 @@ export const UpdateCocktail = () => {
             </fieldset>
             <fieldset>
                 <div className="formGroup">
-                <h2 id="mTitle4"><label htmlFor="type">Type of Cocktail:</label></h2>
+                    <h2 id="mTitle4"><label htmlFor="type">Type of Cocktail:</label></h2>
                     <select id="types" className="drop_down" value={updatedCocktail.cocktailTypes}
-                    onChange={changeCocktailState}>
-                        
+                        onChange={changeCocktailState}>
+
                         <option value={0}>Select Type</option>
                         {
-                            cocktailTypes.map((cocktailType) =>{
+                            cocktailTypes.map((cocktailType) => {
                                 const isSelected = cocktailType.id === updatedCocktail.type_of_cocktail.id
-                                return <option selected={isSelected ?true:false} value={`${cocktailType.id}`} key={`cocktailType--${cocktailType.id}`}>{cocktailType.type}</option>
+                                return <option selected={isSelected ? true : false} value={`${cocktailType.id}`} key={`cocktailType--${cocktailType.id}`}>{cocktailType.type}</option>
                             }
 
                             )
-                            
+
                         }
                     </select>
                 </div>

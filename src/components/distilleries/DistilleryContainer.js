@@ -4,11 +4,11 @@ import { DistillerySearch } from "./DistillerySearch"
 
 
 
-export const DistilleryContainer =()=>{
-    const [searchTerms, setSearchTerms] = useState ("")
-    
+export const DistilleryContainer = () => {
+    const [searchTerms, setSearchTerms] = useState("")
+
     return <>
-        <DistillerySearch setterFunction = {setSearchTerms}/>
-        <DistilleryList searchTermState= {searchTerms}/>
+        <DistillerySearch setterFunction={setSearchTerms} />
+        <DistilleryList searchTermState={searchTerms} />
     </>
 }

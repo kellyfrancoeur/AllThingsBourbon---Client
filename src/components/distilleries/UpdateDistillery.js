@@ -19,7 +19,7 @@ export const UpdateDistillery = () => {
         getDistilleryById(distilleryId).then(setUpdatedDistillery)
     },
         [distilleryId])
-        
+
     const changeDistilleryState = (evt) => {
         const copy = { ...updatedDistillery }
         const propertyToModify = evt.target.id
@@ -32,10 +32,10 @@ export const UpdateDistillery = () => {
             <h1 id="mTitle2">Update Distillery</h1>
             <fieldset>
                 <div className="formGroup">
-                <h2 id="mTitle4"><label htmlFor="name">Name of Distillery: </label></h2>
-                    <input type="text" 
-                        id="name" 
-                        required autoFocus 
+                    <h2 id="mTitle4"><label htmlFor="name">Name of Distillery: </label></h2>
+                    <input type="text"
+                        id="name"
+                        required autoFocus
                         className="formControl"
                         value={updatedDistillery.name}
                         onChange={changeDistilleryState}
@@ -44,10 +44,10 @@ export const UpdateDistillery = () => {
             </fieldset>
             <fieldset>
                 <div className="formGroup">
-                <h2 id="mTitle4"><label htmlFor="location">Location of Distillery: </label></h2>
-                    <input type="text" 
-                        id="location" 
-                        required autoFocus 
+                    <h2 id="mTitle4"><label htmlFor="location">Location of Distillery: </label></h2>
+                    <input type="text"
+                        id="location"
+                        required autoFocus
                         className="form-control"
                         value={updatedDistillery.location}
                         onChange={changeDistilleryState}
@@ -56,10 +56,10 @@ export const UpdateDistillery = () => {
             </fieldset>
             <fieldset>
                 <div className="formGroup">
-                <h2 id="mTitle4"><label htmlFor="description">Description of Distillery: </label></h2>
-                    <input type="text" 
-                        id="description" 
-                        required autoFocus 
+                    <h2 id="mTitle4"><label htmlFor="description">Description of Distillery: </label></h2>
+                    <input type="text"
+                        id="description"
+                        required autoFocus
                         className="form-control"
                         value={updatedDistillery.description}
                         onChange={changeDistilleryState}
@@ -68,10 +68,10 @@ export const UpdateDistillery = () => {
             </fieldset>
             <fieldset>
                 <div className="formGroup">
-                <h2 id="mTitle4"><label htmlFor="link_to_site">Distillery Website: </label></h2>
-                    <input type="text" 
-                        id="link_to_site" 
-                        required autoFocus 
+                    <h2 id="mTitle4"><label htmlFor="link_to_site">Distillery Website: </label></h2>
+                    <input type="text"
+                        id="link_to_site"
+                        required autoFocus
                         className="form-control"
                         value={updatedDistillery.link_to_site}
                         onChange={changeDistilleryState}
@@ -80,10 +80,10 @@ export const UpdateDistillery = () => {
             </fieldset>
             <fieldset>
                 <div className="formGroup">
-                <h2 id="mTitle4"><label htmlFor="distillery_img">Image of Distillery: </label></h2>
-                    <input type="text" 
-                        id="distillery_img" 
-                        required autoFocus 
+                    <h2 id="mTitle4"><label htmlFor="distillery_img">Image of Distillery: </label></h2>
+                    <input type="text"
+                        id="distillery_img"
+                        required autoFocus
                         className="form-control"
                         value={updatedDistillery.distillery_img}
                         onChange={changeDistilleryState}

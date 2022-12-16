@@ -1,76 +1,91 @@
 .navbar {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-evenly;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
 }
 
 .navbar__item {
-    flex-basis: 20%;
-    list-style-type: none;
+  flex-basis: 20%;
+  list-style-type: none;
 }
 
 .staffLogo {
-    margin-left: auto;
-}
-
-.staffHome{
   margin-left: auto;
 }
 
- 
+.staffHome {
+  margin-left: auto;
+}
+
+
 #main-navbar {
-    overflow: hidden;
-    background-color: black;
-    font-family: "Economica";
-  }
-  #main-navbar a {
-    font-size: 20px;
-    color:  rgb(248, 224, 8);
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-  }
-  #links{
-    display: flex;
-    justify-content: space-evenly;
-  }
-  #main-navbar a:hover, .dropdown:hover .dropbtn {
-    background-color: rgb(94, 93, 93);
-  }
-  .dropdown {
-    float: center;
-    overflow: hidden;
-  }
-  .dropdown .dropbtn {
-    font-size: 20px;
-    border: none;
-    outline: none;
-    color: rgb(248, 224, 8);
-    padding: 14px 16px;
-    background-color: inherit;
-    font-family: inherit;
-    margin: 0;
-  }
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color:  rgb(34, 34, 34);
-    min-width: 160px;
-    margin: 0;
-    z-index: 1;
-  }
-  .dropdown-content a {
-    float: none;
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-  }
-  .dropdown-content a:hover {
-    background-color: #ddd;
-  }
-  .dropdown:hover .dropdown-content {
-    display:flex;
-  }
-  
+  overflow: hidden;
+  background-color: black;
+  font-family: "Economica";
+}
+
+#main-navbar a {
+  font-size: 20px;
+  color: rgb(248, 224, 8);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+#links {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+#main-navbar a:hover,
+.dropdown:hover .dropbtn {
+  background-color: rgb(94, 93, 93);
+}
+
+.dropdown {
+  float: center;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 20px;
+  border: none;
+  outline: none;
+  color: rgb(248, 224, 8);
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgb(34, 34, 34);
+  min-width: 160px;
+  margin: 0;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+#logo {
+  position: fixed;
+  top: 0;
+  left: 0;
+}

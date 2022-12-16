@@ -32,7 +32,7 @@ export const createDistillery = (distillery) => {
 }
 
 export const updateDistillery = (distillery) => {
-    return fetch (`http://localhost:8000/distilleries/${distillery.id}`, {
+    return fetch(`http://localhost:8000/distilleries/${distillery.id}`, {
         method: "PUT",
         headers: {
             "Accept": "application/json",

@@ -14,9 +14,9 @@ export const AddBourbon = () => {
         bourbon: 0,
         comments: "",
         rating: 0,
-        descriptors: [] 
+        descriptors: []
     })
-    
+
 
     useEffect(() => {
         getBourbons().then(setBourbons)
@@ -43,26 +43,26 @@ export const AddBourbon = () => {
                 <div className="formGroup">
                     <h2 id="mTitle4"><label htmlFor="bourbon">Bourbon:</label></h2>
                     <select name="bourbon" className="drop_down" value={triedNewBourbon.name}
-                    onChange={changeTriedBourbonState}>
-                        
+                        onChange={changeTriedBourbonState}>
+
                         <option value={0}>Select Bourbon</option>
                         {
-                            bourbons.map((bourbon) =>{
+                            bourbons.map((bourbon) => {
                                 return <option value={`${bourbon.id}`} key={`bourbon--${bourbon.id}`}>{bourbon.name}</option>
                             }
 
                             )
-                            
+
                         }
                     </select>
                 </div>
             </fieldset>
             <fieldset>
                 <div className="formGroup">
-                <h2 id="mTitle4"><label htmlFor="name">Comments: </label></h2>
-                    <input type="text" 
-                        name="comments" 
-                        required autoFocus 
+                    <h2 id="mTitle4"><label htmlFor="name">Comments: </label></h2>
+                    <input type="text"
+                        name="comments"
+                        required autoFocus
                         className="formControl"
                         placeholder="What did you think?"
                         value={triedNewBourbon.comments}
@@ -72,10 +72,10 @@ export const AddBourbon = () => {
             </fieldset>
             <fieldset>
                 <div className="formGroup">
-                <h2 id="mTitle4"><label htmlFor="rating">Rating: </label></h2>
-                    <input type="number" 
-                        name="rating" 
-                        required autoFocus 
+                    <h2 id="mTitle4"><label htmlFor="rating">Rating: </label></h2>
+                    <input type="number"
+                        name="rating"
+                        required autoFocus
                         className="formControl1"
                         min="0" max="5"
                         value={triedNewBourbon.rating}
@@ -85,34 +85,34 @@ export const AddBourbon = () => {
             </fieldset>
             <fieldset>
                 <div className="formGroup">
-                <h2 id="mTitle4"><label htmlFor="descriptor">Descriptors:</label></h2>
-                <div className="descriptorList">
-                    {
-                        descriptors.map((descriptor) =>{
-                            return<>
-                            <option value={`${descriptor.id}`} key={`descriptor--${descriptor.id}`}>{descriptor.label}</option>
-                            <input
-                                type="checkbox"
-                                className="addDescriptor"
-                                value={triedNewBourbon.descriptors}
-                                onChange={
-                                    (evt) => {
-                                        const copy = new Set(chosenDescriptors)
-                                        if(copy.has(descriptor.id)){
-                                            copy.remove(descriptor.id)
-                                        } else {
-                                            copy.add(descriptor.id)
+                    <h2 id="mTitle4"><label htmlFor="descriptor">Descriptors:</label></h2>
+                    <div className="descriptorList">
+                        {
+                            descriptors.map((descriptor) => {
+                                return <>
+                                    <option value={`${descriptor.id}`} key={`descriptor--${descriptor.id}`}>{descriptor.label}</option>
+                                    <input
+                                        type="checkbox"
+                                        className="addDescriptor"
+                                        value={triedNewBourbon.descriptors}
+                                        onChange={
+                                            (evt) => {
+                                                const copy = new Set(chosenDescriptors)
+                                                if (copy.has(descriptor.id)) {
+                                                    copy.remove(descriptor.id)
+                                                } else {
+                                                    copy.add(descriptor.id)
+                                                }
+                                                setChosenDescriptors(copy)
+                                            }
                                         }
-                                        setChosenDescriptors(copy)
-                                    }
-                                }
-                                
-                                />
-                                
-                            </>
+
+                                    />
+
+                                </>
+                            }
+                            )
                         }
-                        )
-                    }
                     </div>
                 </div>
             </fieldset>
@@ -132,6 +132,6 @@ export const AddBourbon = () => {
                         .then(() => navigate({ pathname: "/mybourbons" }))
                 }}
                 className="addNew">Add Bourbon</button>
-            </form>
-            )
+        </form>
+    )
 }

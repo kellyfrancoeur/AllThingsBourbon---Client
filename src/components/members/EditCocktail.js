@@ -37,29 +37,29 @@ export const EditCocktail = () => {
             <h1 id="mTitle2">Update Cocktail</h1>
             <fieldset>
                 <div className="formGroup">
-                <h2 id="mTitle4"><label htmlFor="cocktail">Cocktail:</label></h2>
+                    <h2 id="mTitle4"><label htmlFor="cocktail">Cocktail:</label></h2>
                     <select id="cocktail" className="drop_down" value={updateTriedCocktail.cocktails}
-                    onChange={changeTriedCocktailState}>
-                        
+                        onChange={changeTriedCocktailState}>
+
                         <option value={0}>Select Cocktail</option>
                         {
-                            cocktails.map((cocktail) =>{
-                                const isSelected = cocktail.id === updateTriedCocktail.cocktail.id 
-                                return <option selected={isSelected ?true:false} value={`${cocktail.id}`} key={`cocktail--${cocktail.id}`}>{cocktail.name}</option>
+                            cocktails.map((cocktail) => {
+                                const isSelected = cocktail.id === updateTriedCocktail.cocktail.id
+                                return <option selected={isSelected ? true : false} value={`${cocktail.id}`} key={`cocktail--${cocktail.id}`}>{cocktail.name}</option>
                             }
 
                             )
-                            
+
                         }
                     </select>
                 </div>
             </fieldset>
             <fieldset>
                 <div className="formGroup">
-                <h2 id="mTitle4"><label htmlFor="name">Comments: </label></h2>
-                    <input type="text" 
-                        id="comments" 
-                        required autoFocus 
+                    <h2 id="mTitle4"><label htmlFor="name">Comments: </label></h2>
+                    <input type="text"
+                        id="comments"
+                        required autoFocus
                         className="formControl"
                         value={updateTriedCocktail.comments}
                         onChange={changeTriedCocktailState}
@@ -68,10 +68,10 @@ export const EditCocktail = () => {
             </fieldset>
             <fieldset>
                 <div className="formGroup">
-                <h2 id="mTitle4"><label htmlFor="rating">Rating: </label></h2>
-                    <input type="number" 
-                        id="rating" 
-                        required autoFocus 
+                    <h2 id="mTitle4"><label htmlFor="rating">Rating: </label></h2>
+                    <input type="number"
+                        id="rating"
+                        required autoFocus
                         className="formControl1"
                         min="0" max="5"
                         value={updateTriedCocktail.rating}
@@ -95,6 +95,6 @@ export const EditCocktail = () => {
                         .then(() => navigate({ pathname: "/mybourbons" }))
                 }}
                 className="addNew">Update Cocktail</button>
-            </form>
-            )
+        </form>
+    )
 }

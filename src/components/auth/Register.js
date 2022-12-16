@@ -46,11 +46,11 @@ export const Register = () => {
         setMember(copy)
     }
 
- 
+
     return (
         <main style={{ textAlign: "center" }}>
             <dialog className="dialog dialog--password" ref={conflictDialog}>
-                <div>{ serverFeedback }</div>
+                <div>{serverFeedback}</div>
                 <button className="button--close"
                     onClick={e => {
                         conflictDialog.current.close()
@@ -61,52 +61,52 @@ export const Register = () => {
             <form className="registerLogin" onSubmit={handleRegister}>
                 <h1 className="rTitle1">Register New Account</h1>
                 <section className="register">
-                <fieldset>
-                    <label htmlFor="first_name">  </label>
-                    <input onChange={updateMember}
-                        type="text" id="first_name"
-                        placeholder="First Name"
-                        className="formControl" required autoFocus />
-                </fieldset>
-                <fieldset>
-                    <label htmlFor="last_name"> </label>
-                    <input onChange={updateMember}
-                        type="text" id="last_name"
-                        placeholder="Last Name"
-                        className="formControl" required />
-                </fieldset>
-                <fieldset>
-                    <label htmlFor="birthday"> </label>
-                    <input onChange={updateMember}
-                        type="text"
-                        id="birthday"
-                        placeholder="Birthday (YYYY-MM-DD)"
-                        className="formControl" required />
-                </fieldset>
-                <fieldset>
-                    <label htmlFor="email">  </label>
-                    <input onChange={updateMember}
-                        type="email"
-                        id="email"
-                        placeholder="Email"
-                        className="formControl" required />
-                </fieldset>
-                <fieldset>
-                    <label htmlFor="username"> </label>
-                    <input onChange={updateMember}
-                        type="username"
-                        id="username"
-                        placeholder="Create A Username"
-                        className="formControl" required />
-                </fieldset>
-                <fieldset>
-                    <label htmlFor="password">  </label>
-                    <input onChange={updateMember}
-                        type="password"
-                        id="password"
-                        placeholder="Create A Password"
-                        className="formControl" required />
-                </fieldset>
+                    <fieldset>
+                        <label htmlFor="first_name">  </label>
+                        <input onChange={updateMember}
+                            type="text" id="first_name"
+                            placeholder="First Name"
+                            className="formControl" required autoFocus />
+                    </fieldset>
+                    <fieldset>
+                        <label htmlFor="last_name"> </label>
+                        <input onChange={updateMember}
+                            type="text" id="last_name"
+                            placeholder="Last Name"
+                            className="formControl" required />
+                    </fieldset>
+                    <fieldset>
+                        <label htmlFor="birthday"> </label>
+                        <input onChange={updateMember}
+                            type="text"
+                            id="birthday"
+                            placeholder="Birthday (YYYY-MM-DD)"
+                            className="formControl" required />
+                    </fieldset>
+                    <fieldset>
+                        <label htmlFor="email">  </label>
+                        <input onChange={updateMember}
+                            type="email"
+                            id="email"
+                            placeholder="Email"
+                            className="formControl" required />
+                    </fieldset>
+                    <fieldset>
+                        <label htmlFor="username"> </label>
+                        <input onChange={updateMember}
+                            type="username"
+                            id="username"
+                            placeholder="Create A Username"
+                            className="formControl" required />
+                    </fieldset>
+                    <fieldset>
+                        <label htmlFor="password">  </label>
+                        <input onChange={updateMember}
+                            type="password"
+                            id="password"
+                            placeholder="Create A Password"
+                            className="formControl" required />
+                    </fieldset>
                 </section>
                 <fieldset>
                     <button type="submit"> Register New Member </button>

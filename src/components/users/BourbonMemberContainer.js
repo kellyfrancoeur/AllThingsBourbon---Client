@@ -4,11 +4,11 @@ import { MemberSearch } from "./BourbonMemberSearch"
 
 
 
-export const MemberContainer =()=>{
-    const [searchTerms, setSearchTerms] = useState ("")
-    
+export const MemberContainer = () => {
+    const [searchTerms, setSearchTerms] = useState("")
+
     return <>
-        <MemberSearch setterFunction = {setSearchTerms}/>
-        <MemberList searchTermState= {searchTerms}/>
+        <MemberSearch setterFunction={setSearchTerms} />
+        <MemberList searchTermState={searchTerms} />
     </>
 }

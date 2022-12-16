@@ -1,7 +1,9 @@
+import "./DistilleryList.css"
+
 export const DistillerySearch = ({setterFunction}) => {
     return (
-        <div>
-        <input 
+        <div className="distillerySearch">
+        <input id="search" 
             onChange ={
                 (changeEvent) => {
                 setterFunction(changeEvent.target.value)

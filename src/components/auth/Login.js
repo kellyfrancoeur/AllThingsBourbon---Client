@@ -9,8 +9,6 @@ export const Login = () => {
     const existDialog = useRef()
     let navigate = useNavigate()
 
-    // const localBourbonUser = localStorage.getItem("bourbon_user")
-    // const bourbonUserObject = JSON.parse(localBourbonUser)
 
     const handleLogin = (e) => {
         e.preventDefault()
@@ -44,7 +42,6 @@ export const Login = () => {
             <h2 id="wTitle2">Bourbon</h2>
             </div>
             <h3 id="wTitle3">For the Bourbon Aficionado</h3></div>
-            {/* <section className="logincontainerleft"></section> */}
             <div className="logincard">
                 <form className="form--login" onSubmit={handleLogin}>
                 <div className="loginlogo"></div>

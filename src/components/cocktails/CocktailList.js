@@ -1,29 +1,49 @@
 import React, { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
-import { getCocktails, deleteCocktail } from "../../managers/CocktailManager.js"
+import { deleteCocktail } from "../../managers/CocktailManager.js"
 import "./CocktailList.css"
 
-export const CocktailList = (props) => {
+export const CocktailList = ({searchTermState}) => {
     const [cocktails, setCocktails] = useState([])
+    const [filteredCocktails, setFilteredCocktails] = useState([])
     const navigate = useNavigate()
 
     const localBourbonUser = localStorage.getItem("bourbon_user")
     const bourbonUserObject = JSON.parse(localBourbonUser)
 
-    // useEffect(
-    //     () => {
-    //         const searchedBourbons = cocktails.filter(distillery => {
-    //             return distillery.name.toLowerCase().includes(searchTermState.toLowerCase())
-    //                 || distillery.location.toLowerCase().includes(searchTermState.toLowerCase())
-    //         })
-    //         setCocktails(searchedBourbons)
-    //     },
-    //     [searchTermState]
-    // ) 
+    useEffect(
+        () => {
+            const searchedCocktails = cocktails.filter(cocktail => {
+                return cocktail?.name?.toLowerCase().includes(searchTermState.toLowerCase())
+                    || cocktail?.type_of_cocktail?.type.toLowerCase().includes(searchTermState.toLowerCase())
+            })
+            setFilteredCocktails(searchedCocktails)
+        },
+        [searchTermState]
+    ) 
 
-    useEffect(() => {
-        getCocktails().then(data => setCocktails(data))
-    }, []
+    const getAllCocktails = () => {
+        fetch("http://localhost:8000/cocktails", {
+        headers: {
+            "Accept": "application/json",
+            "Content-Type": "application/json",
+            "Authorization": `Token ${JSON.parse(localStorage.getItem("bourbon_user")).token}`
+        }
+    })
+            .then(response => response.json())
+            .then((cocktailArray) => {
+                setFilteredCocktails(cocktailArray)
+                setCocktails(cocktailArray)
+            })
+
+    }
+
+
+    useEffect(
+        () => {
+            getAllCocktails()
+        },
+        []
     )
 
     return (<>
@@ -39,7 +59,7 @@ export const CocktailList = (props) => {
         </div>
         <article className="cocktails">
             {
-                cocktails.map(cocktail => {
+                filteredCocktails.map(cocktail => {
                     return <section key={`cocktail--${cocktail.id}`} className="cocktail">
                         <div className="cocktailView">
                             <div className="cocktailImg">

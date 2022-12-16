@@ -1,8 +1,8 @@
-import "./CocktailList.css"
+import "./ManageBourbonUsers.css"
 
-export const CocktailSearch = ({setterFunction}) => {
+export const MemberSearch = ({setterFunction}) => {
     return (
-        <div className="cocktailSearch">
+        <div className="memberSearch">
         <input id="search"
             onChange ={
                 (changeEvent) => {

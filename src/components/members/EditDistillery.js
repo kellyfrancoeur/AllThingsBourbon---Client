@@ -7,7 +7,7 @@ import "./MemberPage.css"
 export const EditDistillery = () => {
     const navigate = useNavigate()
     const { distilleryVisitedId } = useParams()
-    const [distilleries, setDistilleries ] = useState([])
+    const [distilleries, setDistilleries] = useState([])
     const [updateTriedDistillery, setUpdatedTriedDistillery] = useState({
         id: 0,
         distillery: 0,
@@ -21,7 +21,7 @@ export const EditDistillery = () => {
         [distilleryVisitedId])
 
     useEffect(() => {
-        getDistilleries().then(setDistilleries )
+        getDistilleries().then(setDistilleries)
     }, []
     )
 
@@ -37,29 +37,29 @@ export const EditDistillery = () => {
             <h1 id="mTitle2">Update Distillery</h1>
             <fieldset>
                 <div className="formGroup">
-                <h2 id="mTitle4"><label htmlFor="distillery">Distillery:</label></h2>
+                    <h2 id="mTitle4"><label htmlFor="distillery">Distillery:</label></h2>
                     <select id="distillery" className="drop_down" value={updateTriedDistillery.distilleries}
-                    onChange={changeTriedDistilleryState}>
-                        
+                        onChange={changeTriedDistilleryState}>
+
                         <option value={0}>Select Distillery</option>
                         {
-                            distilleries.map((distillery) =>{
-                                const isSelected = distillery.id === updateTriedDistillery.distillery.id 
-                                return <option selected={isSelected ?true:false} value={`${distillery.id}`} key={`distillery--${distillery.id}`}>{distillery.name}</option>
+                            distilleries.map((distillery) => {
+                                const isSelected = distillery.id === updateTriedDistillery.distillery.id
+                                return <option selected={isSelected ? true : false} value={`${distillery.id}`} key={`distillery--${distillery.id}`}>{distillery.name}</option>
                             }
 
                             )
-                            
+
                         }
                     </select>
                 </div>
             </fieldset>
             <fieldset>
                 <div className="formGroup">
-                <h2 id="mTitle4"><label htmlFor="name">Comments: </label></h2>
-                    <input type="text" 
-                        id="comments" 
-                        required autoFocus 
+                    <h2 id="mTitle4"><label htmlFor="name">Comments: </label></h2>
+                    <input type="text"
+                        id="comments"
+                        required autoFocus
                         className="formControl"
                         value={updateTriedDistillery.comments}
                         onChange={changeTriedDistilleryState}
@@ -68,10 +68,10 @@ export const EditDistillery = () => {
             </fieldset>
             <fieldset>
                 <div className="formGroup">
-                <h2 id="mTitle4"><label htmlFor="rating">Rating: </label></h2>
-                    <input type="number" 
-                        id="rating" 
-                        required autoFocus 
+                    <h2 id="mTitle4"><label htmlFor="rating">Rating: </label></h2>
+                    <input type="number"
+                        id="rating"
+                        required autoFocus
                         className="formControl1"
                         min="0" max="5"
                         value={updateTriedDistillery.rating}
@@ -95,6 +95,6 @@ export const EditDistillery = () => {
                         .then(() => navigate({ pathname: "/mybourbons" }))
                 }}
                 className="addNew">Update Distillery</button>
-            </form>
-            )
+        </form>
+    )
 }

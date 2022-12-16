@@ -6,7 +6,7 @@ import { getDistilleries } from "../../managers/DistilleriesManager"
 export const AddDistillery = () => {
     const navigate = useNavigate()
     const [distilleries, setDistilleries] = useState([])
-    const [triedNewDistillery , updateNewDistillery ] = useState({
+    const [triedNewDistillery, updateNewDistillery] = useState({
         distillery: 0,
         comments: "",
         rating: 0
@@ -19,8 +19,8 @@ export const AddDistillery = () => {
 
     const changeTriedDistilleryState = (domEvent) => {
         const value = domEvent.target.value
-        updateNewDistillery ({
-            ...triedNewDistillery ,
+        updateNewDistillery({
+            ...triedNewDistillery,
             [domEvent.target.name]: value
         })
     }
@@ -30,28 +30,28 @@ export const AddDistillery = () => {
             <h1 id="mTitle2">Add A New Distillery</h1>
             <fieldset>
                 <div className="formGroup">
-                <h2 id="mTitle4"><label htmlFor="distillery">Distillery:</label></h2>
+                    <h2 id="mTitle4"><label htmlFor="distillery">Distillery:</label></h2>
                     <select name="distillery" className="drop_down" value={triedNewDistillery.name}
-                    onChange={changeTriedDistilleryState}>
-                        
+                        onChange={changeTriedDistilleryState}>
+
                         <option value={0}>Select Distillery</option>
                         {
-                            distilleries.map((distillery) =>{
+                            distilleries.map((distillery) => {
                                 return <option value={`${distillery.id}`} key={`distillery--${distillery.id}`}>{distillery.name}</option>
                             }
 
                             )
-                            
+
                         }
                     </select>
                 </div>
             </fieldset>
             <fieldset>
                 <div className="formGroup">
-                <h2 id="mTitle4"><label htmlFor="name">Comments: </label></h2>
-                    <input type="text" 
-                        name="comments" 
-                        required autoFocus 
+                    <h2 id="mTitle4"><label htmlFor="name">Comments: </label></h2>
+                    <input type="text"
+                        name="comments"
+                        required autoFocus
                         className="formControl"
                         placeholder="What did you think?"
                         value={triedNewDistillery.comments}
@@ -61,10 +61,10 @@ export const AddDistillery = () => {
             </fieldset>
             <fieldset>
                 <div className="formGroup">
-                <h2 id="mTitle4"><label htmlFor="rating">Rating: </label></h2>
-                    <input type="number" 
-                        name="rating" 
-                        required autoFocus 
+                    <h2 id="mTitle4"><label htmlFor="rating">Rating: </label></h2>
+                    <input type="number"
+                        name="rating"
+                        required autoFocus
                         className="formControl1"
                         min="0" max="5"
                         value={triedNewDistillery.rating}
@@ -87,6 +87,6 @@ export const AddDistillery = () => {
                         .then(() => navigate({ pathname: "/mybourbons" }))
                 }}
                 className="addNew">Add Distillery</button>
-            </form>
-            )
+        </form>
+    )
 }

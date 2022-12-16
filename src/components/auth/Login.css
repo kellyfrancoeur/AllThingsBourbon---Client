@@ -1,51 +1,32 @@
-@media (min-width: 1500px) {
-    .logincontainerleft {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            height: 100vh;
-            width: 60vw;
-        }
-}
-@media (min-width: 840px) and (max-width: 1499px) {
-    .logincontainerleft {
-            display: flex;
-            flex-direction: column;
-            align-items: left;
-            height: 100vh;
-            width: 60vw;
-        }
-}
-
-.allThings{
+.allThings {
     padding: 0rem 2rem 0rem 5rem;
-    margin: 8rem 0rem 0rem 5rem;
+    margin: 8rem 0rem 0rem -3rem;
 }
 
-#wTitle1{
+#wTitle1 {
     font-size: 5rem;
     color: rgb(248, 224, 8);
     text-align: center;
     font-family: "Fredoka One";
     line-height: 0.5;
-    margin: 6rem 0rem 0rem -9rem;
+    margin: 12rem 0rem 0rem -25rem;
 }
-  
-#wTitle2{
+
+#wTitle2 {
     font-size: 5rem;
     color: white;
     text-align: center;
     font-family: "Great Vibes";
-    margin: 5rem 0rem 2rem 7rem;
+    margin: 5rem 15rem 2rem 7rem;
     line-height: 0;
 }
-  
-#wTitle3{
+
+#wTitle3 {
     font-size: 1.5rem;
     color: white;
     text-align: center;
     font-family: "Economica";
-    margin: 4rem 15rem 0rem 0rem;
+    margin: 4rem 20rem 0rem 0rem;
 }
 
 fieldset {
@@ -59,8 +40,8 @@ fieldset {
     background-color: black;
     background-blend-mode: overlay;
     background-repeat: no-repeat;
-    margin: 29.5rem 0rem 0rem -34.5rem;
-    width: 36rem;
+    margin: 31.5rem 0rem 0rem -47.5rem;
+    width: 31rem;
     position: fixed;
 }
 
@@ -77,19 +58,9 @@ fieldset {
     background-clip: padding-box;
     border: 1px solid #ced4da;
     border-radius: .25rem;
-    -webkit-transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    -webkit-transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
-
-.main {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    width: 100%;
-    overflow-y: hidden;
-}
-
 
 .loginscreen {
     display: flex;
@@ -97,42 +68,39 @@ fieldset {
     width: 100%;
     height: auto;
     flex-wrap: nowrap;
-}
-
-.logincontainerleft {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 88vh;
-    width: 105vw;
-    background-color: black;
+    margin: 0rem 0rem 0rem -3rem;
 }
 
 .logincontainerright {
     width: 500vw;
-    height: 500;
+    height: 300;
     background-image: url(https://trofnq.co.uk/wp-content/uploads/2016/04/JDK_50-copy-1.jpg);
     background-size: cover;
-    margin: 0rem -3rem -28rem 5rem;
+    margin: 0rem -6rem -24rem -15rem;
 }
 
 .loginLinks {
     position: fixed;
-    right: 88.5rem; bottom: 2rem;
-    height:40px;
+    right: 89rem;
+    bottom: 2rem;
+    height: 40px;
     padding: 5px;
-    text-decoration-color: white;
-  }
-
-#login{
-    text-decoration-color: rgb(248, 224, 8);;
 }
+
+#login {
+    text-decoration-color: rgb(248, 224, 8);
+    ;
+}
+
 a {
     color: rgb(248, 224, 8);
     font-family: "Economica";
 }
 
-.align-right {
-    text-align: left;
-    margin: 0rem 10rem 0rem 0rem;
-  }
+.loginlogo {
+    background-image: url(https://i.postimg.cc/KYNtFxbB/logo3.png);
+    height: 7rem;
+    width: 64rem;
+    background-position: left;
+    background-size: cover;
+}

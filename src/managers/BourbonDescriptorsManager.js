@@ -32,7 +32,7 @@ export const createBourbonDescriptor = (descript) => {
 }
 
 export const updateBourbonDescriptor = (descriptor) => {
-    return fetch (`http://localhost:8000/descriptors/${descriptor.id}`, {
+    return fetch(`http://localhost:8000/descriptors/${descriptor.id}`, {
         method: "PUT",
         headers: {
             "Accept": "application/json",

@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom"
 import { deleteCocktail } from "../../managers/CocktailManager.js"
 import "./CocktailList.css"
 
-export const CocktailList = ({searchTermState}) => {
+export const CocktailList = ({ searchTermState }) => {
     const [cocktails, setCocktails] = useState([])
     const [filteredCocktails, setFilteredCocktails] = useState([])
     const navigate = useNavigate()
@@ -20,16 +20,16 @@ export const CocktailList = ({searchTermState}) => {
             setFilteredCocktails(searchedCocktails)
         },
         [searchTermState]
-    ) 
+    )
 
     const getAllCocktails = () => {
         fetch("http://localhost:8000/cocktails", {
-        headers: {
-            "Accept": "application/json",
-            "Content-Type": "application/json",
-            "Authorization": `Token ${JSON.parse(localStorage.getItem("bourbon_user")).token}`
-        }
-    })
+            headers: {
+                "Accept": "application/json",
+                "Content-Type": "application/json",
+                "Authorization": `Token ${JSON.parse(localStorage.getItem("bourbon_user")).token}`
+            }
+        })
             .then(response => response.json())
             .then((cocktailArray) => {
                 setFilteredCocktails(cocktailArray)

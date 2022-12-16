@@ -1,4 +1,4 @@
-.register{
+.register {
     color: white;
     font-family: "Economica";
     font-size: 2rem;
@@ -7,7 +7,7 @@
 
 }
 
-.rTitle1{
+.rTitle1 {
     font-size: 5rem;
     color: rgb(248, 224, 8);
     text-align: center;
@@ -27,6 +27,6 @@
     background-clip: padding-box;
     border: 1px solid #ced4da;
     border-radius: .25rem;
-    -webkit-transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    -webkit-transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }

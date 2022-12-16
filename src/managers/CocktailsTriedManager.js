@@ -32,7 +32,7 @@ export const createCocktailTried = (cocktailTried) => {
 }
 
 export const updateCocktailTried = (cocktailTried) => {
-    return fetch (`http://localhost:8000/cocktailstried/${cocktailTried.id}`, {
+    return fetch(`http://localhost:8000/cocktailstried/${cocktailTried.id}`, {
         method: "PUT",
         headers: {
             "Accept": "application/json",

@@ -1,4 +1,4 @@
-#cTitle2{
+#cTitle2 {
     font-size: 5rem;
     color: rgb(248, 224, 8);
     text-align: center;
@@ -7,17 +7,17 @@
     margin: 5rem 0rem 10rem 0rem;
 }
 
-#cTitle3{
+#cTitle3 {
     font-size: 2.5rem;
     color: white;
     text-align: left;
     font-family: "Economica";
-  }
+}
 
 .cocktailView {
     display: grid;
-    align-items:flex-start; 
-    grid-template-columns: 1fr 1fr ;
+    align-items: flex-start;
+    grid-template-columns: 1fr 1fr;
     column-gap: 0px;
     margin: 0rem 10rem 5rem 10rem;
 
@@ -25,19 +25,19 @@
 
 .cocktailImg {
     max-width: 100%;
-    max-height:100%;
+    max-height: 100%;
 }
-     
+
 .cocktailInfo {
     font-size: 20px;
     color: white;
-    font-family: "Economica"; 
+    font-family: "Economica";
 }
 
-.cocktailIngredients{
+.cocktailIngredients {
     margin: 0rem 0rem 1rem 0rem;
 }
- 
-.cocktailHowToMake{
+
+.cocktailHowToMake {
     margin: 1rem 0rem 1rem 0rem;
-} 
+}

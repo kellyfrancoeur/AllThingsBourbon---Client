@@ -1,7 +1,8 @@
-.bourbonHistory{
-    margin: 0rem 3rem 0rem 3rem;
+.bourbonHistory {
+  margin: 0rem 3rem 0rem 3rem;
 }
-#aTitle1{
+
+#aTitle1 {
   font-size: 5rem;
   color: rgb(248, 224, 8);
   text-align: center;
@@ -9,179 +10,180 @@
   line-height: 0.8;
 }
 
-#aTitle4{
+#aTitle4 {
   font-size: 3.5rem;
   color: white;
   text-align: center;
   font-family: "Economica";
 }
 
-.intro{
+.intro {
   margin: 0rem 0rem 0rem 0rem;
   color: white;
 }
 
-#earlyHistory{
+#earlyHistory {
   margin: 0rem 3rem 0rem 3.5rem;
-  color: white; 
+  color: white;
 }
 
-#historicalContext{
+#historicalContext {
   margin: 0rem 2.5rem 0rem 3.5rem;
-  color: white; 
+  color: white;
 }
 
-#bname{
+#bname {
   margin: 0rem 3rem 0rem 3.5rem;
-  color: white; 
+  color: white;
 }
 
-#invented{
+#invented {
   margin: 0rem 3rem 0rem 3.5rem;
-  color: white; 
+  color: white;
 }
 
-#popular{
-    margin: 0rem 3rem 0rem 3.5rem;
-    color: white; 
+#popular {
+  margin: 0rem 3rem 0rem 3.5rem;
+  color: white;
 }
 
-#glassBottles{
-    margin: 0rem 3rem 0rem 3.5rem;
-    color: white; 
+#glassBottles {
+  margin: 0rem 3rem 0rem 3.5rem;
+  color: white;
 }
 
-#prohibition{
-    margin: 0rem 3rem 0rem 3.5rem;
-    color: white; 
+#prohibition {
+  margin: 0rem 3rem 0rem 3.5rem;
+  color: white;
 }
 
-#renaissance{
-    margin: 0rem 3rem 0rem 3.5rem;
-    color: white; 
+#renaissance {
+  margin: 0rem 3rem 0rem 3.5rem;
+  color: white;
 }
 
-#ageStatement{
-    margin: 0rem 0rem 0rem 3.5rem;
-    color: white; 
+#ageStatement {
+  margin: 0rem 0rem 0rem 3.5rem;
+  color: white;
 }
 
-#century{
-    margin: 0rem 3rem 4rem 3.5rem;
-    color: white; 
+#century {
+  margin: 0rem 3rem 4rem 3.5rem;
+  color: white;
 }
 
 .history {
   display: grid;
-  align-items:center; 
-  grid-template-columns: 1fr 1fr ;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
   column-gap: 0px;
 }
 
 .context {
   display: grid;
-  align-items:center; 
-  grid-template-columns: 1fr 1fr ;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
   column-gap: 50px;
 }
 
 .bourbonName {
   display: grid;
-  align-items:center; 
-  grid-template-columns: 1fr 1fr ;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
   column-gap: 0px;
 }
 
 .inventedBourbon {
   display: grid;
-  align-items:center; 
-  grid-template-columns: 1fr 1fr ;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
   column-gap: 50px;
 }
 
-.bourbonPop{
+.bourbonPop {
   display: grid;
-  align-items:center; 
-  grid-template-columns: 1fr 1fr ;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
   column-gap: 0px;
 }
 
 .bottles {
-    display: grid;
-    align-items:center; 
-    grid-template-columns: 1fr 1fr ;
-    column-gap: 100px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 100px;
 }
 
 .effects {
-    display: grid;
-    align-items:center; 
-    grid-template-columns: 1fr 1fr ;
-    column-gap: 50px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 50px;
 }
 
 .bourbonRen {
-    display: grid;
-    align-items:center; 
-    grid-template-columns: 1fr 1fr ;
-    column-gap: 75px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 75px;
 }
 
 .statement {
-    display: grid;
-    align-items:center; 
-    grid-template-columns: 1fr 1fr ;
-    column-gap: 00px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 00px;
 }
 
 .bourbonCent {
-    display: grid;
-    align-items:center; 
-    grid-template-columns: 1fr 1fr ;
-    column-gap: 50px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 50px;
 }
 
-#hist{
+#hist {
   padding: 0rem 0rem 0.8rem 0rem;
 }
 
 .shortcutLinks {
-    display: grid;
-    align-items:center; 
-    grid-template-columns: 1fr 1fr ;
-    column-gap: 100px;
-    margin: 0rem 0rem 2rem 0rem;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 100px;
+  margin: 0rem 0rem 2rem 0rem;
 }
 
 .pic {
   max-width: 100%;
-  max-height:100%;
+  max-height: 100%;
 }
-   
+
 .text {
   font-size: 20px;
 }
 
-p{
+p {
   font-size: 20px;
   font-family: "Economica";
 }
 
-.shortcut{
-    margin: 0rem 0rem 0rem 10rem;
-}
-.introPic{
-    margin: 0rem 10rem 0rem 1rem;
+.shortcut {
+  margin: 0rem 0rem 0rem 10rem;
 }
 
-.intro{
-    text-align: left;
-    margin: 0rem 0rem 0rem 10rem;
+.introPic {
+  margin: 0rem 10rem 0rem 1rem;
 }
 
-.help{
-    text-align: left;
-    color: white;
-    margin: 0rem 0rem 7rem 10rem; 
-    font-family: "Economica";
+.intro {
+  text-align: left;
+  margin: 0rem 0rem 0rem 10rem;
+}
+
+.help {
+  text-align: left;
+  color: white;
+  margin: 0rem 0rem 7rem 10rem;
+  font-family: "Economica";
 }

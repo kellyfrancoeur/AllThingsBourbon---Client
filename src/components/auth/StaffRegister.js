@@ -50,7 +50,7 @@ export const StaffRegister = (props) => {
     return (
         <main style={{ textAlign: "center" }}>
             <dialog className="dialog dialog--password" ref={conflictDialog}>
-                <div>{ serverFeedback }</div>
+                <div>{serverFeedback}</div>
                 <button className="button--close"
                     onClick={e => conflictDialog.current.close()}>Close</button>
             </dialog>
@@ -58,52 +58,52 @@ export const StaffRegister = (props) => {
             <form className="staffRegisterLogin" onSubmit={handleRegister}>
                 <h1 className="rTitle1">Welcome to the team</h1>
                 <section className="register">
-                <fieldset>
-                    <label htmlFor="first_name"></label>
-                    <input onChange={updateStaff}
-                        type="text" id="first_name"
-                        placeholder="First Name"
-                        className="formControl" required autoFocus />
-                </fieldset>
-                <fieldset>
-                    <label htmlFor="last_name"></label>
-                    <input onChange={updateStaff}
-                        type="text" id="last_name"
-                        placeholder="Last Name"
-                        className="formControl" required />
-                </fieldset>
-                <fieldset>
-                    <label htmlFor="email"> </label>
-                    <input onChange={updateStaff}
-                        type="email"
-                        id="email"
-                        placeholder="Email"
-                        className="formControl" required />
-                </fieldset>
-                <fieldset>
-                    <label htmlFor="username"></label>
-                    <input onChange={updateStaff}
-                        type="username"
-                        id="username"
-                        placeholder="Create A Username"
-                        className="formControl" required />
-                </fieldset>
-                <fieldset>
-                    <label htmlFor="password"></label>
-                    <input onChange={updateStaff}
-                        type="password"
-                        id="password"
-                        placeholder="Create A Password"
-                        className="formControl" required />
-                </fieldset>
-                <fieldset>
-                    <label htmlFor="bio"></label>
-                    <input onChange={updateStaff}
-                        type="text"
-                        id="bio"
-                        placeholder="Tell Us A Little About Yourself & Your Love of Bourbon..."
-                        className="formControl" required />
-                </fieldset>
+                    <fieldset>
+                        <label htmlFor="first_name"></label>
+                        <input onChange={updateStaff}
+                            type="text" id="first_name"
+                            placeholder="First Name"
+                            className="formControl" required autoFocus />
+                    </fieldset>
+                    <fieldset>
+                        <label htmlFor="last_name"></label>
+                        <input onChange={updateStaff}
+                            type="text" id="last_name"
+                            placeholder="Last Name"
+                            className="formControl" required />
+                    </fieldset>
+                    <fieldset>
+                        <label htmlFor="email"> </label>
+                        <input onChange={updateStaff}
+                            type="email"
+                            id="email"
+                            placeholder="Email"
+                            className="formControl" required />
+                    </fieldset>
+                    <fieldset>
+                        <label htmlFor="username"></label>
+                        <input onChange={updateStaff}
+                            type="username"
+                            id="username"
+                            placeholder="Create A Username"
+                            className="formControl" required />
+                    </fieldset>
+                    <fieldset>
+                        <label htmlFor="password"></label>
+                        <input onChange={updateStaff}
+                            type="password"
+                            id="password"
+                            placeholder="Create A Password"
+                            className="formControl" required />
+                    </fieldset>
+                    <fieldset>
+                        <label htmlFor="bio"></label>
+                        <input onChange={updateStaff}
+                            type="text"
+                            id="bio"
+                            placeholder="Tell Us A Little About Yourself & Your Love of Bourbon..."
+                            className="formControl" required />
+                    </fieldset>
                 </section>
                 <fieldset>
                     <button type="submit"> Register New Staff Member </button>

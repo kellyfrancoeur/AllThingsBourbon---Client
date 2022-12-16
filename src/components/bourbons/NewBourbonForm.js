@@ -16,7 +16,7 @@ export const NewBourbonForm = () => {
         description: "",
         made_in: "",
         link_to_buy: "",
-        bourbon_img:"",
+        bourbon_img: "",
         type_of_bourbon: 0
     })
 
@@ -24,7 +24,7 @@ export const NewBourbonForm = () => {
         getBourbonTypes().then(setBourbonTypes)
     }, []
     )
-   
+
     const changeBourbonState = (domEvent) => {
         const value = domEvent.target.value
         updateBourbon({
@@ -39,10 +39,10 @@ export const NewBourbonForm = () => {
             <h1 id="mTitle2">Add A New Bourbon</h1>
             <fieldset>
                 <div className="formGroup">
-                <h2 id="mTitle4"><label htmlFor="name">Name of Bourbon: </label></h2>
-                    <input type="text" 
-                        name="name" 
-                        required autoFocus 
+                    <h2 id="mTitle4"><label htmlFor="name">Name of Bourbon: </label></h2>
+                    <input type="text"
+                        name="name"
+                        required autoFocus
                         className="formControl"
                         placeholder="Name of Bourbon"
                         value={newBourbon.name}
@@ -52,10 +52,10 @@ export const NewBourbonForm = () => {
             </fieldset>
             <fieldset>
                 <div className="formGroup">
-                <h2 id="mTitle4"><label htmlFor="proof">Proof: </label></h2>
-                    <input type="number" 
-                        name="proof" 
-                        required autoFocus 
+                    <h2 id="mTitle4"><label htmlFor="proof">Proof: </label></h2>
+                    <input type="number"
+                        name="proof"
+                        required autoFocus
                         className="formControl1"
                         placeholder="Proof of Bourbon"
                         value={newBourbon.proof}
@@ -65,10 +65,10 @@ export const NewBourbonForm = () => {
             </fieldset>
             <fieldset>
                 <div className="formGroup">
-                <h2 id="mTitle4"><label htmlFor="aroma">Aroma: </label></h2>
-                    <input type="text" 
-                        name="aroma" 
-                        required autoFocus 
+                    <h2 id="mTitle4"><label htmlFor="aroma">Aroma: </label></h2>
+                    <input type="text"
+                        name="aroma"
+                        required autoFocus
                         className="formControl"
                         placeholder="Aroma of Bourbon"
                         value={newBourbon.aroma}
@@ -78,10 +78,10 @@ export const NewBourbonForm = () => {
             </fieldset>
             <fieldset>
                 <div className="formGroup">
-                <h2 id="mTitle4"><label htmlFor="taste">Taste: </label></h2>
-                    <input type="text" 
-                        name="taste" 
-                        required autoFocus 
+                    <h2 id="mTitle4"><label htmlFor="taste">Taste: </label></h2>
+                    <input type="text"
+                        name="taste"
+                        required autoFocus
                         className="formControl"
                         placeholder="Taste of Bourbon"
                         value={newBourbon.taste}
@@ -91,10 +91,10 @@ export const NewBourbonForm = () => {
             </fieldset>
             <fieldset>
                 <div className="formGroup">
-                <h2 id="mTitle4"><label htmlFor="finish">Finish: </label></h2>
-                    <input type="text" 
-                        name="finish" 
-                        required autoFocus 
+                    <h2 id="mTitle4"><label htmlFor="finish">Finish: </label></h2>
+                    <input type="text"
+                        name="finish"
+                        required autoFocus
                         className="formControl"
                         placeholder="Finish of Bourbon"
                         value={newBourbon.finish}
@@ -104,10 +104,10 @@ export const NewBourbonForm = () => {
             </fieldset>
             <fieldset>
                 <div className="formGroup">
-                <h2 id="mTitle4"><label htmlFor="description">Description of Bourbon: </label></h2>
-                    <input type="text" 
-                        name="description" 
-                        required autoFocus 
+                    <h2 id="mTitle4"><label htmlFor="description">Description of Bourbon: </label></h2>
+                    <input type="text"
+                        name="description"
+                        required autoFocus
                         className="formControl"
                         placeholder="Description of Bourbon"
                         value={newBourbon.description}
@@ -117,10 +117,10 @@ export const NewBourbonForm = () => {
             </fieldset>
             <fieldset>
                 <div className="formGroup">
-                <h2 id="mTitle4"><label htmlFor="made_in">Made In: </label></h2>
-                    <input type="text" 
-                        name="made_in" 
-                        required autoFocus 
+                    <h2 id="mTitle4"><label htmlFor="made_in">Made In: </label></h2>
+                    <input type="text"
+                        name="made_in"
+                        required autoFocus
                         className="formControl"
                         placeholder="Bourbon was Made In..."
                         value={newBourbon.made_in}
@@ -130,10 +130,10 @@ export const NewBourbonForm = () => {
             </fieldset>
             <fieldset>
                 <div className="formGroup">
-                <h2 id="mTitle4"><label htmlFor="link_to_buy">Purchase Bourbon: </label></h2>
-                    <input type="text" 
-                        name="link_to_buy" 
-                        required autoFocus 
+                    <h2 id="mTitle4"><label htmlFor="link_to_buy">Purchase Bourbon: </label></h2>
+                    <input type="text"
+                        name="link_to_buy"
+                        required autoFocus
                         className="formControl"
                         placeholder="Link to Purchase Bourbon"
                         value={newBourbon.link_to_buy}
@@ -143,10 +143,10 @@ export const NewBourbonForm = () => {
             </fieldset>
             <fieldset>
                 <div className="formGroup">
-                <h2 id="mTitle4"><label htmlFor="bourbon_img">Image of Bourbon: </label></h2>
-                    <input type="text" 
-                        name="bourbon_img" 
-                        required autoFocus 
+                    <h2 id="mTitle4"><label htmlFor="bourbon_img">Image of Bourbon: </label></h2>
+                    <input type="text"
+                        name="bourbon_img"
+                        required autoFocus
                         className="formControl"
                         placeholder="Link to Image of Bourbon"
                         value={newBourbon.bourbon_img}
@@ -156,18 +156,18 @@ export const NewBourbonForm = () => {
             </fieldset>
             <fieldset>
                 <div className="formGroup">
-                <h2 id="mTitle4"><label htmlFor="type">Type of Bourbon:</label></h2>
+                    <h2 id="mTitle4"><label htmlFor="type">Type of Bourbon:</label></h2>
                     <select name="type" className="drop_down" value={newBourbon.type}
-                    onChange={changeBourbonState}>
-                        
+                        onChange={changeBourbonState}>
+
                         <option value={0}>Select Type</option>
                         {
-                            bourbonTypes.map((bourbonType) =>{
+                            bourbonTypes.map((bourbonType) => {
                                 return <option value={`${bourbonType.id}`} key={`bourbonType--${bourbonType.id}`}>{bourbonType.type}</option>
                             }
 
                             )
-                            
+
                         }
                     </select>
                 </div>

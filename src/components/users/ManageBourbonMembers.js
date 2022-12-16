@@ -2,10 +2,10 @@ import React, { useEffect, useState } from "react"
 import { getBourbonUsers, deleteBourbonUser } from "../../managers/BourbonUsersManager.js"
 import "./ManageBourbonUsers.css"
 
-export const MemberList = ({searchTermState}) => {
+export const MemberList = ({ searchTermState }) => {
     const [bourbonUsers, setBourbonUsers] = useState([])
     const [filteredBourbonUsers, setFilteredBourbonUsers] = useState([])
-    
+
     useEffect(
         () => {
             const searchedMembers = bourbonUsers.filter(user => {
@@ -14,16 +14,16 @@ export const MemberList = ({searchTermState}) => {
             setFilteredBourbonUsers(searchedMembers)
         },
         [searchTermState]
-    ) 
-    
+    )
+
     const getAllMembers = () => {
         fetch("http://localhost:8000/bourbonusers", {
-        headers: {
-            "Accept": "application/json",
-            "Content-Type": "application/json",
-            "Authorization": `Token ${JSON.parse(localStorage.getItem("bourbon_user")).token}`
-        }
-    })
+            headers: {
+                "Accept": "application/json",
+                "Content-Type": "application/json",
+                "Authorization": `Token ${JSON.parse(localStorage.getItem("bourbon_user")).token}`
+            }
+        })
             .then(response => response.json())
             .then((userArray) => {
                 setFilteredBourbonUsers(userArray)
@@ -40,12 +40,12 @@ export const MemberList = ({searchTermState}) => {
         []
     )
 
-    
+
     useEffect(() => {
         getBourbonUsers().then(data => setBourbonUsers(data))
     }, []
     )
- 
+
     return (<>
         <h1 id="uTitle1">All Things Bourbon Members</h1>
         <article className="bourbonMembers">
@@ -71,9 +71,9 @@ export const MemberList = ({searchTermState}) => {
                 })
             }
         </article>
-            <div className="peepsAtBar">
-                <img src="https://restaurantclicks.com/wp-content/uploads/2021/04/bar-manayunk.jpg" height="800" width="900"></img>
-            </div>
+        <div className="peepsAtBar">
+            <img src="https://restaurantclicks.com/wp-content/uploads/2021/04/bar-manayunk.jpg" height="800" width="900"></img>
+        </div>
     </>
     )
 }

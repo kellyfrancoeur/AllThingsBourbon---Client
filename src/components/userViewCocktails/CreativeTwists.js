@@ -18,7 +18,7 @@ export const CreativeTwists = (props) => {
                 cocktails.map((cocktail) => {
                     if (cocktail.type_of_cocktail.id === 4) {
                         return <section key={`cocktail--${cocktail.id}`} className="cocktail">
-                          <div className="cocktailView">
+                            <div className="cocktailView">
                                 <div className="cocktailImg">
                                     <img src={cocktail.cocktail_img} height="400" width="275" />
                                 </div>

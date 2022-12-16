@@ -2,9 +2,6 @@ import "./StaffHomePage.css"
 
 export const StaffHomePage = () => {
 
-    const localBourbonUser = localStorage.getItem("bourbon_user")
-    const bourbonUserObject = JSON.parse(localBourbonUser)
-
     return (
         <body>
             <main className="staffHomePage">

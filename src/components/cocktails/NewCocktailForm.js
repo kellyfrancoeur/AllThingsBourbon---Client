@@ -10,15 +10,15 @@ export const NewCocktailForm = () => {
         name: "",
         ingredients: "",
         how_to_make: "",
-        cocktail_img:"",
+        cocktail_img: "",
         type_of_cocktail: 0
-    }) 
+    })
 
     useEffect(() => {
         getCocktailTypes().then(setCocktailTypes)
     }, []
     )
-   
+
     const changeCocktailState = (domEvent) => {
         const value = domEvent.target.value
         updateCocktail({
@@ -33,10 +33,10 @@ export const NewCocktailForm = () => {
             <h1 id="mTitle2">Add A New Cocktail</h1>
             <fieldset>
                 <div className="formGroup">
-                <h2 id="mTitle4"><label htmlFor="name">Name of Cocktail: </label></h2>
-                    <input type="text" 
-                        name="name" 
-                        required autoFocus 
+                    <h2 id="mTitle4"><label htmlFor="name">Name of Cocktail: </label></h2>
+                    <input type="text"
+                        name="name"
+                        required autoFocus
                         className="formControl"
                         placeholder="Name of Cocktail"
                         value={newCocktail.name}
@@ -46,10 +46,10 @@ export const NewCocktailForm = () => {
             </fieldset>
             <fieldset>
                 <div className="formGroup">
-                <h2 id="mTitle4"><label htmlFor="ingredients">Ingredients: </label></h2>
-                    <input type="text" 
-                        name="ingredients" 
-                        required autoFocus 
+                    <h2 id="mTitle4"><label htmlFor="ingredients">Ingredients: </label></h2>
+                    <input type="text"
+                        name="ingredients"
+                        required autoFocus
                         className="formControl"
                         placeholder="Ingredients of Cocktail"
                         value={newCocktail.ingredients}
@@ -59,10 +59,10 @@ export const NewCocktailForm = () => {
             </fieldset>
             <fieldset>
                 <div className="formGroup">
-                <h2 id="mTitle4"><label htmlFor="how_to_make">How to Make Cocktail: </label></h2>
-                    <input type="text" 
-                        name="how_to_make" 
-                        required autoFocus 
+                    <h2 id="mTitle4"><label htmlFor="how_to_make">How to Make Cocktail: </label></h2>
+                    <input type="text"
+                        name="how_to_make"
+                        required autoFocus
                         className="formControl"
                         placeholder="How to Make Cocktail"
                         value={newCocktail.how_to_make}
@@ -72,10 +72,10 @@ export const NewCocktailForm = () => {
             </fieldset>
             <fieldset>
                 <div className="formGroup">
-                <h2 id="mTitle4"><label htmlFor="cocktail_img">Image of Cocktail: </label></h2>
-                    <input type="text" 
-                        name="cocktail_img" 
-                        required autoFocus 
+                    <h2 id="mTitle4"><label htmlFor="cocktail_img">Image of Cocktail: </label></h2>
+                    <input type="text"
+                        name="cocktail_img"
+                        required autoFocus
                         className="formControl"
                         placeholder="Image of Cocktail"
                         value={newCocktail.cocktail_img}
@@ -85,22 +85,22 @@ export const NewCocktailForm = () => {
             </fieldset>
             <fieldset>
                 <div className="formGroup">
-                <h2 id="mTitle4"><label htmlFor="type">Type of Cocktail:</label></h2>
+                    <h2 id="mTitle4"><label htmlFor="type">Type of Cocktail:</label></h2>
                     <select name="type" className="drop_down" value={newCocktail.type}
-                    onChange={changeCocktailState}>
-                        
+                        onChange={changeCocktailState}>
+
                         <option value={0}>Select Type</option>
                         {
-                            cocktailTypes.map((cocktailType) =>{
+                            cocktailTypes.map((cocktailType) => {
                                 return <option value={`${cocktailType.id}`} key={`cocktailType--${cocktailType.id}`}>{cocktailType.type}</option>
                             }
 
                             )
-                            
+
                         }
                     </select>
                 </div>
-            </fieldset> 
+            </fieldset>
             <button type="submit"
                 onClick={evt => {
                     evt.preventDefault()

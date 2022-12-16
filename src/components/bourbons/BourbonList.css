@@ -1,4 +1,4 @@
-#bTitle1{
+#bTitle1 {
     font-size: 5rem;
     color: rgb(248, 224, 8);
     text-align: center;
@@ -7,17 +7,17 @@
     margin: 5rem 0rem 0rem 0rem;
 }
 
-#bTitle3{
+#bTitle3 {
     font-size: 1.5rem;
     color: white;
     text-align: left;
     font-family: "Economica";
-  }
- 
+}
+
 .bourbonView {
     display: grid;
-    align-items:flex-start; 
-    grid-template-columns: 1fr 1fr ;
+    align-items: flex-start;
+    grid-template-columns: 1fr 1fr;
     column-gap: 150px;
     margin: 0rem 10rem 5rem 10rem;
 
@@ -26,30 +26,30 @@
 .bourbonImg {
     margin: 0rem 0rem 0rem 5rem;
     max-width: 100%;
-    max-height:100%;
+    max-height: 100%;
 }
-     
+
 .bourbonInfo {
     font-size: 20px;
     color: white;
     font-family: "Economica";
 }
 
-.add_bourbon{
+.add_bourbon {
     margin: 0rem 0rem 5rem 44rem;
 }
 
-.buyBourbon{
+.buyBourbon {
     margin: 1rem 0rem 0rem 0rem;
     font-size: 30px;
 }
 
-.bourbonSearch{
+.bourbonSearch {
     margin: 0rem 1rem 0rem 0rem;
     text-align: right;
 }
 
-#search{
+#search {
     text-align: right;
     width: 20%;
     height: calc(1.5em + .75rem + 2px);

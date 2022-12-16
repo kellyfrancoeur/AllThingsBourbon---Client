@@ -2,19 +2,55 @@ import React, { useEffect, useState } from "react"
 import { getBourbonUsers, deleteBourbonUser } from "../../managers/BourbonUsersManager.js"
 import "./ManageBourbonUsers.css"
 
-export const MemberList = (props) => {
+export const MemberList = ({searchTermState}) => {
     const [bourbonUsers, setBourbonUsers] = useState([])
+    const [filteredBourbonUsers, setFilteredBourbonUsers] = useState([])
+    
+    useEffect(
+        () => {
+            const searchedMembers = bourbonUsers.filter(user => {
+                return user?.name?.toLowerCase().includes(searchTermState.toLowerCase())
+            })
+            setFilteredBourbonUsers(searchedMembers)
+        },
+        [searchTermState]
+    ) 
+    
+    const getAllMembers = () => {
+        fetch("http://localhost:8000/bourbonusers", {
+        headers: {
+            "Accept": "application/json",
+            "Content-Type": "application/json",
+            "Authorization": `Token ${JSON.parse(localStorage.getItem("bourbon_user")).token}`
+        }
+    })
+            .then(response => response.json())
+            .then((userArray) => {
+                setFilteredBourbonUsers(userArray)
+                setBourbonUsers(userArray)
+            })
 
+    }
+
+
+    useEffect(
+        () => {
+            getAllMembers()
+        },
+        []
+    )
+
+    
     useEffect(() => {
         getBourbonUsers().then(data => setBourbonUsers(data))
     }, []
     )
-
+ 
     return (<>
         <h1 id="uTitle1">All Things Bourbon Members</h1>
         <article className="bourbonMembers">
             {
-                bourbonUsers.map(bourbonUser => {
+                filteredBourbonUsers.map(bourbonUser => {
                     return <section key={`bourbonUser--${bourbonUser.id}`} className="bourbonUser">
                         <div className="userInfo">
                             <div className="bourbonUserName"><u><b>{bourbonUser.full_name}</b></u></div>

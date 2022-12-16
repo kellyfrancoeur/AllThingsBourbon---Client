@@ -38,3 +38,15 @@
     margin: 0rem 0rem 5rem 44rem;
 }
   
+.distillerySearch{
+    margin: 0rem 1rem 0rem 0rem;
+    text-align: right;
+}
+
+#search{
+    text-align: right;
+    width: 20%;
+    height: calc(1.5em + .75rem + 2px);
+    font-size: 19px;
+    font-weight: 400;
+}

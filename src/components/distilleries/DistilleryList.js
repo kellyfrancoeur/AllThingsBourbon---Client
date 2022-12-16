@@ -3,29 +3,48 @@ import { useNavigate } from "react-router-dom"
 import { getDistilleries, deleteDistillery } from "../../managers/DistilleriesManager.js"
 import "./DistilleryList.css"
 
-export const DistilleryList = (props) => {
+export const DistilleryList = ({searchTermState}) => {
     const [distilleries, setDistilleries] = useState([])
+    const [filteredDistilleries, setFilteredDistilleries] = useState([])
     const navigate = useNavigate()
 
     const localBourbonUser = localStorage.getItem("bourbon_user")
     const bourbonUserObject = JSON.parse(localBourbonUser)
 
-    // useEffect(
-    //     () => {
-    //         const searchedDistilleries = distilleries.filter(distillery => {
-    //             return distillery.name.toLowerCase().includes(searchTermState.toLowerCase())
-    //                 || distillery.location.toLowerCase().includes(searchTermState.toLowerCase())
-    //         })
-    //         setDistilleries(searchedDistilleries)
-    //     },
-    //     [searchTermState]
-    // )
-
-    useEffect(() => {
-        getDistilleries().then(data => setDistilleries(data))
-    }, []
+    useEffect(
+        () => {
+            const searchedDistilleries = distilleries.filter(distillery => {
+                return distillery.name.toLowerCase().includes(searchTermState.toLowerCase())
+                    || distillery.location.toLowerCase().includes(searchTermState.toLowerCase())
+            })
+            setFilteredDistilleries(searchedDistilleries)
+        },
+        [searchTermState]
     )
 
+    const getAllDistilleries = () => {
+        fetch("http://localhost:8000/distilleries", {
+        headers: {
+            "Accept": "application/json",
+            "Content-Type": "application/json",
+            "Authorization": `Token ${JSON.parse(localStorage.getItem("bourbon_user")).token}`
+        }
+    })
+            .then(response => response.json())
+            .then((distilleryArray) => {
+                setFilteredDistilleries(distilleryArray)
+                setDistilleries(distilleryArray)
+            })
+
+    }
+
+
+    useEffect(
+        () => {
+            getAllDistilleries()
+        },
+        []
+    )
 
     return (<>
         <h1 id="dTitle1">Distilleries</h1>
@@ -40,7 +59,7 @@ export const DistilleryList = (props) => {
         </div>
         <article className="distilleries">
             {
-                distilleries.map(distillery => {
+                filteredDistilleries.map(distillery => {
                     return <section key={`distillery--${distillery.id}`} className="distillery">
                         <div className="distilleryView">
                         <div className="distilleryImg">

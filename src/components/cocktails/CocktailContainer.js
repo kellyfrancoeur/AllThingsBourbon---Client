@@ -4,7 +4,7 @@ import { CocktailSearch } from "./CocktailSearch"
 
 
 
-export const BourbonContainer =()=>{
+export const CocktailContainer =()=>{
     const [searchTerms, setSearchTerms] = useState ("")
     
     return <>

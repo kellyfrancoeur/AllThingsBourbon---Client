@@ -9,7 +9,7 @@
   list-style-type: none;
 }
 
-.staffLogo {
+.staffLogout {
   margin-left: auto;
 }
 
@@ -24,12 +24,23 @@
   font-family: "Economica";
 }
 
+#logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 #main-navbar a {
   font-size: 20px;
   color: rgb(248, 224, 8);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  /* margin: 1rem 0rem 0rem 0rem; */
+}
+
+.logo2{
+  padding: 0px 0px;
 }
 
 #links {
@@ -82,10 +93,4 @@
 
 .dropdown:hover .dropdown-content {
   display: flex;
-}
-
-#logo {
-  position: fixed;
-  top: 0;
-  left: 0;
 }

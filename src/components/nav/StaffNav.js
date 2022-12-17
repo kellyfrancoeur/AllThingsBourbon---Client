@@ -7,10 +7,10 @@ export const StaffNav = () => {
     return (
         <nav id="main-navbar">
             <ul id="links">
-                <li className="staffHome">
-                    <Link to="/">Home</Link>
-                </li>
-
+            <div id="logo">
+                <a id="logo2" href="/"><img src="https://i.postimg.cc/KYNtFxbB/logo3.png" height="100" width="100" /></a>
+            </div> 
+ 
                 {
                     localStorage.getItem("bourbon_user")
                         ? <li className="staffLogout">

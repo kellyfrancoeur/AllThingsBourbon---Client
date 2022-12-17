@@ -48,12 +48,17 @@ export const DistilleryList = ({ searchTermState }) => {
 
     return (<>
         <h1 id="dTitle1">Distilleries</h1>
-        <div className="add_distillery">
+        <div>
             {
                 bourbonUserObject.staff
-                    ? <button onClick={() => {
-                        navigate({ pathname: "/distilleries/add" })
-                    }}>Add A Distillery</button>
+                    ? <div className="container"> 
+                    <img id="listimg" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0dX9YZXbxAEPNQWeEklJtVygsisZKoyd1wQ&usqp=CAU" height="125" width="200"></img>
+                    <div className="middle">
+                        <div className="listtext">
+                            <a href="/distilleries/add">Add A Distillery</a>
+                        </div>
+                    </div>
+                    </div>
                     : ""
             }
         </div>

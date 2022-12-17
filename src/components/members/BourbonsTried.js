@@ -14,11 +14,6 @@ export const BourbonsTried = () => {
 
     return (<>
         <article className="myBourbons">
-            <div>
-                <button className="addButton" onClick={() => {
-                    navigate({ pathname: `/bourbonstried/add` })
-                }}>Add A Bourbon</button>
-            </div>
             {
                 triedBourbons.map(triedBourbon => {
                     return <section key={`triedBourbon--${triedBourbon.id}`}>

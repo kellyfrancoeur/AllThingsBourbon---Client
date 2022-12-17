@@ -48,15 +48,15 @@ export const BourbonList = ({ searchTermState }) => {
 
     return (<>
         <h1 id="bTitle1">Bourbons</h1>
-        <div className="add_bourbon">
-            {
-                bourbonUserObject.staff
-                    ? <button onClick={() => {
-                        navigate({ pathname: "/bourbons/add" })
-                    }}>Add A Bourbon</button>
-                    : ""
-            }
-        </div>
+        <div className="container">
+            <img id="listimg" src="https://www.tastingtable.com/img/gallery/makers-mark-kentucky-straight-bourbon-whisky-the-ultimate-bottle-guide/intro-1667420234.jpg" height="125" width="200"></img>
+                <div className="middle">
+                    <div className="listtext">
+                        <a href="/bourbons/add">Add A Bourbon</a>
+                            </div>
+                        </div>
+                    </div>
+
         <article className="bourbons">
             {
                 filterBourbons.map(bourbon => {

@@ -3,13 +3,16 @@ import "./CocktailList.css"
 export const CocktailSearch = ({ setterFunction }) => {
     return (
         <div className="cocktailSearch">
-            <input id="search"
+            <form name="search">
+            <input type="text"
                 onChange={
                     (changeEvent) => {
                         setterFunction(changeEvent.target.value)
                     }
                 }
-                type="text" placeholder="Enter Search Terms" />
+                className="input"  name="txt" onmouseout="this.value = ''; this.blur();" />
+        </form>
+        <i class="fas fa-search"></i>
         </div>
     )
 }

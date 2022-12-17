@@ -48,15 +48,14 @@ export const CocktailList = ({ searchTermState }) => {
 
     return (<>
         <h1 id="cTitle1">Cocktails</h1>
-        <div className="add_cocktail">
-            {
-                bourbonUserObject.staff
-                    ? <button onClick={() => {
-                        navigate({ pathname: "/cocktails/add" })
-                    }}>Add A Cocktail</button>
-                    : ""
-            }
-        </div>
+        <div className="container">
+            <img id="listimg" src="https://www.sainsburysmagazine.co.uk/uploads/media/2400x1800/06/11036-260820_Sainsburys-Mag_Light-My-Fire_Cocktail.jpg?v=1-0" height="125" width="200"></img>
+                <div className="middle">
+                    <div className="listtext">
+                        <a href="/cocktails/add">Add A Cocktail</a>
+                            </div>
+                        </div>
+                    </div>
         <article className="cocktails">
             {
                 filteredCocktails.map(cocktail => {

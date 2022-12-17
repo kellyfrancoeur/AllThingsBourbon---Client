@@ -5,7 +5,7 @@ import { HowBourbonIsMade } from "../articles/HowBourbonMade"
 import { HowToServe } from "../articles/HowToServe"
 import { BourbonList } from "../bourbons/BourbonList"
 import { TypesOfBourbons } from "../bourbonTypes/BourbonTypes"
-import { DistilleryList } from "../distilleries/DistilleryList"
+import { DistilleryContainer } from "../distilleries/DistilleryContainer"
 import { MemberHomePage } from "../homepage/MemberHomePage"
 import { AddBourbon } from "../members/AddBourbon"
 import { AddCocktail } from "../members/AddCocktail"
@@ -34,7 +34,7 @@ export const MemberViews = () => {
         <Routes>
             <Route path="/" element={<MemberHomePage />} />
 
-            <Route path="distilleries" element={<DistilleryList />} />
+            <Route path="distilleries" element={<DistilleryContainer />} />
             <Route path="bourbons" element={<BourbonList />} />
             <Route path="creativetwist" element={<CreativeTwists />} />
             <Route path="summercocktails" element={<SummerCocktails />} />

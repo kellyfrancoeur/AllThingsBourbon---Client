@@ -13,11 +13,6 @@ export const DistilleriesVisited = () => {
 
     return (<>
         <article className="myDistilleries">
-            <div>
-                <button className="addButton" onClick={() => {
-                    navigate({ pathname: `/distilleriesvisited/add` })
-                }}>Add A Distillery</button>
-            </div>
             {
                 visitedDistilleries.map(visitedDistillery => {
                     return <section key={`visitedDistillery--${visitedDistillery.id}`}>

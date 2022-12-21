@@ -15,7 +15,6 @@ export const MemberNav = () => {
                         <button className="dropbtn">Bourbons
                         </button>
                         <div className="dropdown-content">
-                               <ul><Link to="/standardbourbon">Standard Bourbon</Link></ul>
                                <ul> <Link to="/kentuckybourbon">Kentucky Bourbon</Link></ul>
                                <ul> <Link to="/straightbourbon">Straight Bourbon</Link></ul>
                                <ul> <Link to="/smallsinglebourbon">Small Batch & Single Barrel Bourbon</Link></ul>

@@ -14,21 +14,20 @@ import { EditBourbon } from "../members/EditBourbon"
 import { EditCocktail } from "../members/EditCocktail"
 import { EditDistillery } from "../members/EditDistillery"
 import { MembersPage } from "../members/MembersPage"
-import { BlendedBourbons } from "../userViewBourbons/Blended"
-import { BottledBourbons } from "../userViewBourbons/Bottled"
-import { HighRyeWheatedBourbons } from "../userViewBourbons/HighRyeWheated"
-import { KentuckyBourbons } from "../userViewBourbons/Kentucky"
-import { SmallSingleBourbons } from "../userViewBourbons/SmallSingle"
-import { SourMashBourbons } from "../userViewBourbons/Sour"
-import { StandardBourbons } from "../userViewBourbons/Standard"
-import { StraightBourbons } from "../userViewBourbons/Straight"
-import { ClassicCocktails } from "../userViewCocktails/ClassicCocktails"
-import { CreativeTwists } from "../userViewCocktails/CreativeTwists"
-import { SummerCocktails } from "../userViewCocktails/SummerCocktails"
-import { WinterCocktails } from "../userViewCocktails/WinterCocktails"
+import { BlendedContainer } from "../userViewBourbons/BlendedContainer"
+import { BottledContainer } from "../userViewBourbons/BottledContainer"
+import { HighRyeContainer } from "../userViewBourbons/HighRyeContain"
+import { KentuckyContainer } from "../userViewBourbons/KentuckyContainer"
+import { SmallSingleContainer } from "../userViewBourbons/SmallSingleContainer"
+import { SourContainer } from "../userViewBourbons/SourContainer"
+import { StraightContainer } from "../userViewBourbons/StraightContainer"
+import { ClassicContainer } from "../userViewCocktails/ClassicContainer"
+import { CreativeContainer } from "../userViewCocktails/CreativeContainer"
+import { SummerContainer } from "../userViewCocktails/SummerContainer"
+import { WinterContainer } from "../userViewCocktails/WinterContainer"
 
-
-
+ 
+ 
 export const MemberViews = () => {
     return (
         <Routes>
@@ -36,10 +35,10 @@ export const MemberViews = () => {
 
             <Route path="distilleries" element={<DistilleryContainer />} />
             <Route path="bourbons" element={<BourbonList />} />
-            <Route path="creativetwist" element={<CreativeTwists />} />
-            <Route path="summercocktails" element={<SummerCocktails />} />
-            <Route path="wintercocktails" element={<WinterCocktails />} />
-            <Route path="classiccocktails" element={<ClassicCocktails />} />
+            <Route path="creativetwist" element={<CreativeContainer />} />
+            <Route path="summercocktails" element={<SummerContainer />} />
+            <Route path="wintercocktails" element={<WinterContainer />} />
+            <Route path="classiccocktails" element={<ClassicContainer />} />
             <Route path="mybourbons" element={<MembersPage />} />
             <Route path="cocktailstried/add" element={<AddCocktail />} />
             <Route path="cocktailstried/:cocktailTriedId/edit" element={<EditCocktail />} />
@@ -52,14 +51,13 @@ export const MemberViews = () => {
             <Route path="howitsmade" element={<HowBourbonIsMade />} />
             <Route path="howtoserve" element={<HowToServe />} />
             <Route path="booksonbourbon" element={<BooksOnBourbon />} />
-            <Route path="standardbourbon" element={<StandardBourbons />} />
-            <Route path="kentuckybourbon" element={<KentuckyBourbons />} />
-            <Route path="straightbourbon" element={<StraightBourbons />} />
-            <Route path="smallsinglebourbon" element={<SmallSingleBourbons />} />
-            <Route path="sourmashbourbon" element={<SourMashBourbons />} />
-            <Route path="bottledbourbon" element={<BottledBourbons />} />
-            <Route path="blendedbourbon" element={<BlendedBourbons />} />
-            <Route path="ryewheatedbourbon" element={<HighRyeWheatedBourbons />} />
+            <Route path="kentuckybourbon" element={<KentuckyContainer />} />
+            <Route path="straightbourbon" element={<StraightContainer />} />
+            <Route path="smallsinglebourbon" element={<SmallSingleContainer />} />
+            <Route path="sourmashbourbon" element={<SourContainer />} />
+            <Route path="bottledbourbon" element={<BottledContainer />} />
+            <Route path="blendedbourbon" element={<BlendedContainer />} />
+            <Route path="ryewheatedbourbon" element={<HighRyeContainer />} />
         </Routes>
     )
 }

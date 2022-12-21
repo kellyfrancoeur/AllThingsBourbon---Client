@@ -1,8 +1,8 @@
-import "./BourbonList.css"
+import "./userView.css"
 
-export const BourbonSearch = ({ setterFunction }) => {
+export const SummerSearch = ({ setterFunction }) => {
     return (
-        <div className="bourbonSearch">
+        <div className="cocktailSearch">
             <form name="search">
             <input type="text"
                 onChange={
@@ -15,4 +15,4 @@ export const BourbonSearch = ({ setterFunction }) => {
         <i class="fas fa-search"></i>
         </div>
     )
-} 
+}   

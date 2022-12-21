@@ -1,6 +1,6 @@
-import "./BourbonList.css"
+import "./userViewBourbon.css"
 
-export const BourbonSearch = ({ setterFunction }) => {
+export const BlendedSearch = ({ setterFunction }) => {
     return (
         <div className="bourbonSearch">
             <form name="search">
@@ -15,4 +15,4 @@ export const BourbonSearch = ({ setterFunction }) => {
         <i class="fas fa-search"></i>
         </div>
     )
-} 
+}  

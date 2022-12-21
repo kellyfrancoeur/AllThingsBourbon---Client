@@ -33,8 +33,8 @@ export const createBourbon = (bourbon) => {
     })
 }
 
-export const updateBourbon = (bourbon) => {
-    return fetch(`http://localhost:8000/bourbons/${bourbon.id}`, {
+export const updateBourbon = (id, bourbon) => {
+    return fetch(`http://localhost:8000/bourbons/${id}`, {
         method: "PUT",
         headers: {
             "Accept": "application/json",

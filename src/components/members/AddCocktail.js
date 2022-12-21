@@ -25,6 +25,12 @@ export const AddCocktail = () => {
         })
     }
 
+    const sortedCocktails = cocktails.sort((a, b) => {
+        if (a.name < b.name) return -1;
+        if (a.name > b.name) return 1;
+        return 0;
+      })
+
     return (
         <form className="cocktailForm">
             <h1 id="mTitle2">Add A New Cocktail</h1>
@@ -36,7 +42,7 @@ export const AddCocktail = () => {
 
                         <option value={0}>Select Cocktail</option>
                         {
-                            cocktails.map((cocktail) => {
+                            sortedCocktails.map((cocktail) => {
                                 return <option value={`${cocktail.id}`} key={`cocktail--${cocktail.id}`}>{cocktail.name}</option>
                             }
 

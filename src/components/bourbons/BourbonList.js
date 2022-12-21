@@ -46,6 +46,12 @@ export const BourbonList = ({ searchTermState }) => {
         []
     )
 
+    const sortedBourbons = filterBourbons.sort((a, b) => {
+        if (a.name < b.name) return -1;
+        if (a.name > b.name) return 1;
+        return 0;
+      })
+
     return (<>
         <h1 id="bTitle1">Bourbons</h1>
         <div className="container">
@@ -55,15 +61,15 @@ export const BourbonList = ({ searchTermState }) => {
                         <a href="/bourbons/add">Add A Bourbon</a>
                             </div>
                         </div>
-                    </div>
+                    </div> 
 
         <article className="bourbons">
             {
-                filterBourbons.map(bourbon => {
+                sortedBourbons.map(bourbon => {
                     return <section key={`bourbon--${bourbon.id}`} className="bourbon">
                         <div className="bourbonView">
                             <div className="bourbonImg">
-                                <img src={bourbon.bourbon_img} height="400" width="275" />
+                                <img src={bourbon.bourbon_img} height="375" width="275" />
                             </div>
                             <div className="bourbonInfo">
                                 <h3 id="bTitle3"><u><b>{bourbon.name}</b></u></h3>

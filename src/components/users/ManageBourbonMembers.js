@@ -9,7 +9,7 @@ export const MemberList = ({ searchTermState }) => {
     useEffect(
         () => {
             const searchedMembers = bourbonUsers.filter(user => {
-                return user?.name?.toLowerCase().includes(searchTermState.toLowerCase())
+                return user?.full_name?.toLowerCase().includes(searchTermState.toLowerCase())
             })
             setFilteredBourbonUsers(searchedMembers)
         },
@@ -48,6 +48,9 @@ export const MemberList = ({ searchTermState }) => {
 
     return (<>
         <h1 id="uTitle1">All Things Bourbon Members</h1>
+                                <div className="peepsAtBar">
+                                    <img src="https://restaurantclicks.com/wp-content/uploads/2021/04/bar-manayunk.jpg" height="800" width="900"></img>
+                                </div>
         <article className="bourbonMembers">
             {
                 filteredBourbonUsers.map(bourbonUser => {
@@ -71,9 +74,6 @@ export const MemberList = ({ searchTermState }) => {
                 })
             }
         </article>
-        <div className="peepsAtBar">
-            <img src="https://restaurantclicks.com/wp-content/uploads/2021/04/bar-manayunk.jpg" height="800" width="900"></img>
-        </div>
     </>
     )
-}
+} 

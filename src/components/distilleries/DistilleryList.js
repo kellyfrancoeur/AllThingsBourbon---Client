@@ -46,6 +46,12 @@ export const DistilleryList = ({ searchTermState }) => {
         []
     )
 
+    const sortedDistilleries = filteredDistilleries.sort((a, b) => {
+        if (a.name < b.name) return -1;
+        if (a.name > b.name) return 1;
+        return 0;
+      })
+
     return (<>
         <h1 id="dTitle1">Distilleries</h1>
         <div>
@@ -64,7 +70,7 @@ export const DistilleryList = ({ searchTermState }) => {
         </div>
         <article className="distilleries">
             {
-                filteredDistilleries.map(distillery => {
+                sortedDistilleries.map(distillery => {
                     return <section key={`distillery--${distillery.id}`} className="distillery">
                         <div className="distilleryView">
                             <div className="distilleryImg">

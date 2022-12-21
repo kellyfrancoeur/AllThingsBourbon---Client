@@ -9,7 +9,6 @@ export const UpdateCocktail = () => {
     const { cocktailId } = useParams()
     const [cocktailTypes, setCocktailTypes] = useState([])
     const [updatedCocktail, setUpdatedCocktail] = useState({
-        id: 0,
         name: "",
         ingredients: "",
         how_to_make: "",
@@ -109,16 +108,21 @@ export const UpdateCocktail = () => {
                     evt.preventDefault()
                     window.alert("Cocktail has been updated!")
 
+                    let selectedCocktailType = 0
+
+                    updatedCocktail.type_of_cocktail.id
+                    ?selectedCocktailType = updatedCocktail.type_of_cocktail.id
+                    :selectedCocktailType = updatedCocktail.type_of_cocktail
+
                     const cocktail = {
-                        id: updatedCocktail.id,
                         name: updatedCocktail.name,
                         ingredients: updatedCocktail.ingredients,
                         how_to_make: updatedCocktail.how_to_make,
                         cocktail_img: updatedCocktail.cocktail_img,
-                        type_of_cocktail: parseInt(updatedCocktail.type)
+                        type_of_cocktail: selectedCocktailType
                     }
 
-                    updateCocktail(cocktail)
+                    updateCocktail(cocktailId, cocktail)
                         .then(() => navigate("/cocktails"))
                 }}
                 className="addNew">Update cocktail</button>

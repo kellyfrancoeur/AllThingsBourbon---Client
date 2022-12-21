@@ -9,6 +9,7 @@ export const EditBourbon = () => {
     const navigate = useNavigate()
     const { bourbonTriedId } = useParams()
     const [bourbons, setBourbons] = useState([])
+    const [chosenBourbon, setChosenBourbon] = useState(0)
     const [descriptors, setDescriptors] = useState([])
     const [chosenDescriptors, setChosenDescriptors] = useState(new Set())
     const [updateTriedBourbon, setUpdatedTriedBourbon] = useState({
@@ -41,6 +42,11 @@ export const EditBourbon = () => {
     }, []
     )
 
+    useEffect(() => {
+        setChosenBourbon(updateTriedBourbon.bourbon.id)
+    }, [updateTriedBourbon]
+    )
+
     const changeTriedBourbonState = (evt) => {
         const copy = { ...updateTriedBourbon }
         const propertyToModify = evt.target.id
@@ -49,19 +55,22 @@ export const EditBourbon = () => {
     }
 
     return (
-        <form className="bourbonForm">
+        <form className="bourbonForm" >
             <h1 id="mTitle2">Update Bourbon</h1>
             <fieldset>
                 <div className="formGroup">
                     <h2 id="mTitle4"><label htmlFor="bourbon">Bourbon:</label></h2>
-                    <select id="bourbon" className="drop_down" value={updateTriedBourbon.bourbons}
-                        onChange={changeTriedBourbonState}>
+                    <select
+                        required autoFocus
+                        id="bourbon"
+                        className="drop_down"
+                        value={chosenBourbon}
+                        onChange={evt => setChosenBourbon(evt.target.value)}>
 
                         <option value={0}>Select Bourbon</option>
                         {
                             bourbons.map((bourbon) => {
-                                const isSelected = bourbon.id === updateTriedBourbon.bourbon.id
-                                return <option selected={isSelected ? true : false} value={`${bourbon.id}`} key={`bourbon--${bourbon.id}`}>{bourbon.name}</option>
+                                return <option value={`${bourbon.id}`} key={`bourbon--${bourbon.id}`}>{bourbon.name}</option>
                             }
 
                             )

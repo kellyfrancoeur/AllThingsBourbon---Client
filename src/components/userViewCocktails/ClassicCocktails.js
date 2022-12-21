@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react"
+import { useNavigate } from "react-router-dom"
 import { getCocktails } from "../../managers/CocktailManager.js"
 import "./userView.css"
 
-export const ClassicCocktails = (props) => {
+export const ClassicCocktails = ({searchTermState}) => {
     const [cocktails, setCocktails] = useState([])
+    const [filterCocktails, setFiltered] = useState([])
+    const navigate = useNavigate()
 
 
     useEffect(() => {
@@ -11,11 +14,45 @@ export const ClassicCocktails = (props) => {
     }, []
     )
 
+    useEffect(
+        () => {
+            const searchedCocktails = cocktails.filter(cocktail => {
+                return cocktail?.name?.toLowerCase().includes(searchTermState.toLowerCase())
+            })
+            setFiltered(searchedCocktails)
+        },
+        [searchTermState]
+    )
+
+    const getAllCocktails = () => {
+        fetch("http://localhost:8000/cocktails", {
+            headers: {
+                "Accept": "application/json",
+                "Content-Type": "application/json",
+                "Authorization": `Token ${JSON.parse(localStorage.getItem("bourbon_user")).token}`
+            }
+        })
+            .then(response => response.json())
+            .then((cocktailArray) => {
+                setFiltered(cocktailArray)
+                setCocktails(cocktailArray)
+            })
+
+    }
+
+
+    useEffect(
+        () => {
+            getAllCocktails()
+        },
+        []
+    )
+
     return (<>
         <h1 id="cTitle2">Classic Cocktails</h1>
         <article className="cocktails">
             {
-                cocktails.map((cocktail) => {
+                filterCocktails.map((cocktail) => {
                     if (cocktail.type_of_cocktail.id === 1) {
                         return <section key={`cocktail--${cocktail.id}`} className="cocktail">
                             <div className="cocktailView">
@@ -28,6 +65,11 @@ export const ClassicCocktails = (props) => {
                                     <div>{cocktail.ingredients}</div>
                                     <div className="cocktailHowToMake"><b><u>How to Make it:</u></b></div>
                                     <div>{cocktail.how_to_make}</div>
+                                    <div>
+                                    <button className="addMyCocktail" onClick={() => {
+                                                navigate({ pathname: "/cocktailstried/add" })
+                                            }}>Add to My Cocktails</button>
+                                    </div> 
                                 </div>
                             </div>
                         </section>

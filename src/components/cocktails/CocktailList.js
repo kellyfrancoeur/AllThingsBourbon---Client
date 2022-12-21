@@ -21,7 +21,7 @@ export const CocktailList = ({ searchTermState }) => {
         },
         [searchTermState]
     )
-
+ 
     const getAllCocktails = () => {
         fetch("http://localhost:8000/cocktails", {
             headers: {
@@ -46,6 +46,13 @@ export const CocktailList = ({ searchTermState }) => {
         []
     )
 
+    const sortedCocktails = filteredCocktails.sort((a, b) => {
+        if (a.name < b.name) return -1;
+        if (a.name > b.name) return 1;
+        return 0;
+      })
+
+
     return (<>
         <h1 id="cTitle1">Cocktails</h1>
         <div className="container">
@@ -58,7 +65,7 @@ export const CocktailList = ({ searchTermState }) => {
                     </div>
         <article className="cocktails">
             {
-                filteredCocktails.map(cocktail => {
+                sortedCocktails.map(cocktail => {
                     return <section key={`cocktail--${cocktail.id}`} className="cocktail">
                         <div className="cocktailView">
                             <div className="cocktailImg">
@@ -71,7 +78,8 @@ export const CocktailList = ({ searchTermState }) => {
                                 <div className="cocktailHowToMake"><b><u>How to Make it:</u></b></div>
                                 <div>{cocktail.how_to_make}</div>
 
-                                <div className="cocktailType">{cocktail?.type_of_cocktail?.type}</div>
+                                <div className="cocktailType"><b><u>Type of Cocktail:</u></b></div>
+                                <div>{cocktail?.type_of_cocktail?.type}</div>
 
                                 <div>
                                     {

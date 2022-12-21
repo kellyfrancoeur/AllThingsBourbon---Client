@@ -9,7 +9,6 @@ export const UpdateBourbon = () => {
     const { bourbonId } = useParams()
     const [bourbonTypes, setBourbonTypes] = useState([])
     const [updatedBourbon, setUpdatedBourbon] = useState({
-        id: 0,
         name: "",
         proof: 0,
         aroma: "",
@@ -21,7 +20,7 @@ export const UpdateBourbon = () => {
         bourbon_img: "",
         type_of_bourbon: 0
     })
-
+ 
     useEffect(() => {
         getBourbonById(bourbonId).then(setUpdatedBourbon)
     },
@@ -173,9 +172,14 @@ export const UpdateBourbon = () => {
                 onClick={evt => {
                     evt.preventDefault()
                     window.alert("Bourbon has been updated!")
+ 
+                    let selectedType = 0
+
+                    updatedBourbon.type_of_bourbon.id
+                    ?selectedType = updatedBourbon.type_of_bourbon.id
+                    :selectedType = updatedBourbon.type_of_bourbon
 
                     const bourbon = {
-                        id: updatedBourbon.id,
                         name: updatedBourbon.name,
                         proof: updatedBourbon.proof,
                         aroma: updatedBourbon.aroma,
@@ -185,10 +189,10 @@ export const UpdateBourbon = () => {
                         made_in: updatedBourbon.made_in,
                         link_to_buy: updatedBourbon.link_to_buy,
                         bourbon_img: updatedBourbon.bourbon_img,
-                        type_of_bourbon: parseInt(updatedBourbon.type)
+                        type_of_bourbon: selectedType
                     }
 
-                    updateBourbon(bourbon)
+                    updateBourbon(bourbonId, bourbon)
                         .then(() => navigate("/bourbons"))
                 }}
                 className="addNew">Update Bourbon</button>

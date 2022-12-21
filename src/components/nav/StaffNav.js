@@ -5,11 +5,12 @@ export const StaffNav = () => {
     const navigate = useNavigate()
 
     return (
-        <nav id="main-navbar">
-            <ul id="links">
+        <body>
             <div id="logo">
                 <a id="logo2" href="/"><img src="https://i.postimg.cc/KYNtFxbB/logo3.png" height="100" width="100" /></a>
             </div> 
+        <nav id="main-navbar">
+            <ul id="links">
  
                 {
                     localStorage.getItem("bourbon_user")
@@ -23,5 +24,6 @@ export const StaffNav = () => {
                 }
             </ul>
         </nav>
+        </body>
     )
 }

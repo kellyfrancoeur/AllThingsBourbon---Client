@@ -43,6 +43,18 @@ export const updateBourbonTried = (bourbonTried) => {
     })
 }
 
+// export const updateBourbonTried = (id, bourbonTried, chosenDescriptors) => {
+//     return fetch(`http://localhost:8000/bourbonstried/${id}`, {
+//         method: "PUT",
+//         headers: {
+//             "Accept": "application/json",
+//             "Content-Type": "application/json",
+//             "Authorization": `Token ${JSON.parse(localStorage.getItem("bourbon_user")).token}`
+//         },
+//         body: JSON.stringify({ ...bourbonTried, descriptors: chosenDescriptors })
+//     })
+// }
+
 export const deleteBourbonTried = (bourbonTried) => {
     return fetch(`http://localhost:8000/bourbonstried/${bourbonTried.id}`, {
         method: "DELETE",

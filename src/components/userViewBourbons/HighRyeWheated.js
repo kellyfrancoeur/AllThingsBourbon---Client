@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from "react"
+import { useNavigate } from "react-router-dom"
 import { getBourbons } from "../../managers/BourbonManager"
 import "./userViewBourbon.css"
 
-export const HighRyeWheatedBourbons = (props) => {
+export const HighRyeWheatedBourbons = ({searchTermState}) => {
     const [bourbons, setBourbons] = useState([])
+    const [filterBourbons, setFiltered] = useState([])
+    const navigate = useNavigate()
 
 
     useEffect(() => {
@@ -11,11 +14,45 @@ export const HighRyeWheatedBourbons = (props) => {
     }, []
     )
 
+    useEffect(
+        () => {
+            const searchedBourbons = bourbons.filter(bourbon => {
+                return bourbon?.name?.toLowerCase().includes(searchTermState.toLowerCase())
+            })
+            setFiltered(searchedBourbons)
+        },
+        [searchTermState]
+    )
+
+    const getAllBourbons = () => {
+        fetch("http://localhost:8000/bourbons", {
+            headers: {
+                "Accept": "application/json",
+                "Content-Type": "application/json",
+                "Authorization": `Token ${JSON.parse(localStorage.getItem("bourbon_user")).token}`
+            }
+        })
+            .then(response => response.json())
+            .then((bourbonArray) => {
+                setFiltered(bourbonArray)
+                setBourbons(bourbonArray)
+            })
+
+    }
+
+
+    useEffect(
+        () => {
+            getAllBourbons()
+        },
+        []
+    )
+
     return (<>
         <h1 id="bTitle2">High-Rye & Wheated Bourbons</h1>
         <article className="bourbons">
             {
-                bourbons.map((bourbon) => {
+                filterBourbons.map((bourbon) => {
                     if (bourbon.type_of_bourbon.id === 8) {
                         return <section key={`bourbon--${bourbon.id}`} className="bourbon">
                             <div className="bourbonView">
@@ -37,6 +74,11 @@ export const HighRyeWheatedBourbons = (props) => {
                                     <div className="bourbonMadeIn"><b><u>Made In:</u></b></div>
                                     <div>{bourbon.made_in}</div>
                                     <div className="buyBourbon"><a target="_blank" href={bourbon.link_to_buy}>Buy Bourbon</a></div>
+                                    <div>
+                                    <button className="addMyBourbon" onClick={() => {
+                                                navigate({ pathname: "/bourbonstried/add" })
+                                            }}>Add to My Bourbons</button>
+                                    </div> 
                                 </div>
                             </div>
                         </section>

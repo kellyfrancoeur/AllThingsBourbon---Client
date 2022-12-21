@@ -36,6 +36,12 @@ export const AddBourbon = () => {
         })
     }
 
+    const sortedBourbons = bourbons.sort((a, b) => {
+        if (a.name < b.name) return -1;
+        if (a.name > b.name) return 1;
+        return 0;
+      })
+
     return (
         <form className="bourbonForm">
             <h1 id="mTitle2">Add A New Bourbon</h1>
@@ -47,7 +53,7 @@ export const AddBourbon = () => {
 
                         <option value={0}>Select Bourbon</option>
                         {
-                            bourbons.map((bourbon) => {
+                            sortedBourbons.map((bourbon) => {
                                 return <option value={`${bourbon.id}`} key={`bourbon--${bourbon.id}`}>{bourbon.name}</option>
                             }
 

@@ -1,15 +1,13 @@
 import React, { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { getBourbons } from "../../managers/BourbonManager"
+import { createBourbonTried } from "../../managers/BourbonsTriedManager"
 import "./userViewBourbon.css"
 
 export const KentuckyBourbons = ({searchTermState}) => {
     const [bourbons, setBourbons] = useState([])
     const [filterBourbons, setFiltered] = useState([])
     const navigate = useNavigate()
-
-    const localBourbonUser = localStorage.getItem("bourbon_user")
-    const bourbonUserObject = JSON.parse(localBourbonUser)
 
     useEffect(() => {
         getBourbons().then(data => setBourbons(data))
@@ -78,7 +76,12 @@ export const KentuckyBourbons = ({searchTermState}) => {
                                     <div className="buyBourbon"><a target="_blank" href={bourbon.link_to_buy}>Buy Bourbon</a></div>
                                     <div>
                                     <button className="addMyBourbon" onClick={() => {
-                                                navigate({ pathname: "/bourbonstried/add" })
+                                            createBourbonTried()
+                                            .then(res => res.json())
+                                            .then(() =>{
+                                              getAllBourbons()
+                                            })
+                                                navigate({ pathname: `/bourbonstried/memberAdd/${bourbon.id}`})
                                             }}>Add to My Bourbons</button>
                                     </div> 
                                 </div> 

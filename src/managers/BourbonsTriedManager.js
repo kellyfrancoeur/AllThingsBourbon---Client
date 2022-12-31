@@ -11,7 +11,7 @@ export const getBourbonsTried = () => {
 
 
 export const getBourbonTriedById = (id) => {
-    return fetch(`http://localhost:8000/bourbonstried/${id}`, {
+    return fetch(`http://localhost:8000/bourbonstried?bourbon=${id}`, {
         headers: {
             "Authorization": `Token ${JSON.parse(localStorage.getItem("bourbon_user")).token}`
         }

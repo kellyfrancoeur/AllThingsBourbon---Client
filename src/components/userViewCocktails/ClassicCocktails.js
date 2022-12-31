@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { getCocktails } from "../../managers/CocktailManager.js"
+import { createCocktailTried } from "../../managers/CocktailsTriedManager.js"
 import "./userView.css"
 
 export const ClassicCocktails = ({searchTermState}) => {
@@ -67,7 +68,12 @@ export const ClassicCocktails = ({searchTermState}) => {
                                     <div>{cocktail.how_to_make}</div>
                                     <div>
                                     <button className="addMyCocktail" onClick={() => {
-                                                navigate({ pathname: "/cocktailstried/add" })
+                                                createCocktailTried()
+                                                .then(res => res.json())
+                                                .then(() =>{
+                                                  getAllCocktails()
+                                                })
+                                                    navigate({ pathname: `/cocktailstried/memberAdd/${cocktail.id}`})
                                             }}>Add to My Cocktails</button>
                                     </div> 
                                 </div>

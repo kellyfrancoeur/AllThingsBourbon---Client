@@ -36,14 +36,13 @@ export const Login = () => {
                 <div>User does not exist</div>
                 <button className="button--close" onClick={e => existDialog.current.close()}>Close</button>
             </dialog>
-            <div className="loginlogo"></div>
+                <div className="loginlogo"></div>
             <div className="welcome">
-                <div className="allThings">
-                    <h1 id="wTitle1">All Things</h1>
-                    <h2 id="wTitle2">Bourbon</h2>
-                </div>
-                <h3 id="wTitle3">For the Bourbon Aficionado</h3>
+            <div className="allThings">
+            <h1 id="wTitle1">All Things</h1> 
+            <h2 id="wTitle2">Bourbon</h2>
             </div>
+            <h3 id="wTitle3">For the Bourbon Aficionado</h3></div>
             <div className="logincard">
                 <form className="form--login" onSubmit={handleLogin}>
                     <fieldset>
@@ -66,20 +65,20 @@ export const Login = () => {
                     </fieldset>
                     <fieldset>
                         <div className="align-right">
-                            <button type="submit">
-                                Sign in
-                            </button>
+                        <button type="submit">
+                            Sign in
+                        </button>
                         </div>
                     </fieldset>
                 </form>
-            </div>
+                </div>
             <div className="loginLinks">
                 <section className="link--register">
                     <Link to="/register">Not a member yet?</Link>
                 </section>
                 <section className="link--register">
                     <Link to="/registerstaff">Register new staff member</Link>
-
+                
                 </section>
             </div>
             <section className="logincontainerright">
@@ -88,3 +87,4 @@ export const Login = () => {
     )
 }
 
+ 

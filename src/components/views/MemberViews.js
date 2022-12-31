@@ -5,7 +5,6 @@ import { HowBourbonIsMade } from "../articles/HowBourbonMade"
 import { HowToServe } from "../articles/HowToServe"
 import { BourbonList } from "../bourbons/BourbonList"
 import { TypesOfBourbons } from "../bourbonTypes/BourbonTypes"
-import { DistilleryContainer } from "../distilleries/DistilleryContainer"
 import { MemberHomePage } from "../homepage/MemberHomePage"
 import { AddBourbon } from "../members/AddBourbon"
 import { AddCocktail } from "../members/AddCocktail"
@@ -18,13 +17,17 @@ import { BlendedContainer } from "../userViewBourbons/BlendedContainer"
 import { BottledContainer } from "../userViewBourbons/BottledContainer"
 import { HighRyeContainer } from "../userViewBourbons/HighRyeContain"
 import { KentuckyContainer } from "../userViewBourbons/KentuckyContainer"
+import { MemberAddBourbonFromPage } from "../userViewBourbons/MemberAddBourbonFromPage"
 import { SmallSingleContainer } from "../userViewBourbons/SmallSingleContainer"
 import { SourContainer } from "../userViewBourbons/SourContainer"
 import { StraightContainer } from "../userViewBourbons/StraightContainer"
 import { ClassicContainer } from "../userViewCocktails/ClassicContainer"
 import { CreativeContainer } from "../userViewCocktails/CreativeContainer"
+import { MemberAddCocktailFromPage } from "../userViewCocktails/MemberAddCocktailFromPage"
 import { SummerContainer } from "../userViewCocktails/SummerContainer"
 import { WinterContainer } from "../userViewCocktails/WinterContainer"
+import { MemberAddDistilleryFromPage } from "../userViewDistilleries/MemberAddDistilleryFromPage"
+import { MemberDistilleryContainer } from "../userViewDistilleries/MemberDistilleryContainer"
 
  
  
@@ -33,7 +36,7 @@ export const MemberViews = () => {
         <Routes>
             <Route path="/" element={<MemberHomePage />} />
 
-            <Route path="distilleries" element={<DistilleryContainer />} />
+            <Route path="distilleries" element={<MemberDistilleryContainer />} />
             <Route path="bourbons" element={<BourbonList />} />
             <Route path="creativetwist" element={<CreativeContainer />} />
             <Route path="summercocktails" element={<SummerContainer />} />
@@ -41,10 +44,13 @@ export const MemberViews = () => {
             <Route path="classiccocktails" element={<ClassicContainer />} />
             <Route path="mybourbons" element={<MembersPage />} />
             <Route path="cocktailstried/add" element={<AddCocktail />} />
+            <Route path="cocktailstried/memberAdd/:cocktailId" element={<MemberAddCocktailFromPage />} />
             <Route path="cocktailstried/:cocktailTriedId/edit" element={<EditCocktail />} />
             <Route path="distilleriesvisited/add" element={<AddDistillery />} />
+            <Route path="distilleriesvisited/memberAdd/:distilleryId" element={<MemberAddDistilleryFromPage />} />
             <Route path="distilleriesvisited/:distilleryVisitedId/edit" element={<EditDistillery />} />
             <Route path="bourbonstried/add" element={<AddBourbon />} />
+            <Route path="bourbonstried/memberAdd/:bourbonId" element={<MemberAddBourbonFromPage />} />
             <Route path="bourbonstried/:bourbonTriedId/edit" element={<EditBourbon />} />
             <Route path="bourbontypes" element={<TypesOfBourbons />} />
             <Route path="history" element={<HistoryOfBourbon />} />

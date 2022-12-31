@@ -1,17 +1,19 @@
 import { useState, useEffect } from "react"
-import { useNavigate } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 import { createBourbonTried } from "../../managers/BourbonsTriedManager"
-import { getBourbons } from "../../managers/BourbonManager"
+import { getBourbonById } from "../../managers/BourbonManager"
 import { getDescriptors } from "../../managers/DescriptorsManager"
-import "./MemberPage.css"
+import "./MemberAdd.css"
 
-export const AddBourbon = () => {
+
+export const MemberAddBourbonFromPage = () => {
     const navigate = useNavigate()
-    const [bourbons, setBourbons] = useState([])
+    const { bourbonId } = useParams()
+    const [bourbon, setBourbon] = useState([])
     const [descriptors, setDescriptors] = useState([])
     const [chosenDescriptors, setChosenDescriptors] = useState(new Set())
     const [triedNewBourbon, updateNewBourbon] = useState({
-        bourbon: 0,
+        bourbon: "",
         comments: "",
         rating: 0,
         descriptors: []
@@ -19,7 +21,7 @@ export const AddBourbon = () => {
 
  
     useEffect(() => {
-        getBourbons().then(setBourbons)
+        getBourbonById(bourbonId).then(setBourbon)
     }, []
     )
 
@@ -36,31 +38,16 @@ export const AddBourbon = () => {
         })
     }
 
-    const sortedBourbons = bourbons.sort((a, b) => {
-        if (a.name < b.name) return -1;
-        if (a.name > b.name) return 1;
-        return 0;
-      })
-
     return (
         <form className="bourbonForm">
             <h1 id="mTitle2">Add A New Bourbon</h1>
             <fieldset>
                 <div className="formGroup">
-                    <h2 id="mTitle4"><label htmlFor="bourbon">Bourbon:</label></h2>
-                    <select name="bourbon" className="drop_down" value={triedNewBourbon.name}
-                        onChange={changeTriedBourbonState}>
+                    <h2 id="mTitle4"><label htmlFor="bourbon">Bourbon: </label></h2>
+                    <input type="text" name="bourbon" className="formControl" value={bourbon.name}
+                        onChange={changeTriedBourbonState}
 
-                        <option value={0}>Select Bourbon</option>
-                        {
-                            sortedBourbons.map((bourbon) => {
-                                return <option value={`${bourbon.id}`} key={`bourbon--${bourbon.id}`}>{bourbon.name}</option>
-                            }
-
-                            )
-
-                        }
-                    </select>
+                    />
                 </div>
             </fieldset>
             <fieldset>
@@ -128,7 +115,7 @@ export const AddBourbon = () => {
                     window.alert("Bourbon has been added!")
 
                     const newTriedBourbon = {
-                        bourbon: parseInt(triedNewBourbon.bourbon),
+                        bourbon: bourbon.id,
                         comments: triedNewBourbon.comments,
                         rating: triedNewBourbon.rating,
                         descriptors: Array.from(chosenDescriptors)

@@ -37,7 +37,7 @@ export const HowToServe = () => {
                                         <div className="pic">
                                             <img src="https://glassandvine.com/wp-content/uploads/Decanter-of-whiskey-and-a-glass-with-cuban-cigar-on-a-wooden-table.jpg" height="500" width="500"></img>
                                         </div>
-                                        <div className="text">
+                                        <div className="text1">
                                             <p>Before you begin to drink any bourbon whiskey, it’s absolutely vital that you should follow a few rules.</p>
                                             <p>Firstly, there are no rules. It’s important to remember that bourbon has very humble origins. It was first produced by farmers with too much grain on their hands who used it as a form of currency. They distilled it simply because it was easier to transport than beer as it was both lighter and didn’t spoil.</p>
                                             <p>The gentrification of bourbon is a very recent phenomenon and most small-batch and single-cask whiskeys didn’t emerge until the late 20th century. It was knocked back in shot glasses by dusty travellers or mixed in with cocktails long before it was savoured in elegant nosing glasses.</p>
@@ -51,7 +51,7 @@ export const HowToServe = () => {
                                 <h4 id="aTitle4">How to Drink Bourbon</h4>
                                 <section id="drinkbourbon">
                                     <div className="bourbondrink">
-                                        <div className="text">
+                                        <div className="text1">
                                             <p>Now that we’ve made that very clear, we’d still like to provide you with a few serving suggestions for bourbon whiskey. These may be quite helpful for you, especially if you’re a beginner.</p>
                                             <p>As mentioned earlier, there are lots of ways to drink bourbon. Typically, it can be served in one of the following ways:</p>
                                             <p><ul><li>Tumbler</li>
@@ -78,14 +78,14 @@ export const HowToServe = () => {
                                         <div className="pic">
                                             <img src="https://www.tastingtable.com/img/gallery/25-best-bourbon-cocktails-ranked/l-intro-1646935912.jpg" height="450" width="550"></img>
                                         </div>
-                                        <div className="text">
+                                        <div className="text1">
                                             <p>Adding ice to bourbon is a matter of personal preference. While it’s indeed more refreshing, bear in mind that chilling a beverage in any way slows down oxidisation. This natural process plays an important role in releasing its flavour compounds so if a drink is too cold, it may lose its subtle nuances.</p>
                                             <p>Additionally, diluting bourbon whiskey is actually a great way to savour it. Since bourbon is quite rich in character, it tends to fare well with ice. However, the downside of ice cubes is that they can still over-dilute or over-chill the whiskey in a way you can’t directly control.</p>
                                             <p>You can instead add a few drops of water, which helps open up its aromas. Similarly, it reduces the alcohol bloom, which can overwhelm your senses and mask its flavours when too strong.</p>
                                             <p>If your objective is to taste the bourbon whiskey as best as possible, we would recommend room-temperature mineral water. If you sample it neat first, you should then have a good idea if or how much water you’d want to add. You might find that it’s perfectly fine neat!</p>
                                         </div>
                                     </div>
-                                    <div className="stubborn2">
+                                    <div className="text1">
                                             <p>Some people like to use pipettes in order to properly gauge how much water they add. Nevertheless, you can still pour in a few drops with a small pitcher. As said earlier, there are no rules!</p>
                                             <p>Meanwhile, sampling bourbon on the rocks is a great way for beginners to become acquainted with the drink. The combination of chilling and diluting the beverage will reduce its intensity in a way that’s more approachable.</p>
                                             </div>
@@ -95,7 +95,7 @@ export const HowToServe = () => {
                                 <h4 id="aTitle4">How to Serve Bourbon</h4>
                                 <section id="servebourbon">
                                     <div className="bourbonserved">
-                                        <div className="text">
+                                        <div className="text1">
                                             <p>There are no formalities or fanfare when serving bourbon whiskey for yourself. Simply do it the way you want to drink it.</p>
                                             <p>However, when serving guests, try to take their own preferences into consideration. The best way to go about this is to simply ask them how they take it. Don’t just assume that they’ll have it the same way as you and be a gracious host rather than snooty if they choose it a way that you don’t like.</p>
                                             <p>Nevertheless, since it’s your beverage, you could always ask very politely whether they’d like to try it a little differently. For instance, you may have a very premium bottled-in-bond single-cask bourbon whiskey in your hand and they’ve asked for a tumbler filled with ice.</p>

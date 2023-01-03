@@ -69,7 +69,7 @@ export const CocktailList = ({ searchTermState }) => {
                     return <section key={`cocktail--${cocktail.id}`} className="cocktail">
                         <div className="cocktailView">
                             <div className="cocktailImg">
-                                <img src={cocktail.cocktail_img} height="400" width="275" />
+                                <img id="cimg" src={cocktail.cocktail_img} height="400" width="275" />
                             </div>
                             <div className="cocktailInfo">
                                 <h3 id="cTitle3">{cocktail.name}</h3>

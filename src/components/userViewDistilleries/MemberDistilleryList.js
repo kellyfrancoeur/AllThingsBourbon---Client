@@ -57,7 +57,7 @@ export const MemberDistilleryList = ({ searchTermState }) => {
                     return <section key={`distillery--${distillery.id}`} className="distillery">
                         <div className="distilleryView">
                             <div className="distilleryImg">
-                                <img src={distillery.distillery_img} height="450" width="400" />
+                                <img id="dimg" src={distillery.distillery_img} height="450" width="400" />
                             </div>
                             <div className="distilleryInfo">
                                 <h3 id="dTitle3"><a target="_blank" href={distillery.link_to_site}><b><u>{distillery.name}</u></b></a></h3>

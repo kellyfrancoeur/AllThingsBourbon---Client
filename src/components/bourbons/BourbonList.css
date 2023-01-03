@@ -23,6 +23,10 @@
 
 }
 
+#bimg{
+    border: 3px solid yellow;
+}
+
 .bourbonImg {
     margin: 0rem 0rem 0rem 5rem;
     max-width: 100%;

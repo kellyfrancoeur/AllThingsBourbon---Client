@@ -49,16 +49,22 @@ export const ClassicCocktails = ({searchTermState}) => {
         []
     )
 
+    const sortedCocktails = filterCocktails.sort((a, b) => {
+        if (a.name < b.name) return -1;
+        if (a.name > b.name) return 1;
+        return 0;
+      })
+
     return (<>
         <h1 id="cTitle2">Classic Cocktails</h1>
         <article className="cocktails">
             {
-                filterCocktails.map((cocktail) => {
+                sortedCocktails.map((cocktail) => {
                     if (cocktail.type_of_cocktail.id === 1) {
                         return <section key={`cocktail--${cocktail.id}`} className="cocktail">
                             <div className="cocktailView">
                                 <div className="cocktailImg">
-                                    <img src={cocktail.cocktail_img} height="400" width="275" />
+                                    <img id="cimg" src={cocktail.cocktail_img} height="400" width="275" />
                                 </div>
                                 <div className="cocktailInfo">
                                     <h3 id="cTitle3"><u>{cocktail.name}</u></h3>

@@ -40,7 +40,7 @@ export const HowBourbonIsMade = () => {
                                         <div className="pic">
                                             <img src="https://distilling.com/distillermagazine/wp-content/uploads/2019/02/17F-Shots-Feature.jpg" height="475" width="600"></img>
                                         </div>
-                                        <div className="text">
+                                        <div className="text1">
                                             <p>All whiskey is produced by fermenting grain and then distilling it. Incidentally, most clear spirits like vodka and gin are also made by following a similar process. However, they remain clear because they aren’t aged in oak casks.</p>
                                             <p>The fermented grain is referred to as a “mash” and it’s not unlike beer. However, the ingredients are a little different when making whiskey. The composition of a mash may consist of the following ingredients:</p>
                                             <p><ul><li>Barley</li>
@@ -86,7 +86,7 @@ export const HowBourbonIsMade = () => {
                                         <div className="pic">
                                             <img src="https://media.tacdn.com/media/attractions-splice-spp-674x446/06/71/c3/71.jpg" height="500" width="550"></img>
                                         </div>
-                                        <div className="text">
+                                        <div className="text1">
                                             <p>Whatever technique used, the process results in a clear distillate, which is referred to as a “white dog”. Depending on the type of still used, its strength may range between 65% and 80% ABV, but it must not exceed the latter concentration.</p>
                                             <p>Bourbon whiskey may not be aged in used casks and coopers are commissioned to make new ones with each batch. Larger whiskey brands may have an in-house cooperage but most producers will rely on independent artisans.</p>
                                             <p>Typically, barrels are produced from American white oak and the methods remain relatively artisanal. Furthermore, their interior is charred with a naked flame beforehand, which we explore in further detail below.</p>
@@ -137,7 +137,7 @@ export const HowBourbonIsMade = () => {
                                 <h4 id="aTitle4">Is Bourbon Blended?</h4>
                                 <section id="isblended">
                                     <div className="bourbonBlend">
-                                        <div className="text">
+                                        <div className="text1">
                                             <p>It’s commonly believed that only “blended” bourbon is blended. After all, it’s in the name. Indeed, blended bourbon is a variety of bourbon whiskey that is produced by mixing in different bourbon batches with high-proof spirit. It must, however, contain at least 51% straight bourbon whiskey.</p>
                                             <p>Apart from single-barrel expressions, which by definition are bottled directly from just one cask, all bourbon can be blended as long as it respects certain requirements.</p>
                                             <p>For instance, straight bourbon can still be recognised as such as long as it’s blended with other straight bourbon produced in the same state. Needless to say, the second rule certainly applies to Kentucky bourbon, too.</p>

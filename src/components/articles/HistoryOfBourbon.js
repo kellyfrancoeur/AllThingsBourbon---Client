@@ -43,7 +43,7 @@ export const HistoryOfBourbon = () => {
                                         <div className="pic">
                                             <img src="https://whiskymag.com/shares/p34-6.jpg" height="500" width="550"></img>
                                         </div>
-                                        <div className="text">
+                                        <div className="text1">
                                             <p>Whiskey production spread throughout the present-day USA during the 18th century largely due to the convenience and availability of surplus grain. In most cases, whiskey was distilled by farmers of Scots-Irish origin.</p>
                                             <p>Since it was the most prevalent crop in Kentucky and along the Western Frontier, corn was often the primary whiskey ingredient in the region. Furthermore, beer often spoiled due to the region’s warm climate and was difficult to transport. Therefore, distillation was the best method to preserve a beverage.</p>
                                             <p>Throughout its early history, whiskey was both a form of currency for bartering as well as a cheap commodity to stock in taverns and public houses. Indeed, whiskey’s association with saloons and gunslingers is largely rooted in practicality but has since become an icon of American history.</p>
@@ -55,7 +55,7 @@ export const HistoryOfBourbon = () => {
                                 <h4 id="aTitle4">Bourbon's Historical Context</h4>
                                 <section id="historicalContext">
                                     <div className="context">
-                                        <div className="text">
+                                        <div className="text1">
                                             <p>Whiskey production grew in the American colonies in response to the British Sugar Act of 1764. This law sought to heavily tax molasses imports from French and Spanish plantations and greatly affected rum, which was the preferred American liquor up to this point.</p>
                                             <p>Indeed, the Sugar Act was one of the main grievances that led to the American Revolutionary War. American Independence came with a hefty war debt that the newly-formed federal government needed to repay.</p>
                                             <p>Ironically, it targeted distilled spirits as a source of revenue. Since whiskey had now become the most popular liquor in America, it was referred to as the “whiskey tax”.</p>
@@ -75,7 +75,7 @@ export const HistoryOfBourbon = () => {
                                         <div className="pic">
                                             <img src="https://64parishes.org/wp-content/uploads/1983.162.15_web.jpg" height="550" width="550"></img>
                                         </div>
-                                        <div className="text">
+                                        <div className="text1">
                                             <p>After settling in Kentucky with his “Travelling Church”, baptist minister Elijah Craig founded his eponymous distillery in 1789. Although whiskey production was already well-established in the region, he is often mistakenly credited for its creation.</p>
                                             <p>However, it wasn’t until the mid-19th century that bourbon whiskey earned its name. In fact, the origin of such a French name for an American product is often disputed and the following namesakes have been suggested:</p>
                                             <p><ul><li>Bourbon County in modern-day Kentucky.</li>
@@ -96,7 +96,7 @@ export const HistoryOfBourbon = () => {
                                 <h4 id="aTitle4">Who Invented Bourbon Whiskey?</h4>
                                 <section id="invented">
                                     <div className="inventedBourbon">
-                                        <div className="text">
+                                        <div className="text2">
                                             <p>Legend has it that a 1790s fire in Elijah Craig’s distillery burned his barrels. Rather than replace them, he turned the barrel staves around so nobody would notice. He then sent them to New Orleans via the Ohio River and by the time they arrived, the whiskey had developed its iconically sweet flavour.</p>
                                             <p>The story itself is a fanciful tale and it often contributes to the widespread belief that the baptist minister personally invented bourbon whiskey. However, the earliest evidence that Craig charred his barrels is from 1826. Nevertheless, it’s anchored in enough truth to make it credible.</p>
                                             <p>In fact, the most likely reason that bourbon whiskey barrels are charred is far more interesting.</p>
@@ -117,7 +117,7 @@ export const HistoryOfBourbon = () => {
                                         <div className="pic">
                                             <img src="https://assets.theblend.world/images/2020-05/bowmore-distillery-workers.jpg" height="500" width="550"></img>
                                         </div>
-                                        <div className="text">
+                                        <div className="text1">
                                             <p>It seems strange today that bourbon would be sent south in order to be then shipped back to destinations that were geographically closer to the distilleries themselves. However, much of its early success is owed to this early trade route.</p>
                                             <p>As illustrated in the research of aforementioned historian Michael Veach, steamboats were essential to early trade. Railways were largely undeveloped and travelling by river drastically shortened travel time.</p>
                                             <p>Therefore, it proved quicker to send whiskey barrels via the Ohio River to New Orleans. Upon arrival, the cargo could either travel by train to inland locations like Kansas City.</p>
@@ -133,7 +133,7 @@ export const HistoryOfBourbon = () => {
                                 <h4 id="aTitle4">Glass Bottles Replace the Barrel</h4>
                                 <section id="glassBottles">
                                     <div className="bottles">
-                                        <div className="text">
+                                        <div className="text1">
                                             <p>Throughout most of its history, bourbon whiskey was distributed directly to various retailers in their oak barrels. Even today, glass is notoriously fragile but it was far more so during the 19th century and before. Furthermore, it was very expensive and breakages during shipping was an unthinkable additional cost.</p>
                                             <p>However, technology allowing for cheaper and more resistant glass had become available. Bottles could now be blown by machine rather than by hand. Similarly, coal-fired glass was far stronger than that made from a typical wood fire.</p>
                                             <p>Nevertheless, glass bottles remained expensive. In fact, they were worth more than the whiskey itself! When pharmacist George Garvin Brown (the founder of Brown-Forman) decided to bottle his Old Forester whiskey in the 1870s, it would set a revolution in motion.</p>
@@ -155,7 +155,7 @@ export const HistoryOfBourbon = () => {
                                         <div className="pic">
                                             <img src="https://bespokeunit.wpenginepowered.com/wp-content/uploads/2021/06/Destroyed-Whiskey-Barrels-During-Prohibition-600x400.jpg" height="450" width="550"></img>
                                         </div>
-                                        <div className="text">
+                                        <div className="text1">
                                             <p>As you may know, the 18th Amendment to the United States Constitution was signed in December 1917 and established the prohibition of alcohol in the United States. Although it was ratified in 1919, it took effect a year earlier in Kentucky.</p>
                                             <p>Compared to other varieties of alcohol, which occasionally found ways to survive it, prohibition proved utterly disastrous for the American whiskey industry. All of Bourbon County’s 26 distilleries were permanently shut down.</p>
                                             <p>Meanwhile, some distilleries in other counties were able to obtain permits to produce “medicinal whiskey”. These include Brown-Forman in Jefferson County and what is now known as Buffalo Trace in Franklin County. Although they hardly thrived during this period, they were at least able to survive until 1933.</p>
@@ -168,7 +168,7 @@ export const HistoryOfBourbon = () => {
                                 <h4 id="aTitle4">Bourbon's Renaissance</h4>
                                 <section id="renaissance">
                                     <div className="bourbonRen">
-                                        <div className="text">
+                                        <div className="text1">
                                             <p>In 1964, US Congress recognised bourbon as a “distinctive product of the United States”. It marked the first step towards regulations that would define bourbon whiskey as a distinctive liquor albeit with a wide denomination of origin.</p>
                                             <p>Indeed, bourbon whiskey can technically be produced anywhere in the USA. Nevertheless, the Alcohol and Tobacco Tax and Trade Bureau drafted its Federal Standard of Identity for Distilled Spirits, which would help preserve its quality and prevent imported counterfeits.</p>
                                             <p>Although the official recognition helped solidify its position, bourbon’s popularity steadily declined in the 1970s in favour of imported clear spirits like vodka. However, an unparalleled renaissance followed in the late 1980s.</p>
@@ -203,7 +203,7 @@ export const HistoryOfBourbon = () => {
                                 <h4 id="aTitle4">Bourbon in the 21st Century</h4>
                                 <section id="century">
                                     <div className="bourbonCent">
-                                        <div className="text">
+                                        <div className="text1">
                                             <p>Bourbon’s renaissance coincided or may have even contributed to the growing cocktail culture. With Don Draper of the 2007 AMC series Mad Men often brandishing an Old Fashioned, consumers and bartenders also rediscovered classic early-20th century cocktails.</p>
                                             <p>It would also frequently appear in FX’s Justified as the favourite beverage of Timothy Oliphant’s gunslinging US Marshal. Furthermore, the Rockstar video game, Red Dead Redemption, and its sequel would only add to the contemporary interest in old west drinking.</p>
                                             <p>Thanks to its integration into popular culture, bourbon essentially became cool again. Consequently, it was embraced by a younger generation of men of which over a quarter are from black or ethnic minority communities.</p>

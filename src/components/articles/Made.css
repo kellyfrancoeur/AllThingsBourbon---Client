@@ -28,32 +28,32 @@
 }
 
 #distilled {
-  margin: 0rem 5rem 0rem 0rem;
+  margin: 0rem 0rem 0rem 0rem;
   color: white;
 }
 
 #aged {
-  margin: 0rem 3rem 0rem 3.5rem;
+  margin: 0rem 0rem 0rem 0rem;
   color: white;
 }
 
 #charred {
-  margin: 0rem 3rem 0rem 2rem;
+  margin: 0rem 0rem 0rem 0rem;
   color: white;
 }
 
 #agedhowlong {
-  margin: 0rem 3rem 0rem 4rem;
+  margin: 0rem 0rem 0rem 0rem;
   color: white;
 }
 
 #isblended {
-  margin: 0rem 4rem 0rem 2rem;
+  margin: 0rem 0rem 0rem 0rem;
   color: white;
 }
 
 #bottle {
-  margin: 0rem 3rem 0rem 3.5rem;
+  margin: 0rem 0rem 0rem 0rem;
   color: white;
 }
 
@@ -61,28 +61,28 @@
   display: grid;
   align-items: center;
   grid-template-columns: 1fr 1fr;
-  column-gap: 20px;
+  column-gap: 100px;
 }
 
 .distill {
   display: grid;
   align-items: center;
   grid-template-columns: 1fr 1fr;
-  column-gap: 0px;
+  column-gap: 100px;
 }
 
 .bourbonAge {
   display: grid;
   align-items: center;
   grid-template-columns: 1fr 1fr;
-  column-gap: 0px;
+  column-gap: 50px;
 }
 
 .char {
   display: grid;
   align-items: center;
   grid-template-columns: 1fr 1fr;
-  column-gap: 50px;
+  column-gap: 100px;
 }
 
 .howLong {

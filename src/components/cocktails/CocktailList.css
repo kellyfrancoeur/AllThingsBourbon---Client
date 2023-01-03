@@ -23,6 +23,10 @@
 
 }
 
+#cimg{
+    border: 3px solid yellow;
+}
+
 .cocktailImg {
     max-width: 100%;
     max-height: 100%;

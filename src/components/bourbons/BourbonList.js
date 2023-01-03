@@ -69,7 +69,7 @@ export const BourbonList = ({ searchTermState }) => {
                     return <section key={`bourbon--${bourbon.id}`} className="bourbon">
                         <div className="bourbonView">
                             <div className="bourbonImg">
-                                <img src={bourbon.bourbon_img} height="375" width="275" />
+                                <img id="bimg" src={bourbon.bourbon_img} height="375" width="275" />
                             </div>
                             <div className="bourbonInfo">
                                 <h3 id="bTitle3"><u><b>{bourbon.name}</b></u></h3>

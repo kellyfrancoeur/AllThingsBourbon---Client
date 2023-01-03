@@ -23,22 +23,22 @@
 }
 
 #drinkingrules {
-  margin: 0rem 4rem 0rem 2rem;
+  margin: 0rem 0rem 0rem 0rem;
   color: white;
 }
 
 #drinkbourbon {
-  margin: 0rem 5rem 0rem 0rem;
+  margin: 0rem 0rem 0rem 0rem;
   color: white;
 }
 
 #onrocks {
-  margin: 0rem 5rem 0rem 2rem;
+  margin: 0rem 0rem 0rem 0rem;
   color: white;
 }
 
 #servebourbon {
-  margin: 0rem 1em 0rem 0rem;
+  margin: 0rem 0rem 0rem 0rem;
   color: white;
 }
 
@@ -53,21 +53,21 @@
   display: grid;
   align-items: center;
   grid-template-columns: 1fr 1fr;
-  column-gap: 0px;
+  column-gap: 100px;
 }
 
 .bourbonrocks {
   display: grid;
   align-items: center;
   grid-template-columns: 1fr 1fr;
-  column-gap: 0px;
+  column-gap: 100px;
 }
 
 .bourbonserved {
   display: grid;
   align-items: center;
   grid-template-columns: 1fr 1fr;
-  column-gap: 50px;
+  column-gap: 100px;
 }
 
 #serving {
@@ -76,10 +76,6 @@
 
 .stubborn1 {
   margin: 1rem 0rem 0rem 2rem;
-}
-
-.stubborn2 {
-  margin: 1rem 2rem 0rem 0rem;
 }
 
 .stubborn3 {

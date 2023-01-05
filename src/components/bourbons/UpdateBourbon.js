@@ -20,7 +20,7 @@ export const UpdateBourbon = () => {
         bourbon_img: "",
         type_of_bourbon: 0
     })
- 
+
     useEffect(() => {
         getBourbonById(bourbonId).then(setUpdatedBourbon)
     },
@@ -172,12 +172,12 @@ export const UpdateBourbon = () => {
                 onClick={evt => {
                     evt.preventDefault()
                     window.alert("Bourbon has been updated!")
- 
+
                     let selectedType = 0
 
                     updatedBourbon.type_of_bourbon.id
-                    ?selectedType = updatedBourbon.type_of_bourbon.id
-                    :selectedType = updatedBourbon.type_of_bourbon
+                        ? selectedType = updatedBourbon.type_of_bourbon.id
+                        : selectedType = updatedBourbon.type_of_bourbon
 
                     const bourbon = {
                         name: updatedBourbon.name,

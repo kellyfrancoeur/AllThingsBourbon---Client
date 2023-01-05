@@ -4,7 +4,7 @@ import { getBourbons } from "../../managers/BourbonManager"
 import { createBourbonTried } from "../../managers/BourbonsTriedManager"
 import "./userViewBourbon.css"
 
-export const SmallSingleBourbons = ({searchTermState}) => {
+export const SmallSingleBourbons = ({ searchTermState }) => {
     const [bourbons, setBourbons] = useState([])
     const [filterBourbons, setFiltered] = useState([])
     const navigate = useNavigate()
@@ -52,12 +52,12 @@ export const SmallSingleBourbons = ({searchTermState}) => {
         if (a.name < b.name) return -1;
         if (a.name > b.name) return 1;
         return 0;
-      })
+    })
 
     return (<>
         <h1 id="bTitle2">Small Batch & Single Barrel Bourbons</h1>
         <article className="bourbons">
-            { 
+            {
                 sortedBourbons.map((bourbon) => {
                     if (bourbon.type_of_bourbon.id === 4) {
                         return <section key={`bourbon--${bourbon.id}`} className="bourbon">
@@ -81,15 +81,15 @@ export const SmallSingleBourbons = ({searchTermState}) => {
                                     <div>{bourbon.made_in}</div>
                                     <div className="buyBourbon"><a target="_blank" href={bourbon.link_to_buy}>Buy Bourbon</a></div>
                                     <div>
-                                    <button className="addMyBourbon" onClick={() => {
-                                                createBourbonTried()
+                                        <button className="addMyBourbon" onClick={() => {
+                                            createBourbonTried()
                                                 .then(res => res.json())
-                                                .then(() =>{
-                                                  getAllBourbons()
+                                                .then(() => {
+                                                    getAllBourbons()
                                                 })
-                                                    navigate({ pathname: `/bourbonstried/memberAdd/${bourbon.id}`})
-                                            }}>Add to My Bourbons</button>
-                                    </div> 
+                                            navigate({ pathname: `/bourbonstried/memberAdd/${bourbon.id}` })
+                                        }}>Add to My Bourbons</button>
+                                    </div>
                                 </div>
                             </div>
                         </section>

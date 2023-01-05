@@ -4,7 +4,7 @@ import { getBourbons } from "../../managers/BourbonManager"
 import { createBourbonTried } from "../../managers/BourbonsTriedManager"
 import "./userViewBourbon.css"
 
-export const KentuckyBourbons = ({searchTermState}) => {
+export const KentuckyBourbons = ({ searchTermState }) => {
     const [bourbons, setBourbons] = useState([])
     const [filterBourbons, setFiltered] = useState([])
     const navigate = useNavigate()
@@ -52,7 +52,7 @@ export const KentuckyBourbons = ({searchTermState}) => {
         if (a.name < b.name) return -1;
         if (a.name > b.name) return 1;
         return 0;
-      })
+    })
 
     return (<>
         <h1 id="bTitle2">Kentucky Bourbons</h1>
@@ -81,21 +81,21 @@ export const KentuckyBourbons = ({searchTermState}) => {
                                     <div>{bourbon.made_in}</div>
                                     <div className="buyBourbon"><a target="_blank" href={bourbon.link_to_buy}>Buy Bourbon</a></div>
                                     <div>
-                                    <button className="addMyBourbon" onClick={() => {
+                                        <button className="addMyBourbon" onClick={() => {
                                             createBourbonTried()
-                                            .then(res => res.json())
-                                            .then(() =>{
-                                              getAllBourbons()
-                                            })
-                                                navigate({ pathname: `/bourbonstried/memberAdd/${bourbon.id}`})
-                                            }}>Add to My Bourbons</button>
-                                    </div> 
-                                </div> 
+                                                .then(res => res.json())
+                                                .then(() => {
+                                                    getAllBourbons()
+                                                })
+                                            navigate({ pathname: `/bourbonstried/memberAdd/${bourbon.id}` })
+                                        }}>Add to My Bourbons</button>
+                                    </div>
+                                </div>
                             </div>
                         </section>
                     }
                 })
-            } 
+            }
         </article>
     </>
     )

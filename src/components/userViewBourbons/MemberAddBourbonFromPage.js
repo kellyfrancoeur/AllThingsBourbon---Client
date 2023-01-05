@@ -19,7 +19,7 @@ export const MemberAddBourbonFromPage = () => {
         descriptors: []
     })
 
- 
+
     useEffect(() => {
         getBourbonById(bourbonId).then(setBourbon)
     }, []

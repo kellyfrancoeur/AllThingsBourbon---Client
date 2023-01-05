@@ -21,7 +21,7 @@ export const CocktailList = ({ searchTermState }) => {
         },
         [searchTermState]
     )
- 
+
     const getAllCocktails = () => {
         fetch("http://localhost:8000/cocktails", {
             headers: {
@@ -50,19 +50,19 @@ export const CocktailList = ({ searchTermState }) => {
         if (a.name < b.name) return -1;
         if (a.name > b.name) return 1;
         return 0;
-      })
+    })
 
 
     return (<>
         <h1 id="cTitle1">Cocktails</h1>
         <div className="container">
             <img id="listimg" src="https://www.sainsburysmagazine.co.uk/uploads/media/2400x1800/06/11036-260820_Sainsburys-Mag_Light-My-Fire_Cocktail.jpg?v=1-0" height="125" width="200"></img>
-                <div className="middle">
-                    <div className="listtext">
-                        <a href="/cocktails/add">Add A Cocktail</a>
-                            </div>
-                        </div>
-                    </div>
+            <div className="middle">
+                <div className="listtext">
+                    <a href="/cocktails/add">Add A Cocktail</a>
+                </div>
+            </div>
+        </div>
         <article className="cocktails">
             {
                 sortedCocktails.map(cocktail => {

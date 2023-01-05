@@ -32,6 +32,12 @@ export const EditCocktail = () => {
         setUpdatedTriedCocktail(copy)
     }
 
+    const sortedCocktails = cocktails.sort((a, b) => {
+        if (a.name < b.name) return -1;
+        if (a.name > b.name) return 1;
+        return 0;
+    })
+
     return (
         <form className="cocktailForm">
             <h1 id="mTitle2">Update Cocktail</h1>
@@ -43,7 +49,7 @@ export const EditCocktail = () => {
 
                         <option value={0}>Select Cocktail</option>
                         {
-                            cocktails.map((cocktail) => {
+                            sortedCocktails.map((cocktail) => {
                                 const isSelected = cocktail.id === updateTriedCocktail.cocktail.id
                                 return <option selected={isSelected ? true : false} value={`${cocktail.id}`} key={`cocktail--${cocktail.id}`}>{cocktail.name}</option>
                             }

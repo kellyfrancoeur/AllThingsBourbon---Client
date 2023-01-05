@@ -3,7 +3,7 @@ import "./StaffHomePage.css"
 export const StaffHomePage = () => {
 
     return (
-        <body>
+        <article>
             <main className="staffHomePage">
                 <section>
                     <form>
@@ -46,5 +46,5 @@ export const StaffHomePage = () => {
                     </form>
                 </section>
             </main>
-        </body>)
+        </article>)
 }

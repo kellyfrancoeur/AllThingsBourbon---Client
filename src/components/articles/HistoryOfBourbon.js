@@ -3,7 +3,7 @@ import "./History.css"
 
 export const HistoryOfBourbon = () => {
     return (
-        <body>
+        <article>
             <main className="bourbonHistory">
                 <section>
                     <form>
@@ -30,7 +30,7 @@ export const HistoryOfBourbon = () => {
                                     <p id="hist"><a href="#centurybourbon">Bourbon in the 21st Century</a></p>
                                 </div>
                                 <div className="introPic">
-                                    <img src="https://oldnewsclub.com/wp-content/uploads/2018/11/The-Glenturret-Scotlands-oldest-working-whisky-distillery-2.jpg" height="500" width="550"></img>
+                                    <img id="bimg" src="https://oldnewsclub.com/wp-content/uploads/2018/11/The-Glenturret-Scotlands-oldest-working-whisky-distillery-2.jpg" height="500" width="550"></img>
                                 </div>
                             </div>
                             <div className="help">
@@ -41,7 +41,7 @@ export const HistoryOfBourbon = () => {
                                 <section id="earlyHistory">
                                     <div className="history">
                                         <div className="pic">
-                                            <img src="https://whiskymag.com/shares/p34-6.jpg" height="500" width="550"></img>
+                                            <img id="bimg" src="https://whiskymag.com/shares/p34-6.jpg" height="500" width="550"></img>
                                         </div>
                                         <div className="text1">
                                             <p>Whiskey production spread throughout the present-day USA during the 18th century largely due to the convenience and availability of surplus grain. In most cases, whiskey was distilled by farmers of Scots-Irish origin.</p>
@@ -63,7 +63,7 @@ export const HistoryOfBourbon = () => {
                                             <p>Since these events affected all American whiskey, we’ll cover it in greater detail elsewhere. However, the insurrection helped define Kentucky as a frontier whiskey region before it was suppressed in 1794.</p>
                                         </div>
                                         <div className="pic">
-                                            <img src="https://whiskymag.com/shares/p34-5.jpg" height="500" width="575"></img>
+                                            <img id="bimg" src="https://whiskymag.com/shares/p34-5.jpg" height="500" width="575"></img>
                                         </div>
                                     </div>
                                 </section>
@@ -73,16 +73,16 @@ export const HistoryOfBourbon = () => {
                                 <section id="bname">
                                     <div className="bourbonName">
                                         <div className="pic">
-                                            <img src="https://64parishes.org/wp-content/uploads/1983.162.15_web.jpg" height="550" width="550"></img>
+                                            <img id="bimg" src="https://64parishes.org/wp-content/uploads/1983.162.15_web.jpg" height="550" width="550"></img>
                                         </div>
                                         <div className="text1">
                                             <p>After settling in Kentucky with his “Travelling Church”, baptist minister Elijah Craig founded his eponymous distillery in 1789. Although whiskey production was already well-established in the region, he is often mistakenly credited for its creation.</p>
                                             <p>However, it wasn’t until the mid-19th century that bourbon whiskey earned its name. In fact, the origin of such a French name for an American product is often disputed and the following namesakes have been suggested:</p>
-                                            <p><ul><li>Bourbon County in modern-day Kentucky.</li>
+                                            <ul><p><li>Bourbon County in modern-day Kentucky.</li>
                                                 <li>The “Old Bourbon” County shared by modern-day Virginia and Kentucky.</li>
                                                 <li>Bourbon Street in New Orleans where it was sold as a cheaper alternative to cognac.</li>
                                                 <li>The French House of Bourbon, which assisted in the American Revolutionary War.</li>
-                                            </ul></p>
+                                            </p></ul>
                                             <p>Whiskey producers did (and indeed continue to) operate in Kentucky’s Bourbon County, which was founded in 1785. It was part of the larger county of the same name, which was broken into smaller ones and split between both Virginia and Kentucky.</p>
                                             <p>Modern-day Bourbon County was created from a section of Fayette County where just as many distillers were based, including Craig’s distillery. Incidentally, both counties were named after the House of Bourbon General Gilbert du Motier, Marquis de Lafayette.</p>
                                         </div>
@@ -105,7 +105,7 @@ export const HistoryOfBourbon = () => {
                                             <p>The whiskey from Kentucky was received in uncharred barrels, which they transferred to their own before sending it on its way.</p>
                                         </div>
                                         <div className="pic">
-                                            <img src="https://i0.wp.com/bourbonbyproxy.com/wp-content/uploads/2022/05/Elijah-Craig-Single-Barrel-Barrel-Proof-1.jpg?fit=1246%2C1449&ssl=1" height="550" width="550"></img>
+                                            <img id="bimg" src="https://i0.wp.com/bourbonbyproxy.com/wp-content/uploads/2022/05/Elijah-Craig-Single-Barrel-Barrel-Proof-1.jpg?fit=1246%2C1449&ssl=1" height="550" width="550"></img>
                                         </div>
                                     </div>
                                 </section>
@@ -115,7 +115,7 @@ export const HistoryOfBourbon = () => {
                                 <section id="popular">
                                     <div className="bourbonPop">
                                         <div className="pic">
-                                            <img src="https://assets.theblend.world/images/2020-05/bowmore-distillery-workers.jpg" height="500" width="550"></img>
+                                            <img id="bimg" src="https://assets.theblend.world/images/2020-05/bowmore-distillery-workers.jpg" height="500" width="550"></img>
                                         </div>
                                         <div className="text1">
                                             <p>It seems strange today that bourbon would be sent south in order to be then shipped back to destinations that were geographically closer to the distilleries themselves. However, much of its early success is owed to this early trade route.</p>
@@ -141,7 +141,7 @@ export const HistoryOfBourbon = () => {
                                             <p>In order to ensure a specific level of quality, Brown’s whiskey was exclusively sold in bottles, which also prevented adulteration. While indeed pricier than barrel-stored whiskey, the guarantee of quality proved popular among other pharmacists and liquor stores who soon stocked his product.</p>
                                         </div>
                                         <div className="pic">
-                                            <img src="https://ae05.alicdn.com/kf/Hff521f111c36480b9fe8a1009ed2922bH/Whiskey-Decanter-Whiskey-Bottle-Crystal-Glass-Wine-Beer-Containers-Glass-Bottle-Glass-Cup-Home-Bar-Tools.jpg" height="550" width="500"></img>
+                                            <img id="bimg" src="https://ae05.alicdn.com/kf/Hff521f111c36480b9fe8a1009ed2922bH/Whiskey-Decanter-Whiskey-Bottle-Crystal-Glass-Wine-Beer-Containers-Glass-Bottle-Glass-Cup-Home-Bar-Tools.jpg" height="550" width="500"></img>
                                         </div>
                                     </div>
                                     <p>It would eventually lead to the 1897 Bottled-in-Bond Act, which offered government-approved certification that recognised and further guaranteed the conditions in which whiskey was aged and bottled. This legislation would be the first step towards a federal standard.</p>
@@ -153,7 +153,7 @@ export const HistoryOfBourbon = () => {
                                 <section id="prohibition">
                                     <div className="effects">
                                         <div className="pic">
-                                            <img src="https://bespokeunit.wpenginepowered.com/wp-content/uploads/2021/06/Destroyed-Whiskey-Barrels-During-Prohibition-600x400.jpg" height="450" width="550"></img>
+                                            <img id="bimg" src="https://bespokeunit.wpenginepowered.com/wp-content/uploads/2021/06/Destroyed-Whiskey-Barrels-During-Prohibition-600x400.jpg" height="450" width="550"></img>
                                         </div>
                                         <div className="text1">
                                             <p>As you may know, the 18th Amendment to the United States Constitution was signed in December 1917 and established the prohibition of alcohol in the United States. Although it was ratified in 1919, it took effect a year earlier in Kentucky.</p>
@@ -176,7 +176,7 @@ export const HistoryOfBourbon = () => {
                                             <p>Meanwhile, the North American Free Trade Agreement was signed in 1994 and trade improved with the European Union following the dissolution of the USSR. These resulted in an emerging global market with trade agreements that allowed bourbon to compete with Scotch and other international beverages.</p>
                                         </div>
                                         <div className="pic">
-                                            <img src="https://mintjuleptours.com/wp-content/uploads/2020/05/Woodford-Reserve-Bourbon-Distillery-Tour_Public-Bourbon-Tour-Kentucky.jpg" height="550" width="475"></img>
+                                            <img id="bimg" src="https://mintjuleptours.com/wp-content/uploads/2020/05/Woodford-Reserve-Bourbon-Distillery-Tour_Public-Bourbon-Tour-Kentucky.jpg" height="550" width="475"></img>
                                         </div>
                                     </div>
                                 </section>
@@ -186,7 +186,7 @@ export const HistoryOfBourbon = () => {
                                 <section id="ageStatement">
                                     <div className="statement">
                                         <div className="pic">
-                                            <img src="https://images.squarespace-cdn.com/content/v1/5c5b349711f784047c1bbb0d/1568136741759-PL8DP1SVAFRWKY7WIU87/Screen+Shot+2019-09-10+at+10.26.59+AM.png" height="500" width="545"></img>
+                                            <img id="bimg" src="https://images.squarespace-cdn.com/content/v1/5c5b349711f784047c1bbb0d/1568136741759-PL8DP1SVAFRWKY7WIU87/Screen+Shot+2019-09-10+at+10.26.59+AM.png" height="500" width="545"></img>
                                         </div>
                                         <div className="text">
                                             <p>While age statements certainly existed before the 20th century, they were usually unreliable. As you’ll have learned, whiskey was often sold in barrels and listing its age wasn’t a legal requirement. There were stamps that indicated when the taxes were paid, but these provided little insight.</p>
@@ -210,7 +210,7 @@ export const HistoryOfBourbon = () => {
                                             <p>Yearly sales have continued to consistently grow and the “bourbon boom” has shown little signs of slowing. Even amid the 2020 Covid-19 pandemic, sales jumped an additional 30%!</p>
                                         </div>
                                         <div className="pic">
-                                            <img src="https://64.media.tumblr.com/29d5c0b172772ff143fa1368e5086178/tumblr_nndxapFiIm1rqg6f3o4_1280.jpg" height="400" width="550"></img>
+                                            <img id="bimg" src="https://64.media.tumblr.com/29d5c0b172772ff143fa1368e5086178/tumblr_nndxapFiIm1rqg6f3o4_1280.jpg" height="400" width="550"></img>
                                         </div>
                                     </div>
                                 </section>
@@ -219,6 +219,6 @@ export const HistoryOfBourbon = () => {
                     </form>
                 </section>
             </main>
-        </body>)
+        </article>)
 }
 

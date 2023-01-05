@@ -33,7 +33,7 @@ export const MemberAddDistilleryFromPage = () => {
                 <div className="formGroup">
                     <h2 id="mTitle4"><label htmlFor="distillery">Distillery:</label></h2>
                     <input name="text" className="formControl" value={distillery.name}
-                        onChange={changeTriedDistilleryState}/>
+                        onChange={changeTriedDistilleryState} />
                 </div>
             </fieldset>
             <fieldset>

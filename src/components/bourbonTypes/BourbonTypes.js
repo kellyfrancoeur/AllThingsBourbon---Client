@@ -3,7 +3,7 @@ import "./BourbonTypes.css"
 
 export const TypesOfBourbons = () => {
     return (
-        <body>
+        <article>
             <main className="bourbonTypes">
                 <section>
                     <form>
@@ -30,7 +30,7 @@ export const TypesOfBourbons = () => {
                                     <p id="type"><a href="#highRye">High Rye & Wheated Bourbon</a></p>
                                 </div>
                                 <div className="introPic">
-                                    <img src="https://www.visittheusa.com/sites/default/files/styles/hero_l/public/2016-11/0%20HERO%20--%20bar%20front%20all%20brands_Web72DPI.jpg?itok=EBZaZUNg" height="400" width="550"></img>
+                                    <img id="bimg" src="https://www.visittheusa.com/sites/default/files/styles/hero_l/public/2016-11/0%20HERO%20--%20bar%20front%20all%20brands_Web72DPI.jpg?itok=EBZaZUNg" height="400" width="550"></img>
                                 </div>
                             </div>
                             <div className="help">
@@ -41,7 +41,7 @@ export const TypesOfBourbons = () => {
                                 <section id="standandbourbon">
                                     <div className="bourbonstandard">
                                         <div className="pic">
-                                            <img src="https://static.wixstatic.com/media/647b9f_9811d450c29642d5bc0ae74dfa1aafd9~mv2.jpg/v1/fit/w_940%2Ch_627%2Cal_c%2Cq_80/file.jpg" height="550" width="535"></img>
+                                            <img id="bimg" src="https://static.wixstatic.com/media/647b9f_9811d450c29642d5bc0ae74dfa1aafd9~mv2.jpg/v1/fit/w_940%2Ch_627%2Cal_c%2Cq_80/file.jpg" height="550" width="535"></img>
                                         </div>
                                         <div className="text">
                                             <p>
@@ -70,7 +70,7 @@ export const TypesOfBourbons = () => {
                                             <p>Otherwise, the whiskey must follow the basic American whiskey and bourbon regulations in order to be recognised as “Kentucky bourbon whiskey”. However, it must also undergo a one-year minimum ageing process.</p>
                                         </div>
                                         <div className="pic">
-                                            <img src="https://production-cms-assets.s3.us-east-1.amazonaws.com/assets/globals/makers-mark-family-of-5-bottles-2700x1500.jpg" height="400" width="500"></img>
+                                            <img id="bimg" src="https://production-cms-assets.s3.us-east-1.amazonaws.com/assets/globals/makers-mark-family-of-5-bottles-2700x1500.jpg" height="400" width="500"></img>
                                         </div>
                                     </div>
                                 </section>
@@ -80,7 +80,7 @@ export const TypesOfBourbons = () => {
                                 <section id="straightbourbon">
                                     <div className="bourbonstraight">
                                         <div className="pic">
-                                            <img src="https://www.stirchleywines.co.uk/wp-content/uploads/2020/04/knob_creek.jpg" height="500" width="450"></img>
+                                            <img id="bimg" src="https://www.stirchleywines.co.uk/wp-content/uploads/2020/04/knob_creek.jpg" height="500" width="450"></img>
                                         </div>
                                         <div className="text">
                                             <p>In some ways, American “straight” whiskey may be regarded as a label of quality similar to Scottish “single-malt whisky”. Nevertheless, the two mustn’t be confused as they’re very different.</p>
@@ -107,7 +107,7 @@ export const TypesOfBourbons = () => {
                                             <p>As a result, it is supposed to provide a unique flavour rather than one from a regular production that is intended to be consistent every year.</p>
                                         </div>
                                         <div className="pic">
-                                            <img src="https://global-uploads.webflow.com/5ace2bae31f6d3c07d267cb9/5c42485279dc693f07b2cee7_Jeffersons-Very-Small-Batch-01a.jpg" height="550" width="475"></img>
+                                            <img id="bimg" src="https://global-uploads.webflow.com/5ace2bae31f6d3c07d267cb9/5c42485279dc693f07b2cee7_Jeffersons-Very-Small-Batch-01a.jpg" height="550" width="475"></img>
                                         </div>
                                     </div>
                                 </section>
@@ -117,7 +117,7 @@ export const TypesOfBourbons = () => {
                                 <section id="sourbourbon">
                                     <div className="bourbonsour">
                                         <div className="pic">
-                                            <img src="https://www.drinkhacker.com/wp-content/uploads/2014/01/belle-meade-bourbon.jpg" height="500" width="375"></img>
+                                            <img id="bimg" src="https://www.drinkhacker.com/wp-content/uploads/2014/01/belle-meade-bourbon.jpg" height="500" width="375"></img>
                                         </div>
                                         <div className="text">
                                             <p>Made famous by Jack Daniel’s Tennessee Whiskey, sour mash is a technique that can be used for most bourbon whiskey. It consists of reserving a small amount of fermented mash for another batch in the following year.</p>
@@ -140,7 +140,7 @@ export const TypesOfBourbons = () => {
                                             <p>Like straight whiskey, bottled in bond liquor is not an exclusive term for bourbon and can be used by other American creations.</p>
                                         </div>
                                         <div className="pic">
-                                            <img src="https://content.thirtyonewhiskey.com/wp-content/uploads/2020/09/05150011/00100lrPORTRAIT_00100_BURST20200905144454670_COVER-scaled.jpg" height="500" width="435"></img>
+                                            <img id="bimg" src="https://content.thirtyonewhiskey.com/wp-content/uploads/2020/09/05150011/00100lrPORTRAIT_00100_BURST20200905144454670_COVER-scaled.jpg" height="500" width="435"></img>
                                         </div>
                                     </div>
                                 </section>
@@ -150,7 +150,7 @@ export const TypesOfBourbons = () => {
                                 <section id="blendedbourbon">
                                     <div className="bourbonblended">
                                         <div className="pic">
-                                            <img src="https://whiskeyconsensus.com/wp-content/uploads/2019/09/Three-Chord-Blended-Bourbon-Whiskey-Batch-0001-768x760.jpg" height="450" width="400"></img>
+                                            <img id="bimg" src="https://whiskeyconsensus.com/wp-content/uploads/2019/09/Three-Chord-Blended-Bourbon-Whiskey-Batch-0001-768x760.jpg" height="450" width="400"></img>
                                         </div>
                                         <div className="text">
                                             <p>Although historically more affordable, blended bourbon is surprisingly rarer than it used to be. Generally speaking, blended American whiskey must contain at least 20% straight whiskey.</p>
@@ -170,7 +170,7 @@ export const TypesOfBourbons = () => {
                                             <p>Similar to high-rye whiskey is high-wheat or “wheated” bourbon. A high quantity of rye may provide a bourbon whiskey with additional spiciness and depth. Meanwhile, heavy use of wheat can impart a mild and subtle flavour profile.</p>
                                         </div>
                                         <div className="pic">
-                                            <img src="https://whiskeyconsensus.com/wp-content/uploads/2019/09/1792-High-Rye-Bourbon-768x765.jpg" height="350" width="300"></img>
+                                            <img id="bimg" src="https://whiskeyconsensus.com/wp-content/uploads/2019/09/1792-High-Rye-Bourbon-768x765.jpg" height="350" width="300"></img>
                                         </div>
                                     </div>
                                 </section>
@@ -180,6 +180,6 @@ export const TypesOfBourbons = () => {
                     </form>
                 </section>
             </main>
-        </body>)
+        </article>)
 }
 

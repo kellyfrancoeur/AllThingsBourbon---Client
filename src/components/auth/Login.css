@@ -99,6 +99,8 @@ a {
 
 .loginlogo {
     background-image: url(https://i.postimg.cc/KYNtFxbB/logo3.png);
+    border-bottom: 3px solid yellow;
+    border-right: 3px solid yellow;
     height: 7rem;
     width: 64rem;
     background-position: left;

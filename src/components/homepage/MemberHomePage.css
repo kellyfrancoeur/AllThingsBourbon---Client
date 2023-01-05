@@ -39,8 +39,13 @@ body {
   color: white;
 }
 
+#vimg {
+  border: 3px solid yellow;
+
+}
+
 .video {
-  margin: 4rem 26rem 5rem 26rem;
+  margin: 4rem 26rem 5rem 30rem;
   color: white;
 }
 

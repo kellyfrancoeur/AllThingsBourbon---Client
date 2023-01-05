@@ -4,7 +4,7 @@ import { getCocktails } from "../../managers/CocktailManager.js"
 import { createCocktailTried } from "../../managers/CocktailsTriedManager.js"
 import "./userView.css"
 
-export const CreativeTwists = ({searchTermState}) => {
+export const CreativeTwists = ({ searchTermState }) => {
     const [cocktails, setCocktails] = useState([])
     const [filterCocktails, setFiltered] = useState([])
     const navigate = useNavigate()
@@ -52,7 +52,7 @@ export const CreativeTwists = ({searchTermState}) => {
         if (a.name < b.name) return -1;
         if (a.name > b.name) return 1;
         return 0;
-      })
+    })
 
     return (<>
         <h1 id="cTitle2">Creative Twists on Classic Cocktails</h1>
@@ -72,15 +72,15 @@ export const CreativeTwists = ({searchTermState}) => {
                                     <div className="cocktailHowToMake"><b><u>How to Make it:</u></b></div>
                                     <div>{cocktail.how_to_make}</div>
                                     <div>
-                                    <button className="addMyCocktail" onClick={() => {
-                                                createCocktailTried()
+                                        <button className="addMyCocktail" onClick={() => {
+                                            createCocktailTried()
                                                 .then(res => res.json())
-                                                .then(() =>{
-                                                  getAllCocktails()
+                                                .then(() => {
+                                                    getAllCocktails()
                                                 })
-                                                    navigate({ pathname: `/cocktailstried/memberAdd/${cocktail.id}`})
-                                            }}>Add to My Cocktails</button>
-                                    </div> 
+                                            navigate({ pathname: `/cocktailstried/memberAdd/${cocktail.id}` })
+                                        }}>Add to My Cocktails</button>
+                                    </div>
                                 </div>
                             </div>
                         </section>

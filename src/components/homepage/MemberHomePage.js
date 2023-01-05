@@ -1,9 +1,8 @@
 import "./MemberHomePage.css"
 
-
 export const MemberHomePage = () => {
     return (
-        <body>
+        <article>
             <main className="memberHomePage">
                 <section>
                     <form>
@@ -13,14 +12,14 @@ export const MemberHomePage = () => {
                         </div>
                         <h3 id="title3">For the Bourbon Aficionado</h3>
                         <div className="video">
-                            <iframe width="560" height="315" src="https://www.youtube.com/embed/MPY_EuvimH0?controls=0&amp&autoplay=1&mute=1;start=186" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe id="vimg" width="560" height="315" src="https://www.youtube.com/embed/MPY_EuvimH0?controls=0&amp&autoplay=1&mute=1;start=186" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                         </div>
                         <section className="memberHome">
                             <h4 id="title4">What is Bourbon Whiskey?</h4>
                             <section className="whatIsBourbon">
                                 <div className="what">
                                     <div className="bourbon">
-                                        <img src="https://media2.phoenixnewtimes.com/phx/imager/u/original/11247817/haymaker-whiskey-bar.jpg" height="700" width="650"></img>
+                                        <img id="bimg" src="https://media2.phoenixnewtimes.com/phx/imager/u/original/11247817/haymaker-whiskey-bar.jpg" height="700" width="650"></img>
                                     </div>
                                     <div className="bourbonp">
                                         <p>Bourbon is a variety of barrel-aged American whiskey that is predominantly produced from corn as opposed to malted barley like Scotch whisky.</p>
@@ -44,7 +43,7 @@ export const MemberHomePage = () => {
                                         <p>Interestingly, bourbon and what is called “corn whiskey” aren’t necessarily the same thing, either. Although bourbon needs at least 51% corn in its mash, corn whiskey actually requires 80%! Additionally, corn whiskey may be aged in barrels that are uncharred or have already been used.</p>
                                     </div>
                                     <div className="bourbon">
-                                        <img src="https://coolmaterial.com/wp-content/uploads/2021/07/Difference-Between-Bourbon-and-Whiskey-1.jpg" height="450" width="500"></img>
+                                        <img id="bimg" src="https://coolmaterial.com/wp-content/uploads/2021/07/Difference-Between-Bourbon-and-Whiskey-1.jpg" height="450" width="500"></img>
                                     </div>
                                 </div>
                             </section>
@@ -52,7 +51,7 @@ export const MemberHomePage = () => {
                             <section className="taste">
                                 <div className="tasty">
                                     <div className="bourbon">
-                                        <img src="https://www.thelist.com/img/gallery/youve-been-drinking-bourbon-wrong-all-along/l-intro-1622671501.jpg" height="495" width="515"></img>
+                                        <img id="bimg" src="https://www.thelist.com/img/gallery/youve-been-drinking-bourbon-wrong-all-along/l-intro-1622671501.jpg" height="495" width="515"></img>
                                     </div>
                                     <div className="bourbonp">
                                         <p>Thanks to its high corn content, bourbon usually has a distinctively sweet flavour profile compared to other types of American whiskey. Furthermore, it must usually undergo a similar ageing process to the others, which requires charred new oak barrels.</p>
@@ -76,7 +75,7 @@ export const MemberHomePage = () => {
                                         <p>Interestingly, though, Mexico has a few corn whiskeys given its strong maize agriculture. They’re certainly worth checking out as a unique</p>
                                     </div>
                                     <div className="bourbon">
-                                        <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/25-best-scotch-whiskeys-gear-patrol-lead-full-v2-1594053022.jpg?crop=1.00xw:0.749xh;0.00160xw,0.217xh&resize=1200:*" height="600" width="550"></img>
+                                        <img id="bimg" src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/25-best-scotch-whiskeys-gear-patrol-lead-full-v2-1594053022.jpg?crop=1.00xw:0.749xh;0.00160xw,0.217xh&resize=1200:*" height="600" width="550"></img>
                                     </div>
                                 </div>
                                 <p>Aside from it being made in a neighbouring state, Tennessee whiskey is technically identical to bourbon. In fact, the process it follows officially allows it to carry the “bourbon” label but producers have chosen to distinguish themselves with the name of their home state.</p>
@@ -86,7 +85,7 @@ export const MemberHomePage = () => {
                             <section className="nutrition">
                                 <div className="facts">
                                     <div className="bourbon">
-                                        <img src="https://www.foodandwine.com/thmb/b7xdZxc4zELCwgdkIjHQUefyTrc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/high-end-bourbon-bottles-to-collect-FT-BLOG0721-d5962165f8f840b28bcebccce9f479e9.jpg" height="375" width="550"></img>
+                                        <img id="bimg" src="https://www.foodandwine.com/thmb/b7xdZxc4zELCwgdkIjHQUefyTrc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/high-end-bourbon-bottles-to-collect-FT-BLOG0721-d5962165f8f840b28bcebccce9f479e9.jpg" height="375" width="550"></img>
                                     </div>
                                     <div className="bourbonp">
                                         <p>Despite its sweet flavour, bourbon whiskey should contain no sugar. In fact, the use of any additives, including caramel colouring, is prohibited in straight bourbon whiskey.</p>
@@ -100,6 +99,6 @@ export const MemberHomePage = () => {
                     </form>
                 </section>
             </main>
-        </body>)
+        </article>)
 }
 

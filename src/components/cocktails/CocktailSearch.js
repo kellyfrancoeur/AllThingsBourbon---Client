@@ -1,18 +1,23 @@
 import "./CocktailList.css"
 
+const clearInput = (event) => {
+    event.target.value = '';
+    event.target.blur();
+};
+
 export const CocktailSearch = ({ setterFunction }) => {
     return (
         <div className="cocktailSearch">
             <form name="search">
-            <input type="text"
-                onChange={
-                    (changeEvent) => {
-                        setterFunction(changeEvent.target.value)
+                <input type="text"
+                    onChange={
+                        (changeEvent) => {
+                            setterFunction(changeEvent.target.value)
+                        }
                     }
-                }
-                className="input"  name="txt" onmouseout="this.value = ''; this.blur();" />
-        </form>
-        <i class="fas fa-search"></i>
+                    className="input" name="txt" onMouseOut={clearInput} />
+            </form>
+            <i className="fas fa-search"></i>
         </div>
     )
 }

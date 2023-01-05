@@ -11,7 +11,7 @@ export const getBourbonsTried = () => {
 
 
 export const getBourbonTriedById = (id) => {
-    return fetch(`http://localhost:8000/bourbonstried?bourbon=${id}`, {
+    return fetch(`http://localhost:8000/bourbonstried/${id}`, {
         headers: {
             "Authorization": `Token ${JSON.parse(localStorage.getItem("bourbon_user")).token}`
         }
@@ -42,18 +42,6 @@ export const updateBourbonTried = (bourbonTried) => {
         body: JSON.stringify(bourbonTried)
     })
 }
-
-// export const updateBourbonTried = (id, bourbonTried, chosenDescriptors) => {
-//     return fetch(`http://localhost:8000/bourbonstried/${id}`, {
-//         method: "PUT",
-//         headers: {
-//             "Accept": "application/json",
-//             "Content-Type": "application/json",
-//             "Authorization": `Token ${JSON.parse(localStorage.getItem("bourbon_user")).token}`
-//         },
-//         body: JSON.stringify({ ...bourbonTried, descriptors: chosenDescriptors })
-//     })
-// }
 
 export const deleteBourbonTried = (bourbonTried) => {
     return fetch(`http://localhost:8000/bourbonstried/${bourbonTried.id}`, {

@@ -47,7 +47,7 @@ export const MemberDistilleryList = ({ searchTermState }) => {
         if (a.name < b.name) return -1;
         if (a.name > b.name) return 1;
         return 0;
-      })
+    })
 
     return (<>
         <h1 id="dTitle1">Distilleries</h1>
@@ -64,15 +64,15 @@ export const MemberDistilleryList = ({ searchTermState }) => {
                                 <h4 id="dTitle4"><i>{distillery.location}</i></h4>
                                 <div>{distillery.description}</div>
                                 <div>
-                                <button className="addMyCocktail" onClick={() => {
-                                                createDistilleryVisited()
-                                                .then(res => res.json())
-                                                .then(() =>{
-                                                  getAllDistilleries()
-                                                })
-                                                    navigate({ pathname: `/distilleriesvisited/memberAdd/${distillery.id}`})
-                                            }}>Add to My Distilleries</button>
-                                    </div> 
+                                    <button className="addMyCocktail" onClick={() => {
+                                        createDistilleryVisited()
+                                            .then(res => res.json())
+                                            .then(() => {
+                                                getAllDistilleries()
+                                            })
+                                        navigate({ pathname: `/distilleriesvisited/memberAdd/${distillery.id}` })
+                                    }}>Add to My Distilleries</button>
+                                </div>
                             </div>
                         </div>
                     </section>

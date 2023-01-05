@@ -54,6 +54,12 @@ export const EditBourbon = () => {
         setUpdatedTriedBourbon(copy)
     }
 
+    const sortedBourbons = bourbons.sort((a, b) => {
+        if (a.name < b.name) return -1;
+        if (a.name > b.name) return 1;
+        return 0;
+    })
+
     return (
         <form className="bourbonForm" >
             <h1 id="mTitle2">Update Bourbon</h1>
@@ -69,7 +75,7 @@ export const EditBourbon = () => {
 
                         <option value={0}>Select Bourbon</option>
                         {
-                            bourbons.map((bourbon) => {
+                            sortedBourbons.map((bourbon) => {
                                 return <option value={`${bourbon.id}`} key={`bourbon--${bourbon.id}`}>{bourbon.name}</option>
                             }
 
@@ -143,7 +149,7 @@ export const EditBourbon = () => {
 
                     const newTriedBourbon = {
                         id: updateTriedBourbon.id,
-                        bourbon: parseInt(updateTriedBourbon.bourbon),
+                        bourbon: parseInt(chosenBourbon),
                         comments: updateTriedBourbon.comments,
                         rating: updateTriedBourbon.rating,
                         descriptors: Array.from(chosenDescriptors)

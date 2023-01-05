@@ -111,8 +111,8 @@ export const UpdateCocktail = () => {
                     let selectedCocktailType = 0
 
                     updatedCocktail.type_of_cocktail.id
-                    ?selectedCocktailType = updatedCocktail.type_of_cocktail.id
-                    :selectedCocktailType = updatedCocktail.type_of_cocktail
+                        ? selectedCocktailType = updatedCocktail.type_of_cocktail.id
+                        : selectedCocktailType = updatedCocktail.type_of_cocktail
 
                     const cocktail = {
                         name: updatedCocktail.name,

@@ -3,7 +3,7 @@ import "./Made.css"
 
 export const HowBourbonIsMade = () => {
     return (
-        <body>
+        <article>
             <main className="howBourbonMade">
                 <section>
                     <form>
@@ -27,7 +27,7 @@ export const HowBourbonIsMade = () => {
                                     <p id="made"><a href="#ageinbottle">Does Bourbon Age in the Bottle?</a></p>
                                 </div>
                                 <div className="introPic">
-                                    <img src="https://www.whisky.com/fileadmin/_processed_/e/f/csm_Destillieren_dadae79fc94de7c95a5d0c8ecbdea67d_693eb60c88.jpg" height="450" width="500"></img>
+                                    <img id="bimg" src="https://www.whisky.com/fileadmin/_processed_/e/f/csm_Destillieren_dadae79fc94de7c95a5d0c8ecbdea67d_693eb60c88.jpg" height="450" width="500"></img>
                                 </div>
                             </div>
                             <div className="help">
@@ -38,16 +38,16 @@ export const HowBourbonIsMade = () => {
                                 <section id="bingredients">
                                     <div className="whatIng">
                                         <div className="pic">
-                                            <img src="https://distilling.com/distillermagazine/wp-content/uploads/2019/02/17F-Shots-Feature.jpg" height="475" width="600"></img>
+                                            <img id="bimg" src="https://distilling.com/distillermagazine/wp-content/uploads/2019/02/17F-Shots-Feature.jpg" height="475" width="600"></img>
                                         </div>
                                         <div className="text1">
                                             <p>All whiskey is produced by fermenting grain and then distilling it. Incidentally, most clear spirits like vodka and gin are also made by following a similar process. However, they remain clear because they aren’t aged in oak casks.</p>
                                             <p>The fermented grain is referred to as a “mash” and it’s not unlike beer. However, the ingredients are a little different when making whiskey. The composition of a mash may consist of the following ingredients:</p>
-                                            <p><ul><li>Barley</li>
+                                            <ul><p><li>Barley</li>
                                                 <li>Corn</li>
                                                 <li>Rye</li>
                                                 <li>Wheat</li>
-                                            </ul></p>
+                                            </p></ul>
                                             <p>The rye and barley can be malted beforehand, which involves humidifying the grain so it opens and begins to germinate. The mash’s chosen ingredients and their proportions are referred to as a “bill”.</p>
                                         </div>
                                     </div>
@@ -70,7 +70,7 @@ export const HowBourbonIsMade = () => {
                                             <p>These allow the heads and tails to be easily recovered, which are distilled again to remove more impurities. The idea was developed in the early 19th century by Édouard Adam but his invention never really took hold in France and Europe since Aeneas Coffey’s continuous column still was invented around the same time.</p>
                                         </div>
                                         <div className="pic">
-                                            <img src="https://www.liquor.com/thmb/ZFc0Arw-m5ZLVqjVbX-H0cpvzEI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__liquor__2017__06__26152116__Love-Bourbon-Introducing-10-New-Kentucky-Bourbon-Distilleries-720x720-article-ab79fc7e95e240d2a11e59752c5ece28.jpg" height="450" width="550"></img>
+                                            <img id="bimg" src="https://www.liquor.com/thmb/ZFc0Arw-m5ZLVqjVbX-H0cpvzEI=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__liquor__2017__06__26152116__Love-Bourbon-Introducing-10-New-Kentucky-Bourbon-Distilleries-720x720-article-ab79fc7e95e240d2a11e59752c5ece28.jpg" height="450" width="550"></img>
                                         </div>
                                     </div>
                                     <div className="stubborn2">
@@ -84,7 +84,7 @@ export const HowBourbonIsMade = () => {
                                 <section id="aged">
                                     <div className="bourbonAge">
                                         <div className="pic">
-                                            <img src="https://media.tacdn.com/media/attractions-splice-spp-674x446/06/71/c3/71.jpg" height="500" width="550"></img>
+                                            <img id="bimg" src="https://media.tacdn.com/media/attractions-splice-spp-674x446/06/71/c3/71.jpg" height="500" width="550"></img>
                                         </div>
                                         <div className="text1">
                                             <p>Whatever technique used, the process results in a clear distillate, which is referred to as a “white dog”. Depending on the type of still used, its strength may range between 65% and 80% ABV, but it must not exceed the latter concentration.</p>
@@ -108,7 +108,7 @@ export const HowBourbonIsMade = () => {
                                             <p>For instance, the wood’s cellulose crystalises into sugars while lignin is extracted from the sap. After prolonged contact, these two compounds are absorbed by the distillate and will eventually result in caramel and vanilla flavours respectfully.</p>
                                         </div>
                                         <div className="pic">
-                                            <img src="https://s.wsj.net/public/resources/images/BN-IH804_0508BA_M_20150507184745.jpg" height="500" width="500"></img>
+                                            <img id="bimg" src="https://s.wsj.net/public/resources/images/BN-IH804_0508BA_M_20150507184745.jpg" height="500" width="500"></img>
                                         </div>
                                     </div>
                                 </section>
@@ -118,7 +118,7 @@ export const HowBourbonIsMade = () => {
                                 <section id="agedhowlong">
                                     <div className="howLong">
                                         <div className="pic">
-                                            <img src="http://cdn.shopify.com/s/files/1/0535/0578/6016/articles/barrel-aging-101-maple-syrup-barrels-feature_1200x1200.jpg?v=1639679249" height="500" width="500"></img>
+                                            <img id="bimg" src="http://cdn.shopify.com/s/files/1/0535/0578/6016/articles/barrel-aging-101-maple-syrup-barrels-feature_1200x1200.jpg?v=1639679249" height="500" width="500"></img>
                                         </div>
                                         <div className="text">
                                             <p>There is no minimum ageing period for standard bourbon whiskey and it can be bottled after just a few months. However, it is expected that premium bourbon whiskey is aged for a bit longer, to say the least!</p>
@@ -145,7 +145,7 @@ export const HowBourbonIsMade = () => {
                                             <p>Finally, if the bourbon whiskey is to bear an age statement, the year on the label must equal the age of the youngest batch used in the blend.</p>
                                         </div>
                                         <div className="pic">
-                                            <img src="https://mscwordpresscontent.s3.amazonaws.com/wa/wp-content/uploads/2021/04/jim-beam-barrel-dump.jpg?resize=1920x0" height="450" width="500"></img>
+                                            <img id="bimg" src="https://mscwordpresscontent.s3.amazonaws.com/wa/wp-content/uploads/2021/04/jim-beam-barrel-dump.jpg?resize=1920x0" height="450" width="500"></img>
                                         </div>
                                     </div>
                                 </section>
@@ -155,7 +155,7 @@ export const HowBourbonIsMade = () => {
                                 <section id="bottle">
                                     <div className="bottleAge">
                                         <div className="pic">
-                                            <img src="https://imageio.forbes.com/specials-images/imageserve/607c80f46b792f912496a8cd/Best-Bourbons-for-Kentucky-Derby-2021/960x0.jpg?format=jpg&width=960" height="500" width="600"></img>
+                                            <img id="bimg" src="https://imageio.forbes.com/specials-images/imageserve/607c80f46b792f912496a8cd/Best-Bourbons-for-Kentucky-Derby-2021/960x0.jpg?format=jpg&width=960" height="500" width="600"></img>
                                         </div>
                                         <div className="text">
                                             <p>Bourbon is bottled at a minimum of 40% ABV, a requirement in both the USA and EU, once the producer deems it ready to drink. However, some distillers may bottle their whiskey at a high-proof strength, which can even be above 70% ABV! Similarly, bottled-in-bond bourbon must have a final ABV of at least 50%.</p>
@@ -173,6 +173,6 @@ export const HowBourbonIsMade = () => {
                     </form>
                 </section>
             </main>
-        </body>)
+        </article>)
 }
 

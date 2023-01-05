@@ -39,7 +39,7 @@
 }
 
 .distillerySearch {
-   margin: 3rem 3rem 0rem 0rem;
+    margin: 3rem 3rem 0rem 0rem;
     text-align: right;
     position: relative;
 }
@@ -60,23 +60,23 @@
     transition: .5s;
 }
 
-.distillerySearch:hover input{
+.distillerySearch:hover input {
     width: 350px;
     background: #3b3640;
     border-radius: 10px;
 }
 
-.distillerySearch i{
+.distillerySearch i {
     position: absolute;
     top: 50%;
     right: 15px;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     font-size: 26px;
     color: #ffd52d;
     transition: .2s;
 }
 
-.distillerySearch:hover i{
+.distillerySearch:hover i {
     opacity: 0;
     z-index: -1;
 }

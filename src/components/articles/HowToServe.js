@@ -3,7 +3,7 @@ import "./Serve.css"
 
 export const HowToServe = () => {
     return (
-        <body>
+        <article>
             <main className="howToServe">
                 <section>
                     <form>
@@ -24,7 +24,7 @@ export const HowToServe = () => {
                                     <p id="serving"><a href="#serve">How to Serve Bourbon</a></p>
                                 </div>
                                 <div className="introPic">
-                                    <img src="https://media.istockphoto.com/id/1085322468/photo/pouring-whiskey-from-bottle-into-glass-with-ice.jpg?s=612x612&w=0&k=20&c=O5nPiD2D5FpNpD4Qai76Xga-itJwlNMKuMUnjeNa5_s=" height="350" width="500"></img>
+                                    <img id="bimg" src="https://media.istockphoto.com/id/1085322468/photo/pouring-whiskey-from-bottle-into-glass-with-ice.jpg?s=612x612&w=0&k=20&c=O5nPiD2D5FpNpD4Qai76Xga-itJwlNMKuMUnjeNa5_s=" height="350" width="500"></img>
                                 </div>
                             </div>
                             <div className="help">
@@ -35,7 +35,7 @@ export const HowToServe = () => {
                                 <section id="drinkingrules">
                                     <div className="bourbonrules">
                                         <div className="pic">
-                                            <img src="https://glassandvine.com/wp-content/uploads/Decanter-of-whiskey-and-a-glass-with-cuban-cigar-on-a-wooden-table.jpg" height="500" width="500"></img>
+                                            <img id="bimg" src="https://glassandvine.com/wp-content/uploads/Decanter-of-whiskey-and-a-glass-with-cuban-cigar-on-a-wooden-table.jpg" height="500" width="500"></img>
                                         </div>
                                         <div className="text1">
                                             <p>Before you begin to drink any bourbon whiskey, it’s absolutely vital that you should follow a few rules.</p>
@@ -54,21 +54,21 @@ export const HowToServe = () => {
                                         <div className="text1">
                                             <p>Now that we’ve made that very clear, we’d still like to provide you with a few serving suggestions for bourbon whiskey. These may be quite helpful for you, especially if you’re a beginner.</p>
                                             <p>As mentioned earlier, there are lots of ways to drink bourbon. Typically, it can be served in one of the following ways:</p>
-                                            <p><ul><li>Tumbler</li>
+                                            <ul><p><li>Tumbler</li>
                                                 <li>Shot Glass</li>
                                                 <li>Nosing Glass</li>
                                                 <li>Cocktail</li>
-                                            </ul></p>
+                                            </p></ul>
                                             <p>Shot glasses are self-explanatory. These drinking vessels are designed to contain a single shot. You can sip it or knock it back, it’s up to you. A step up from the shot glass is the tumbler. It’s a stable glass and unlike the shot, it leaves plenty of room for ice should you choose to add some.</p>
                                             <p>Meanwhile, the nosing glass has several advantages. As the name suggests, its tulip shape will capture the aromas so you can enjoy them before taking a sip.</p>
                                         </div>
                                         <div className="pic">
-                                            <img src="https://www.simplyrecipes.com/thmb/emBLFdFsdH2INtxf8hTEVzBpt6A=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/BestWhiskyGlasses_GroupShot_03-ea83b029dc1843279d41f9676ca26ca2.jpg" height="550" width="550"></img>
+                                            <img id="bimg" src="https://www.simplyrecipes.com/thmb/emBLFdFsdH2INtxf8hTEVzBpt6A=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/BestWhiskyGlasses_GroupShot_03-ea83b029dc1843279d41f9676ca26ca2.jpg" height="550" width="550"></img>
                                         </div>
                                     </div>
                                     <div className="stubborn1">
-                                            <p>If you’re looking to appreciate the whiskey’s quality, it’s the better option. A shot glass has no space for the aromas while the tumbler lets them escape without much resistance. This simple design element will greatly influence the resulting flavour profile and generally heighten your experience if that’s what you seek.</p>
-                                            </div>
+                                        <p>If you’re looking to appreciate the whiskey’s quality, it’s the better option. A shot glass has no space for the aromas while the tumbler lets them escape without much resistance. This simple design element will greatly influence the resulting flavour profile and generally heighten your experience if that’s what you seek.</p>
+                                    </div>
                                 </section>
                             </section>
                             <section id="rocks">
@@ -76,7 +76,7 @@ export const HowToServe = () => {
                                 <section id="onrocks">
                                     <div className="bourbonrocks">
                                         <div className="pic">
-                                            <img src="https://www.tastingtable.com/img/gallery/25-best-bourbon-cocktails-ranked/l-intro-1646935912.jpg" height="450" width="550"></img>
+                                            <img id="bimg" src="https://www.tastingtable.com/img/gallery/25-best-bourbon-cocktails-ranked/l-intro-1646935912.jpg" height="450" width="550"></img>
                                         </div>
                                         <div className="text1">
                                             <p>Adding ice to bourbon is a matter of personal preference. While it’s indeed more refreshing, bear in mind that chilling a beverage in any way slows down oxidisation. This natural process plays an important role in releasing its flavour compounds so if a drink is too cold, it may lose its subtle nuances.</p>
@@ -86,9 +86,9 @@ export const HowToServe = () => {
                                         </div>
                                     </div>
                                     <div className="text1">
-                                            <p>Some people like to use pipettes in order to properly gauge how much water they add. Nevertheless, you can still pour in a few drops with a small pitcher. As said earlier, there are no rules!</p>
-                                            <p>Meanwhile, sampling bourbon on the rocks is a great way for beginners to become acquainted with the drink. The combination of chilling and diluting the beverage will reduce its intensity in a way that’s more approachable.</p>
-                                            </div>
+                                        <p>Some people like to use pipettes in order to properly gauge how much water they add. Nevertheless, you can still pour in a few drops with a small pitcher. As said earlier, there are no rules!</p>
+                                        <p>Meanwhile, sampling bourbon on the rocks is a great way for beginners to become acquainted with the drink. The combination of chilling and diluting the beverage will reduce its intensity in a way that’s more approachable.</p>
+                                    </div>
                                 </section>
                             </section>
                             <section id="serve">
@@ -102,19 +102,19 @@ export const HowToServe = () => {
                                             <p>You could simply ask them whether they’ve ever tried a nice bourbon in a tasting glass and see how they respond. You never know, they might be enthusiastic!</p>
                                         </div>
                                         <div className="pic">
-                                            <img src="https://restaurantclicks.com/wp-content/uploads/2021/06/Bartender-Serving-Bourbon-Whiskey.jpg" height="400" width="450"></img>
+                                            <img id="bimg" src="https://restaurantclicks.com/wp-content/uploads/2021/06/Bartender-Serving-Bourbon-Whiskey.jpg" height="400" width="450"></img>
                                         </div>
                                     </div>
                                     <div className="stubborn3">
-                                            <p>Whatever the chosen glassware, we suggest serving it neat alongside a bowl filled with ice, tongs, and a small pitcher of water. Your guests will then be able to comfortably serve themselves according to their tastes rather than feel embarrassed that they’d have to ask some.</p>
-                                            <p>For instance, they might try it neat as you recommended but find it to be too strong. This way, you’ll have given them the option to add ice anyway. Even if you don’t approve, it’s better that they enjoy their drink another way rather than it go to waste!</p>
-                                            </div>
+                                        <p>Whatever the chosen glassware, we suggest serving it neat alongside a bowl filled with ice, tongs, and a small pitcher of water. Your guests will then be able to comfortably serve themselves according to their tastes rather than feel embarrassed that they’d have to ask some.</p>
+                                        <p>For instance, they might try it neat as you recommended but find it to be too strong. This way, you’ll have given them the option to add ice anyway. Even if you don’t approve, it’s better that they enjoy their drink another way rather than it go to waste!</p>
+                                    </div>
                                 </section>
                             </section>
                         </section>
                     </form>
                 </section>
             </main>
-        </body>)
+        </article>)
 }
 

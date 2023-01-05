@@ -32,6 +32,12 @@ export const EditDistillery = () => {
         setUpdatedTriedDistillery(copy)
     }
 
+    const sortedDistilleries = distilleries.sort((a, b) => {
+        if (a.name < b.name) return -1;
+        if (a.name > b.name) return 1;
+        return 0;
+    })
+
     return (
         <form className="distilleryForm">
             <h1 id="mTitle2">Update Distillery</h1>
@@ -43,7 +49,7 @@ export const EditDistillery = () => {
 
                         <option value={0}>Select Distillery</option>
                         {
-                            distilleries.map((distillery) => {
+                            sortedDistilleries.map((distillery) => {
                                 const isSelected = distillery.id === updateTriedDistillery.distillery.id
                                 return <option selected={isSelected ? true : false} value={`${distillery.id}`} key={`distillery--${distillery.id}`}>{distillery.name}</option>
                             }
